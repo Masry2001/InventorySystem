@@ -1,0 +1,6 @@
+C:\Users\mohamed el masry\source\repos\SharedUtilities\bin\Debug\SharedUtilities.dll
+C:\Users\mohamed el masry\source\repos\SharedUtilities\bin\Debug\SharedUtilities.pdb
+C:\Users\mohamed el masry\source\repos\SharedUtilities\obj\Debug\SharedUtilities.csproj.AssemblyReference.cache
+C:\Users\mohamed el masry\source\repos\SharedUtilities\obj\Debug\SharedUtilities.csproj.CoreCompileInputs.cache
+C:\Users\mohamed el masry\source\repos\SharedUtilities\obj\Debug\SharedUtilities.dll
+C:\Users\mohamed el masry\source\repos\SharedUtilities\obj\Debug\SharedUtilities.pdb

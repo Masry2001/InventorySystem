@@ -1,0 +1,9 @@
+C:\Users\mohamed el masry\source\repos\Inventory_DAL\bin\Debug\Inventory_DAL.dll
+C:\Users\mohamed el masry\source\repos\Inventory_DAL\bin\Debug\Inventory_DAL.pdb
+C:\Users\mohamed el masry\source\repos\Inventory_DAL\bin\Debug\SharedUtilities.dll
+C:\Users\mohamed el masry\source\repos\Inventory_DAL\bin\Debug\SharedUtilities.pdb
+C:\Users\mohamed el masry\source\repos\Inventory_DAL\obj\Debug\Inventory_DAL.csproj.AssemblyReference.cache
+C:\Users\mohamed el masry\source\repos\Inventory_DAL\obj\Debug\Inventory_DAL.csproj.CoreCompileInputs.cache
+C:\Users\mohamed el masry\source\repos\Inventory_DAL\obj\Debug\Inventor.07157F25.Up2Date
+C:\Users\mohamed el masry\source\repos\Inventory_DAL\obj\Debug\Inventory_DAL.dll
+C:\Users\mohamed el masry\source\repos\Inventory_DAL\obj\Debug\Inventory_DAL.pdb

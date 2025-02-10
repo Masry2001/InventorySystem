@@ -1,0 +1,6 @@
+C:\Users\mohamed el masry\source\repos\BusinessUtilities\bin\Debug\BusinessUtilities.dll
+C:\Users\mohamed el masry\source\repos\BusinessUtilities\bin\Debug\BusinessUtilities.pdb
+C:\Users\mohamed el masry\source\repos\BusinessUtilities\obj\Debug\BusinessUtilities.csproj.AssemblyReference.cache
+C:\Users\mohamed el masry\source\repos\BusinessUtilities\obj\Debug\BusinessUtilities.csproj.CoreCompileInputs.cache
+C:\Users\mohamed el masry\source\repos\BusinessUtilities\obj\Debug\BusinessUtilities.dll
+C:\Users\mohamed el masry\source\repos\BusinessUtilities\obj\Debug\BusinessUtilities.pdb

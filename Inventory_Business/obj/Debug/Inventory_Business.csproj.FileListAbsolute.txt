@@ -1,0 +1,13 @@
+C:\Users\mohamed el masry\source\repos\Inventory_Business\bin\Debug\Inventory_Business.dll
+C:\Users\mohamed el masry\source\repos\Inventory_Business\bin\Debug\Inventory_Business.pdb
+C:\Users\mohamed el masry\source\repos\Inventory_Business\bin\Debug\BusinessUtilities.dll
+C:\Users\mohamed el masry\source\repos\Inventory_Business\bin\Debug\Inventory_DAL.dll
+C:\Users\mohamed el masry\source\repos\Inventory_Business\bin\Debug\SharedUtilities.dll
+C:\Users\mohamed el masry\source\repos\Inventory_Business\bin\Debug\BusinessUtilities.pdb
+C:\Users\mohamed el masry\source\repos\Inventory_Business\bin\Debug\Inventory_DAL.pdb
+C:\Users\mohamed el masry\source\repos\Inventory_Business\bin\Debug\SharedUtilities.pdb
+C:\Users\mohamed el masry\source\repos\Inventory_Business\obj\Debug\Inventory_Business.csproj.AssemblyReference.cache
+C:\Users\mohamed el masry\source\repos\Inventory_Business\obj\Debug\Inventory_Business.csproj.CoreCompileInputs.cache
+C:\Users\mohamed el masry\source\repos\Inventory_Business\obj\Debug\Inventor.465271B8.Up2Date
+C:\Users\mohamed el masry\source\repos\Inventory_Business\obj\Debug\Inventory_Business.dll
+C:\Users\mohamed el masry\source\repos\Inventory_Business\obj\Debug\Inventory_Business.pdb

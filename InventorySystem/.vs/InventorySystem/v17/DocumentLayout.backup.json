@@ -1,0 +1,298 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mohamed el masry\\source\\repos\\Inventory_Business\\clsEmployeeManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\employees\\ctrlemployeecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\ctrlemployeecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\employees\\ctrlemployeecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\ctrlemployeecard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\utilities\\ctrlpersoncard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:utilities\\ctrlpersoncard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\employees\\frmemployeeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmemployeeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\employees\\frmlistemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmlistemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\employees\\frmlistemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmlistemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\utilities\\ctrlpersoncard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:utilities\\ctrlpersoncard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\employees\\frmlistemployees.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmlistemployees.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\employees\\frmemployeeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmemployeeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|InventorySystem.csproj|C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|InventorySystem.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mohamed el masry\\source\\repos\\Inventory_Business\\clsPersonManager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mohamed el masry\\source\\repos\\Inventory_DAL\\clsPeopleDAL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mohamed el masry\\source\\repos\\Inventory_DAL\\clsEmployeesDAL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mohamed el masry\\source\\repos\\Inventory_DAL\\clsBaseDAL.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ctrlEmployeeCard.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\Employees\\ctrlEmployeeCard.cs",
+              "RelativeDocumentMoniker": "Employees\\ctrlEmployeeCard.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\Employees\\ctrlEmployeeCard.cs",
+              "RelativeToolTip": "Employees\\ctrlEmployeeCard.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAIwCYAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T05:15:46.158Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "clsPersonManager.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\source\\repos\\Inventory_Business\\clsPersonManager.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\Inventory_Business\\clsPersonManager.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\source\\repos\\Inventory_Business\\clsPersonManager.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\Inventory_Business\\clsPersonManager.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowDMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T14:43:50.818Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "clsEmployeeManager.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\source\\repos\\Inventory_Business\\clsEmployeeManager.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\Inventory_Business\\clsEmployeeManager.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\source\\repos\\Inventory_Business\\clsEmployeeManager.cs*",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\Inventory_Business\\clsEmployeeManager.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T05:35:46.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "clsPeopleDAL.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\source\\repos\\Inventory_DAL\\clsPeopleDAL.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\Inventory_DAL\\clsPeopleDAL.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\source\\repos\\Inventory_DAL\\clsPeopleDAL.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\Inventory_DAL\\clsPeopleDAL.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-05T05:34:04.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "clsEmployeesDAL.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\source\\repos\\Inventory_DAL\\clsEmployeesDAL.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\Inventory_DAL\\clsEmployeesDAL.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\source\\repos\\Inventory_DAL\\clsEmployeesDAL.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\Inventory_DAL\\clsEmployeesDAL.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAMwCkAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T08:53:39.519Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ctrlEmployeeCard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\Employees\\ctrlEmployeeCard.cs",
+              "RelativeDocumentMoniker": "Employees\\ctrlEmployeeCard.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\source\\repos\\InventorySystem\\Employees\\ctrlEmployeeCard.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\InventorySystem\\Employees\\ctrlEmployeeCard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T05:06:28.739Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "clsBaseDAL.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\source\\repos\\Inventory_DAL\\clsBaseDAL.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\source\\repos\\Inventory_DAL\\clsBaseDAL.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\source\\repos\\Inventory_DAL\\clsBaseDAL.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\Inventory_DAL\\clsBaseDAL.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAIwFYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T09:17:56.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ctrlPersonCard.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\Utilities\\ctrlPersonCard.cs",
+              "RelativeDocumentMoniker": "Utilities\\ctrlPersonCard.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\Utilities\\ctrlPersonCard.cs",
+              "RelativeToolTip": "Utilities\\ctrlPersonCard.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAkwCAAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T14:17:33.498Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmEmployeeInfo.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmEmployeeInfo.cs",
+              "RelativeDocumentMoniker": "Employees\\frmEmployeeInfo.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmEmployeeInfo.cs",
+              "RelativeToolTip": "Employees\\frmEmployeeInfo.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T05:24:24.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmListEmployees.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmListEmployees.cs",
+              "RelativeDocumentMoniker": "Employees\\frmListEmployees.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmListEmployees.cs",
+              "RelativeToolTip": "Employees\\frmListEmployees.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAIwKcAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T03:14:06.812Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmListEmployees.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmListEmployees.cs",
+              "RelativeDocumentMoniker": "Employees\\frmListEmployees.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\source\\repos\\InventorySystem\\Employees\\frmListEmployees.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\InventorySystem\\Employees\\frmListEmployees.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T03:13:11.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ctrlPersonCard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\Utilities\\ctrlPersonCard.cs",
+              "RelativeDocumentMoniker": "Utilities\\ctrlPersonCard.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\source\\repos\\InventorySystem\\Utilities\\ctrlPersonCard.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\InventorySystem\\Utilities\\ctrlPersonCard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T14:12:06.683Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmListEmployees.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmListEmployees.Designer.cs",
+              "RelativeDocumentMoniker": "Employees\\frmListEmployees.Designer.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmListEmployees.Designer.cs",
+              "RelativeToolTip": "Employees\\frmListEmployees.Designer.cs",
+              "ViewState": "AgIAADsBAAAAAAAAAADwvzsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T06:01:07.747Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmEmployeeInfo.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmEmployeeInfo.cs",
+              "RelativeDocumentMoniker": "Employees\\frmEmployeeInfo.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\source\\repos\\InventorySystem\\Employees\\frmEmployeeInfo.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\InventorySystem\\Employees\\frmEmployeeInfo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T05:24:22.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\frmMain.cs",
+              "RelativeToolTip": "frmMain.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAxwBYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T08:45:07.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\source\\repos\\InventorySystem\\frmMain.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\InventorySystem\\frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T04:37:36.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\mohamed el masry\\Desktop\\InventoryProject\\Solution\\InventorySystem\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "C:\\Users\\mohamed el masry\\source\\repos\\InventorySystem\\frmMain.cs [Design]",
+              "RelativeToolTip": "..\\..\\..\\..\\source\\repos\\InventorySystem\\frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T10:15:48.959Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
