@@ -1,4 +1,5 @@
 ﻿using Inventory_Business;
+using SharedUtilities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,21 @@ namespace InventorySystem.Employees
     public partial class ctrlEmployeeCard : UserControl
     {
 
+
+        private clsEmployeeManager _Employee;
+
+        private int _EmployeeID = -1;
+
+        public int EmployeeID
+        {
+            get { return _EmployeeID; }
+        }
+
+        public clsEmployeeManager SelectedEmployeeInfo
+        {
+            get { return _Employee; }
+        }
+
         public ctrlEmployeeCard()
         {
             InitializeComponent();
@@ -24,32 +40,34 @@ namespace InventorySystem.Employees
 
         }
 
-        public void LoadEmployeeData(int EmployeeID, int PersonID)
+        public void LoadData(int EmployeeID)
         {
-            // we want to get personId then send it to ctrlPersonCard.LoadPersonData(personID)
+
+            LoadEmployeeData(EmployeeID);
+
+            int PersonID = _Employee.PersonID;
             ctrlPersonCard1.LoadPersonData(PersonID);
 
-            // load data for employee 
-            LoadEmployeeData(EmployeeID);
         }
+
+
+
 
         private void LoadEmployeeData(int EmployeeID)
         {
 
-            if (clsEmployeeManager.GetEmployee(EmployeeID, out Dictionary<string, object> EmployeeData))
+            if (( _Employee = clsEmployeeManager.GetEmployee(EmployeeID)) != null)
             {
-             
-                lblEmployeeID.Text = EmployeeID.ToString();
-                lblDesignation.Text = Convert.ToString(EmployeeData["Designation"]);
-                lblDepartment.Text = Convert.ToString(EmployeeData["Department"]);
-                lblSalary.Text = EmployeeData["Salary"]?.ToString() ?? "0.00";
-                lblCreationDate.Text = Convert.ToString(EmployeeData["CreatedDate"]);
-                lblModifiedDate.Text = Convert.ToString(EmployeeData["ModifiedDate"]);
-                lblIsActive.Text = (bool)EmployeeData["IsActive"] ? "Active" : "Inactive";
-                lblNotes.Text = string.IsNullOrEmpty(Convert.ToString(EmployeeData["Notes"]))
-                  ? "No Notes"
-                  : Convert.ToString(EmployeeData["Notes"]);
+                _EmployeeID = EmployeeID;
 
+                lblEmployeeID.Text = EmployeeID.ToString();
+                lblDesignation.Text = _Employee.Designation;
+                lblDepartment.Text = _Employee.Department;
+                lblSalary.Text = Convert.ToString(_Employee.Salary);
+                lblCreationDate.Text = Convert.ToString(_Employee.CreatedDate);
+                lblModifiedDate.Text = Convert.ToString(_Employee.ModifiedDate);
+                lblIsActive.Text = _Employee.ActiveStatus;
+                lblNotes.Text = _Employee.Notes;
             }
 
             else

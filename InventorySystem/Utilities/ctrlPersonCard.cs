@@ -8,12 +8,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SharedUtilities;
 
 
 namespace InventorySystem.Utilities
 {
     public partial class ctrlPersonCard : UserControl
     {
+
+
+        private clsPersonManager _Person;
+
+        private int _PersonID = -1;
+
+        public int PersonID
+        {
+            get { return _PersonID; }
+        }
+
+        public clsPersonManager SelectedPersonInfo
+        {
+            get { return _Person; }
+        }
 
         public ctrlPersonCard()
         {
@@ -26,17 +42,18 @@ namespace InventorySystem.Utilities
         }
 
 
+
         public void LoadPersonData(int PersonId)
         {
-            if (clsPersonManager.GetPerson(PersonId, out Dictionary<string, object> personData))
+            if (( _Person = clsPersonManager.GetPerson(PersonId) ) != null)
             {
+                _PersonID = PersonId;
+
                 lblPersonID.Text = PersonId.ToString();
-                lblName.Text = Convert.ToString(personData["Name"]);
-                lblPhone.Text = Convert.ToString(personData["Phone"]);
-                lblEmail.Text = Convert.ToString(personData["Email"]);
-                lblAddress.Text = string.IsNullOrEmpty(Convert.ToString(personData["Address"]))
-                  ? "Unknown"
-                  : Convert.ToString(personData["Address"]);
+                lblName.Text = _Person.Name;
+                lblPhone.Text = _Person.Phone;
+                lblEmail.Text = _Person.Email;
+                lblAddress.Text = _Person.Address;
             }
 
             else
@@ -45,5 +62,9 @@ namespace InventorySystem.Utilities
             }
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

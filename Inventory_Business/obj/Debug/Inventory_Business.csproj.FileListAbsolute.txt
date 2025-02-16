@@ -11,3 +11,20 @@ C:\Users\mohamed el masry\source\repos\Inventory_Business\obj\Debug\Inventory_Bu
 C:\Users\mohamed el masry\source\repos\Inventory_Business\obj\Debug\Inventor.465271B8.Up2Date
 C:\Users\mohamed el masry\source\repos\Inventory_Business\obj\Debug\Inventory_Business.dll
 C:\Users\mohamed el masry\source\repos\Inventory_Business\obj\Debug\Inventory_Business.pdb
+C:\Users\mohamed el masry\Desktop\InventoryProject\Solution\Inventory_Business\obj\Debug\Inventory_Business.csproj.AssemblyReference.cache
+C:\Users\mohamed el masry\Desktop\InventoryProject\Solution\Inventory_Business\obj\Debug\Inventory_Business.csproj.CoreCompileInputs.cache
+C:\Users\mohamed el masry\Desktop\InventoryProject\Solution\Inventory_Business\obj\Debug\Inventory_Business.dll
+C:\Users\mohamed el masry\Desktop\InventoryProject\Solution\Inventory_Business\obj\Debug\Inventory_Business.pdb
+D:\programming\InventoryProject\Solution\Inventory_Business\obj\Debug\Inventory_Business.csproj.AssemblyReference.cache
+D:\programming\InventoryProject\Solution\Inventory_Business\obj\Debug\Inventory_Business.csproj.CoreCompileInputs.cache
+D:\programming\InventoryProject\Solution\Inventory_Business\obj\Debug\Inventory_Business.dll
+D:\programming\InventoryProject\Solution\Inventory_Business\obj\Debug\Inventory_Business.pdb
+D:\programming\InventoryProject\Solution\Inventory_Business\bin\Debug\Inventory_Business.dll
+D:\programming\InventoryProject\Solution\Inventory_Business\bin\Debug\Inventory_Business.pdb
+D:\programming\InventoryProject\Solution\Inventory_Business\bin\Debug\BusinessUtilities.dll
+D:\programming\InventoryProject\Solution\Inventory_Business\bin\Debug\Inventory_DAL.dll
+D:\programming\InventoryProject\Solution\Inventory_Business\bin\Debug\SharedUtilities.dll
+D:\programming\InventoryProject\Solution\Inventory_Business\bin\Debug\BusinessUtilities.pdb
+D:\programming\InventoryProject\Solution\Inventory_Business\bin\Debug\Inventory_DAL.pdb
+D:\programming\InventoryProject\Solution\Inventory_Business\bin\Debug\SharedUtilities.pdb
+D:\programming\InventoryProject\Solution\Inventory_Business\obj\Debug\Inventor.465271B8.Up2Date

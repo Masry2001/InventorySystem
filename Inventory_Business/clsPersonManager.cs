@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Inventory_DAL;
+using BusinessUtilities;
 
 namespace Inventory_Business
 {
@@ -38,6 +39,8 @@ namespace Inventory_Business
         }
 
         // Validation Methods
+        //Before Saving Data to the Database (During Create/Update Operations).
+        //During User Input Validation(e.g., in a UI form before allowing submission).
         public bool IsValidEmail()
         {
             if (string.IsNullOrEmpty(Email)) return false;
@@ -70,7 +73,28 @@ namespace Inventory_Business
         public static bool GetPerson(int personId, out Dictionary<string, object> personData)
         {
             return clsPeopleDAL.GetPersonById(personId, out personData);
+
         }
+
+        public static clsPersonManager GetPerson(int personId)
+        {
+            if (clsPeopleDAL.GetPersonById(personId, out Dictionary<string, object> personData))
+            {
+                return new clsPersonManager
+                {
+                    PersonId = personId,
+                    Name = personData["Name"].ToString(),
+                    Phone = BusinessUtil.GetValueOrDefault(personData["Phone"]?.ToString()),
+                    Email = BusinessUtil.GetValueOrDefault(personData["Email"]?.ToString()),
+                    Address = BusinessUtil.GetValueOrDefault(personData["Address"]?.ToString())
+
+                };
+            }
+            return null; // No data found
+        }
+
+
+
 
 
 

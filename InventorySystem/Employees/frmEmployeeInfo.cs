@@ -14,13 +14,11 @@ namespace InventorySystem.Employees
     {
 
         private int _EmployeeID;
-        private int _PersonID;
 
-        public frmEmployeeInfo(int EmployeeID,  int PersonID)
+        public frmEmployeeInfo(int EmployeeID)
         {
             InitializeComponent();
             _EmployeeID = EmployeeID;
-            _PersonID = PersonID;
             LoadEmployeeData();
         }
 
@@ -31,9 +29,7 @@ namespace InventorySystem.Employees
 
         private void LoadEmployeeData()
         {
-            // Load and display employee details using _employeeId and _personId
-            //ctrlEmployeeCard1.LoadUserInfo(_UserID);
-            ctrlEmployeeCard1.LoadEmployeeData(_EmployeeID, _PersonID); 
+            ctrlEmployeeCard1.LoadData(_EmployeeID); 
         }
 
         private void btnClose_Click(object sender, EventArgs e)

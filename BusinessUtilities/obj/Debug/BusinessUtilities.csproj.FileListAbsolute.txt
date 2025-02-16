@@ -4,3 +4,9 @@ C:\Users\mohamed el masry\source\repos\BusinessUtilities\obj\Debug\BusinessUtili
 C:\Users\mohamed el masry\source\repos\BusinessUtilities\obj\Debug\BusinessUtilities.csproj.CoreCompileInputs.cache
 C:\Users\mohamed el masry\source\repos\BusinessUtilities\obj\Debug\BusinessUtilities.dll
 C:\Users\mohamed el masry\source\repos\BusinessUtilities\obj\Debug\BusinessUtilities.pdb
+D:\programming\InventoryProject\Solution\BusinessUtilities\bin\Debug\BusinessUtilities.dll
+D:\programming\InventoryProject\Solution\BusinessUtilities\bin\Debug\BusinessUtilities.pdb
+D:\programming\InventoryProject\Solution\BusinessUtilities\obj\Debug\BusinessUtilities.csproj.AssemblyReference.cache
+D:\programming\InventoryProject\Solution\BusinessUtilities\obj\Debug\BusinessUtilities.csproj.CoreCompileInputs.cache
+D:\programming\InventoryProject\Solution\BusinessUtilities\obj\Debug\BusinessUtilities.dll
+D:\programming\InventoryProject\Solution\BusinessUtilities\obj\Debug\BusinessUtilities.pdb

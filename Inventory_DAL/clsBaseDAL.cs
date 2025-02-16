@@ -113,7 +113,7 @@ namespace Inventory_DAL
 
                                 foreach (var column in columns)
                                 {
-                                    result[column] = reader[column] != DBNull.Value ? reader[column] : null;
+                                    result[column] = GetDbValueOrNull(reader[column]);
                                 }
                             }
                         }
@@ -166,6 +166,17 @@ namespace Inventory_DAL
 
             return personId;
         }
+
+
+
+        //Purpose: Handles database values that might be DBNull
+        // This Method Will Be Used Only In DAL
+        public static object GetDbValueOrNull(object value)
+        {
+            return value == DBNull.Value ? null : value;
+        }
+
+
 
 
     }

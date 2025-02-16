@@ -4,3 +4,9 @@ C:\Users\mohamed el masry\source\repos\SharedUtilities\obj\Debug\SharedUtilities
 C:\Users\mohamed el masry\source\repos\SharedUtilities\obj\Debug\SharedUtilities.csproj.CoreCompileInputs.cache
 C:\Users\mohamed el masry\source\repos\SharedUtilities\obj\Debug\SharedUtilities.dll
 C:\Users\mohamed el masry\source\repos\SharedUtilities\obj\Debug\SharedUtilities.pdb
+D:\programming\InventoryProject\Solution\SharedUtilities\bin\Debug\SharedUtilities.dll
+D:\programming\InventoryProject\Solution\SharedUtilities\bin\Debug\SharedUtilities.pdb
+D:\programming\InventoryProject\Solution\SharedUtilities\obj\Debug\SharedUtilities.csproj.AssemblyReference.cache
+D:\programming\InventoryProject\Solution\SharedUtilities\obj\Debug\SharedUtilities.csproj.CoreCompileInputs.cache
+D:\programming\InventoryProject\Solution\SharedUtilities\obj\Debug\SharedUtilities.dll
+D:\programming\InventoryProject\Solution\SharedUtilities\obj\Debug\SharedUtilities.pdb

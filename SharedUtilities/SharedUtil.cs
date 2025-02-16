@@ -9,7 +9,13 @@ namespace SharedUtilities
 
 
 
-    public class SharedUtil
+    public static class SharedUtil
     {
+
+
+
+
+
+
     }
 }

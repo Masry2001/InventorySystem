@@ -7,3 +7,12 @@ C:\Users\mohamed el masry\source\repos\Inventory_DAL\obj\Debug\Inventory_DAL.csp
 C:\Users\mohamed el masry\source\repos\Inventory_DAL\obj\Debug\Inventor.07157F25.Up2Date
 C:\Users\mohamed el masry\source\repos\Inventory_DAL\obj\Debug\Inventory_DAL.dll
 C:\Users\mohamed el masry\source\repos\Inventory_DAL\obj\Debug\Inventory_DAL.pdb
+D:\programming\InventoryProject\Solution\Inventory_DAL\bin\Debug\Inventory_DAL.dll
+D:\programming\InventoryProject\Solution\Inventory_DAL\bin\Debug\Inventory_DAL.pdb
+D:\programming\InventoryProject\Solution\Inventory_DAL\bin\Debug\SharedUtilities.dll
+D:\programming\InventoryProject\Solution\Inventory_DAL\bin\Debug\SharedUtilities.pdb
+D:\programming\InventoryProject\Solution\Inventory_DAL\obj\Debug\Inventory_DAL.csproj.AssemblyReference.cache
+D:\programming\InventoryProject\Solution\Inventory_DAL\obj\Debug\Inventory_DAL.csproj.CoreCompileInputs.cache
+D:\programming\InventoryProject\Solution\Inventory_DAL\obj\Debug\Inventor.07157F25.Up2Date
+D:\programming\InventoryProject\Solution\Inventory_DAL\obj\Debug\Inventory_DAL.dll
+D:\programming\InventoryProject\Solution\Inventory_DAL\obj\Debug\Inventory_DAL.pdb

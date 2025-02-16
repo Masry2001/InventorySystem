@@ -179,6 +179,7 @@
             this.dgvEmployees.Size = new System.Drawing.Size(1484, 371);
             this.dgvEmployees.TabIndex = 94;
             this.dgvEmployees.TabStop = false;
+            this.dgvEmployees.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployees_CellDoubleClick);
             // 
             // contextMenuStrip1
             // 
@@ -195,7 +196,7 @@
             this.deleteEmployeeToolStripMenuItem,
             this.toolStripMenuItem4});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(271, 190);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(271, 162);
             // 
             // toolStripMenuItem5
             // 

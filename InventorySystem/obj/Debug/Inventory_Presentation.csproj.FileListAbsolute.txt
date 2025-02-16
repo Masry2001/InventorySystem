@@ -19,3 +19,26 @@ C:\Users\mohamed el masry\source\repos\InventorySystem\obj\Debug\InventorySystem
 C:\Users\mohamed el masry\source\repos\InventorySystem\obj\Debug\InventorySystem.Employees.ctrlEmployeeCard.resources
 C:\Users\mohamed el masry\source\repos\InventorySystem\obj\Debug\InventorySystem.Employees.frmEmployeeInfo.resources
 C:\Users\mohamed el masry\source\repos\InventorySystem\obj\Debug\InventorySystem.Utilities.ctrlPersonCard.resources
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\Inventory_Presentation.csproj.AssemblyReference.cache
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Employees.ctrlEmployeeCard.resources
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Employees.frmEmployeeInfo.resources
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Employees.frmListEmployees.resources
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\Inventory_Presentation.frmMain.resources
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Properties.Resources.resources
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Utilities.ctrlPersonCard.resources
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\Inventory_Presentation.csproj.GenerateResource.cache
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\Inventory_Presentation.csproj.CoreCompileInputs.cache
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.exe
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.pdb
+D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\InventorySystem.exe.config
+D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\InventorySystem.exe
+D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\InventorySystem.pdb
+D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\Inventory_Business.dll
+D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\SharedUtilities.dll
+D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\Inventory_DAL.dll
+D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\Inventory_Business.pdb
+D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\SharedUtilities.pdb
+D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\Inventory_DAL.pdb
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\Inventor.11099E72.Up2Date
+D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\BusinessUtilities.dll
+D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\BusinessUtilities.pdb

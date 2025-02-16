@@ -156,25 +156,45 @@ namespace InventorySystem.Employees
             lblRecordsCount.Text = recordCount;
         }
 
-       
-        private void employeeInfoToolStripMenuItem_Click(object sender, EventArgs e)
+
+        private void OpenEmployeeInfo()
         {
-            if (dgvEmployees.SelectedRows.Count > 0) // Ensure a row is selected
+            if (dgvEmployees.SelectedRows.Count > 0)
             {
-                // Extract EmployeeID from the DataGridView
                 int employeeId = Convert.ToInt32(dgvEmployees.SelectedRows[0].Cells["EmployeeID"].Value);
-
-                // Fetch PersonID using EmployeeID (from database or DataTable)
-                int personId = clsEmployeeManager.GetPersonIdByEmployeeId(employeeId);
-
-                // Open the Employee Info Form
-                frmEmployeeInfo frm = new frmEmployeeInfo(employeeId, personId);
-                frm.ShowDialog();
+                using (frmEmployeeInfo frm = new frmEmployeeInfo(employeeId))
+                {
+                    frm.ShowDialog();
+                }
             }
             else
             {
                 MessageBox.Show("Please select an employee.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void employeeInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenEmployeeInfo();
+        }
+
+        private void dgvEmployees_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                OpenEmployeeInfo();
+            }
+        }
+
+        /*
+         string query = @"UPDATE People
+                                    SET
+	                                    Name = 'Mohamed Hany',
+	                                    Phone = '01125226780',
+                                        Email = 'mh@gmail.com',
+                                        Address = '123 Updated Street'
+                                    WHERE PersonID = 1;"
+         */
+
     }
 }
