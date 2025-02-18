@@ -78,7 +78,18 @@
     <Compile Include="Utilities\ctrlPersonCard.Designer.cs">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\frmEditPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\frmEditPerson.Designer.cs">
+      <DependentUpon>frmEditPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\PresentationUtility.cs" />
+    <Compile Include="Utilities\ValidationMessages.Designer.cs">
+      <DependentUpon>ValidationMessages.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <EmbeddedResource Include="Employees\ctrlEmployeeCard.resx">
       <DependentUpon>ctrlEmployeeCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +113,14 @@
     </Compile>
     <EmbeddedResource Include="Utilities\ctrlPersonCard.resx">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\frmEditPerson.resx">
+      <DependentUpon>frmEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\ValidationMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationMessages.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

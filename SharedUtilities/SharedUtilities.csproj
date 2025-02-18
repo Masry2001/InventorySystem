@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="ConfigHelper.cs" />
     <Compile Include="LogHelper.cs" />
-    <Compile Include="SharedUtil.cs" />
+    <Compile Include="Validation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

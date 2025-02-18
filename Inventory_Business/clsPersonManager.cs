@@ -56,12 +56,6 @@ namespace Inventory_Business
             }
         }
 
-        public bool IsValidPhone()
-        {
-            if (string.IsNullOrEmpty(Phone)) return false;
-            string pattern = @"^(01[0-2,5]{1}[0-9]{8})$"; // Matches Egypt Phone Numbers Only
-            return System.Text.RegularExpressions.Regex.IsMatch(Phone, pattern);
-        }
 
         // Base Class Method to Display Basic Info
         public virtual string GetInfo()

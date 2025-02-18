@@ -66,5 +66,12 @@ namespace InventorySystem.Utilities
         {
 
         }
+
+        private void llEditPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // open form for editing person info
+            frmEditPerson frm = new frmEditPerson(_PersonID);
+            frm.ShowDialog();
+        }
     }
 }

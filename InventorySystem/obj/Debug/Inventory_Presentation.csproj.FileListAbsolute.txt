@@ -42,3 +42,5 @@ D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\Inventory_DAL
 D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\Inventor.11099E72.Up2Date
 D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\BusinessUtilities.dll
 D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\BusinessUtilities.pdb
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Utilities.frmEditPerson.resources
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Utilities.ValidationMessages.resources

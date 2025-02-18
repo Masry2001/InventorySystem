@@ -1,5 +1,7 @@
-﻿using System;
+﻿using SharedUtilities;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -57,8 +59,6 @@ namespace InventorySystem.Utilities
                 dataTable.DefaultView.RowFilter = $"[{filterColumn}] LIKE '{filterValue.Trim().Replace("'", "''")}%'";
             }
         }
-
-
 
         public static void ApplyIsActiveFilter(DataTable dataTable, string filterValue, out string recordCount)
         {
@@ -150,12 +150,56 @@ namespace InventorySystem.Utilities
             recordCount = dataTable.DefaultView.Count.ToString();
         }
 
+        public static void ValidateEmptyTextBox(object sender, ErrorProvider errorProvider, CancelEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+
+            if (string.IsNullOrEmpty(textBox.Text.Trim()))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(textBox, ValidationMessages.Error_RequiredField);
+            }
+            else
+            {
+                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                errorProvider.SetError(textBox, null); // Clear the error
+            }
+        }
+
+        public static void ValidateEmail(object sender, ErrorProvider errorProvider, CancelEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+
+            // Validate email format
+            if (!Validation.ValidateEmail(textBox.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(textBox, ValidationMessages.Error_InvalidEmail);
+            }
+            else
+            {
+                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                errorProvider.SetError(textBox, null); // Clear the error
+            }
+        }
 
 
+        public static void ValidatePhone(object sender, ErrorProvider errorProvider, CancelEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
 
-
-
-
+            // Validate email format
+            if (!Validation.IsValidPhone(textBox.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(textBox, ValidationMessages.Error_InvalidPhone);
+            }
+            else
+            {
+                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                errorProvider.SetError(textBox, null); // Clear the error
+            }
+        }
 
     }
 }
