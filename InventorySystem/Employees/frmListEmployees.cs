@@ -166,6 +166,7 @@ namespace InventorySystem.Employees
                 {
                     frm.ShowDialog();
                 }
+                _RefreshEmployeesList();
             }
             else
             {
@@ -185,16 +186,6 @@ namespace InventorySystem.Employees
                 OpenEmployeeInfo();
             }
         }
-
-        /*
-         string query = @"UPDATE People
-                                    SET
-	                                    Name = 'Mohamed Hany',
-	                                    Phone = '01125226780',
-                                        Email = 'mh@gmail.com',
-                                        Address = '123 Updated Street'
-                                    WHERE PersonID = 1;"
-         */
 
     }
 }

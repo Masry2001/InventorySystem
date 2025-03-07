@@ -58,14 +58,42 @@ namespace InventorySystem.Utilities
             }
         }
 
+        public void SavePersonData()
+        {
+            if (_Person == null) return;
+
+            _Person.Name = txtName.Text;
+            _Person.Phone = txtPhone.Text;
+            _Person.Email = txtEmail.Text;
+            _Person.Address = txtAddress.Text;
+            _Person.Mode = clsPersonManager.enMode.Update;
+
+            if (_Person.SavePerson())
+            {
+                MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+                // Trigger the event to send data back to the caller form.
+                //DataBack?.Invoke(this, _Person.PersonID);
+            }
+            else
+            {
+                MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (!this.ValidateChildren())
             {
 
-
+                //Here we dont continue becuase the form is not valid
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
 
             }
+
+            SavePersonData();
 
         }
 
