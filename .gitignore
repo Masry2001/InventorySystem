@@ -28,7 +28,6 @@ obj/
 *.msi
 *.apk
 *.ipa
-*.manifest
 *.tlog
 
 # Ignore database and data files
