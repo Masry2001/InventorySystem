@@ -145,11 +145,12 @@
             this.txtNotes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNotes.Location = new System.Drawing.Point(239, 151);
             this.txtNotes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNotes.MaxLength = 50;
+            this.txtNotes.MaxLength = 250;
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(426, 94);
             this.txtNotes.TabIndex = 12;
+            this.txtNotes.Validating += new System.ComponentModel.CancelEventHandler(this.txtNotes_Validating);
             // 
             // label12
             // 
@@ -428,8 +429,10 @@
             // 
             // frmEditEmployee
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(768, 669);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblPersonID);

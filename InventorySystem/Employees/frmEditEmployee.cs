@@ -80,7 +80,7 @@ namespace InventorySystem.Employees
             }
         }
 
-        // Make Validation Check 
+        // Make Validation Checks 
         // Department and Designation are required fields
         // Salary should be a positive number
         // Notes should not exceed 250 characters
@@ -109,6 +109,15 @@ namespace InventorySystem.Employees
         {
             PresentationUtility.ValidateCreationDate(dtpCreationDate, dtpModifiedDate, errorProvider1, e);
         }
+
+        private void txtNotes_Validating(object sender, CancelEventArgs e)
+        {
+            PresentationUtility.ValidateNotesIsLessThan250Char(sender, errorProvider1, e);
+        }
+
+
+
+
 
     }
 

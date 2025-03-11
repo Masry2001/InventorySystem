@@ -245,6 +245,24 @@ namespace InventorySystem.Utilities
             }
         }
 
+        public static void ValidateNotesIsLessThan250Char(object sender, ErrorProvider errorProvider, CancelEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            if (textBox != null)
+            {
+                if (textBox.Text.Length > 250)
+                {
+                    errorProvider.SetError(textBox, "Notes should not exceed 250 characters.");
+                    e.Cancel = true; // Prevent focus change
+                }
+                else
+                {
+                    errorProvider.SetError(textBox, ""); // Clear error
+                }
+            }
+        }
+
+
 
 
     }
