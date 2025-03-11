@@ -72,6 +72,7 @@ namespace InventorySystem.Utilities
             // open form for editing person info
             frmEditPerson frm = new frmEditPerson(_PersonID);
             frm.ShowDialog();
+            LoadPersonData(_PersonID);
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Inventory_Business;
+using InventorySystem.Utilities;
 using SharedUtilities;
 using System;
 using System.Collections.Generic;
@@ -77,5 +78,12 @@ namespace InventorySystem.Employees
 
         }
 
+        private void llEditEmployeeInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmEditEmployee frm = new frmEditEmployee(_EmployeeID);
+            frm.ShowDialog();
+            LoadEmployeeData(_EmployeeID);
+
+        }
     }
 }

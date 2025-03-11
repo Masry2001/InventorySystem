@@ -79,6 +79,15 @@ namespace InventorySystem.Utilities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enter A Valid Salary With 2 Decimals At Most.
+        /// </summary>
+        internal static string Error_InvalidSalary {
+            get {
+                return ResourceManager.GetString("Error_InvalidSalary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This field is required!.
         /// </summary>
         internal static string Error_RequiredField {

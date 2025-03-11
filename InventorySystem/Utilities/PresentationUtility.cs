@@ -188,7 +188,6 @@ namespace InventorySystem.Utilities
         {
             TextBox textBox = sender as TextBox;
 
-            // Validate email format
             if (!Validation.IsValidPhone(textBox.Text))
             {
                 e.Cancel = true;
@@ -200,6 +199,53 @@ namespace InventorySystem.Utilities
                 errorProvider.SetError(textBox, null); // Clear the error
             }
         }
+
+        // validate the salary of text box 
+        public static void ValidateSalary(object sender, ErrorProvider errorProvider, CancelEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+
+            if (!Validation.IsValidSalary(textBox.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(textBox, ValidationMessages.Error_InvalidSalary);
+            }
+            else
+            {
+                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                errorProvider.SetError(textBox, null); // Clear the error
+            }
+        }
+
+        public static void ValidateModifiedDate(DateTimePicker dtpCreatedDate, DateTimePicker dtpModifiedDate, ErrorProvider errorProvider, CancelEventArgs e)
+        {
+            if (dtpCreatedDate.Value > dtpModifiedDate.Value) // Created Date is AFTER Modified Date
+            {
+                errorProvider.SetError(dtpModifiedDate, "Modified Date cannot be earlier than Created Date.");
+                e.Cancel = true; // Prevents losing focus
+                dtpModifiedDate.Focus();
+            }
+            else
+            {
+                errorProvider.SetError(dtpModifiedDate, ""); // Clears the error if validation passes
+            }
+        }
+
+        public static void ValidateCreationDate(DateTimePicker dtpCreatedDate, DateTimePicker dtpModifiedDate, ErrorProvider errorProvider, CancelEventArgs e)
+        {
+            if (dtpCreatedDate.Value > dtpModifiedDate.Value) // Created Date is AFTER Modified Date
+            {
+                errorProvider.SetError(dtpCreatedDate, "Created Date cannot be later than Modified Date.");
+                e.Cancel = true; // Prevents losing focus
+                dtpCreatedDate.Focus();
+            }
+            else
+            {
+                errorProvider.SetError(dtpCreatedDate, ""); // Clears the error if validation passes
+            }
+        }
+
+
 
     }
 }

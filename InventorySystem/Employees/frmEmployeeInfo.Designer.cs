@@ -38,10 +38,10 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(544, 635);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnClose.Location = new System.Drawing.Point(408, 516);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(126, 37);
+            this.btnClose.Size = new System.Drawing.Size(94, 30);
             this.btnClose.TabIndex = 17;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -50,20 +50,22 @@
             // ctrlEmployeeCard1
             // 
             this.ctrlEmployeeCard1.Location = new System.Drawing.Point(0, 0);
+            this.ctrlEmployeeCard1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ctrlEmployeeCard1.Name = "ctrlEmployeeCard1";
-            this.ctrlEmployeeCard1.Size = new System.Drawing.Size(535, 680);
+            this.ctrlEmployeeCard1.Size = new System.Drawing.Size(401, 552);
             this.ctrlEmployeeCard1.TabIndex = 18;
             // 
             // frmEmployeeInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(683, 686);
+            this.ClientSize = new System.Drawing.Size(512, 557);
             this.Controls.Add(this.ctrlEmployeeCard1);
             this.Controls.Add(this.btnClose);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmEmployeeInfo";
-            this.Text = "Form1";
+            this.Text = "frmEmployeeInfo";
             this.Load += new System.EventHandler(this.frmEmployeeInfo_Load);
             this.ResumeLayout(false);
 
