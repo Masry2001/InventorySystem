@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using SharedUtilities;
 using System.Runtime.CompilerServices;
 using System.Reflection;
+using System.Linq;
 
 namespace Inventory_DAL
 {
@@ -132,6 +133,71 @@ namespace Inventory_DAL
         }
 
 
+        protected static bool UpdateEntity(string tableName, int ID, Dictionary<string, object> columnsToUpdate,
+                                     [CallerMemberName] string methodName = "", [CallerFilePath] string filePath = "")
+        {
+            if (columnsToUpdate == null || columnsToUpdate.Count == 0)
+            {
+                throw new ArgumentException("No columns provided for update.");
+            }
+
+            using (SqlConnection connection = GetConnection())
+            {
+
+                // Define the correct primary key for each table
+                Dictionary<string, string> primaryKeyMap = new Dictionary<string, string>
+                {
+                    { "People", "PersonID" },
+                    { "Employees", "EmployeeID" },
+                    { "Customers", "CustomerID" },
+                    { "Suppliers", "SupplierID" }
+                };
+
+                // Ensure the table name exists in the dictionary
+                if (!primaryKeyMap.TryGetValue(tableName, out string primaryKey))
+                {
+                    throw new ArgumentException($"Invalid table name: {tableName}");
+                }
+
+                // Constructing update query dynamically
+                string setClause = string.Join(", ", columnsToUpdate.Keys.Select(col => $"{col} = @{col}"));
+                string query = $"UPDATE {tableName} SET {setClause} WHERE {primaryKey} = @ID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    // Add column parameters
+                    foreach (var column in columnsToUpdate)
+                    {
+                        command.Parameters.AddWithValue($"@{column.Key}", column.Value ?? DBNull.Value);
+                    }
+
+                    // Add ID parameter
+                    command.Parameters.AddWithValue("@ID", ID);
+
+                    int rowsAffected = 0;   
+                    try
+                    {
+                        rowsAffected = command.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            LogHelper.LogInfo($"Update successful in {filePath}, Method: {methodName}");
+                            return true;
+                        }
+                        else
+                        {
+                            LogHelper.LogWarning($"No rows were updated in {filePath}, Method: {methodName}");
+                            return false; // Explicitly return false when no update occurs
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        LogHelper.LogError($"An error occurred while updating table '{tableName}'.", ex, methodName, filePath);
+                        throw; // Rethrow exception
+                    }
+                }
+            }
+        }
 
         protected static int GetPersonIdByEntityId(string tableName, string idColumnName, int entityId,
                                            [CallerMemberName] string methodName = "", [CallerFilePath] string filePath = "")

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Inventory_DAL;
 using BusinessUtilities;
+using System.Xml.Linq;
 
 namespace Inventory_Business
 {
@@ -21,11 +22,21 @@ namespace Inventory_Business
         public string Email { get; set; }
         public string Address { get; set; }
 
+        public enum enMode { AddNew = 0, Update = 1 };
+        public enMode Mode = enMode.AddNew;
+
 
 
         public clsPersonManager()
         {
             // Initialize with default values if necessary
+            PersonId = -1;
+            Name = "";
+            Phone = "";
+            Email = "";
+            Address = "";
+            Mode = enMode.AddNew;
+
         }
 
         // Parameterized Constructor to Initialize Fields
@@ -36,6 +47,7 @@ namespace Inventory_Business
             Phone = phone;
             Email = email;
             Address = address;
+            Mode = enMode.Update;
         }
 
         // Validation Methods
@@ -88,6 +100,53 @@ namespace Inventory_Business
         }
 
 
+        private bool _AddNewPerson()
+        {
+            //call DataAccess Layer 
+
+            //this.PersonID = clsPeopleDAL.AddNewPerson(
+            //    this.FirstName, this.SecondName, this.ThirdName,
+            //    this.LastName, this.NationalNo,
+            //    this.DateOfBirth, this.Gendor, this.Address, this.Phone, this.Email,
+            //    this.NationalityCountryID, this.ImagePath);
+
+            //return (this.PersonID != -1);
+            return false;
+        }
+
+        private bool _UpdatePerson()
+        {
+            //call DataAccess Layer 
+
+            return clsPeopleDAL.UpdatePerson(
+                this.PersonId, this.Name, this.Phone, this.Email,
+                this.Address);
+        }
+
+        public bool SavePerson()
+        {
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewPerson())
+                    {
+
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case enMode.Update:
+
+                    return _UpdatePerson();
+
+            }
+
+            return false;
+        }
 
 
 

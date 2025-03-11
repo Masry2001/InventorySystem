@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Runtime.CompilerServices;
@@ -54,6 +53,41 @@ namespace SharedUtilities
             }
         }
 
+
+
+
+
+        public static void LogWarning(string message,
+                                  [CallerMemberName] string methodName = "",
+                                  [CallerFilePath] string filePath = "")
+        {
+            try
+            {
+                // Create event source if it does not exist
+                if (!EventLog.SourceExists(SourceName))
+                {
+                    EventLog.CreateEventSource(SourceName, LogName);
+                }
+
+                // Extract file name and project name for context
+                string fileName = Path.GetFileName(filePath);
+                string projectName = Path.GetFileName(Path.GetDirectoryName(filePath));
+
+                // Compose detailed log message
+                string logMessage = $"{DateTime.Now:G} | {projectName}::{fileName}::{methodName}: {message}";
+
+                // Write to event log
+                EventLog.WriteEntry(SourceName, logMessage, EventLogEntryType.Warning);
+
+                // Optional: Write to console for debugging purposes
+                Console.WriteLine(logMessage);
+            }
+            catch (Exception loggingEx)
+            {
+                // Fallback logging if EventLog fails
+                Console.WriteLine("Logging failed: " + loggingEx.Message);
+            }
+        }
         /// <summary>
         /// Logs an informational message.
         /// </summary>

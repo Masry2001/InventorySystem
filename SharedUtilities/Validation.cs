@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace SharedUtilities
 {
-
-
 
     public static class Validation
     {
@@ -25,6 +19,7 @@ namespace SharedUtilities
 
             return Regex.IsMatch(emailAddress, pattern);
         }
+
         public static bool IsValidPhone(string Phone)
         {
             if (string.IsNullOrEmpty(Phone))
@@ -57,6 +52,19 @@ namespace SharedUtilities
         {
             return (ValidateInteger(Number) || ValidateFloat(Number));
         }
+
+        
+        public static bool IsValidSalary(string Salary)
+        {
+            if (string.IsNullOrEmpty(Salary))
+            {
+                return true;
+            }
+            string pattern = @"^\d{1,9}(\.\d{1,2})?$"; // Matches Salary with 2 decimal points
+            return Regex.IsMatch(Salary, pattern);
+        }
+
+ 
 
 
     }

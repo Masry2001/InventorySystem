@@ -17,6 +17,11 @@ namespace Inventory_DAL
         }
 
 
+        public static bool UpdatePerson(int personId, string name, string phone, string email, string address)
+        {
+            return UpdateEntity("People", personId, new Dictionary<string, object> { { "Name", name }, { "Phone", phone }, { "Email", email }, { "Address", address } });
+        }
+
 
         public static bool GetCustomerById(int customerId, out Dictionary<string, object> customerData)
         {
