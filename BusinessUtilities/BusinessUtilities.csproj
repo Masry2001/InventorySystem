@@ -42,7 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessUtil.cs" />
+    <Compile Include="clsPersonManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Inventory_DAL\Inventory_DAL.csproj">
+      <Project>{48eae4f3-9402-4e89-a109-ebe4b5cb1121}</Project>
+      <Name>Inventory_DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

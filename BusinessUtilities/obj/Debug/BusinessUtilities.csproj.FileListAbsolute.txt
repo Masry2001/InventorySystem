@@ -10,3 +10,8 @@ D:\programming\InventoryProject\Solution\BusinessUtilities\obj\Debug\BusinessUti
 D:\programming\InventoryProject\Solution\BusinessUtilities\obj\Debug\BusinessUtilities.csproj.CoreCompileInputs.cache
 D:\programming\InventoryProject\Solution\BusinessUtilities\obj\Debug\BusinessUtilities.dll
 D:\programming\InventoryProject\Solution\BusinessUtilities\obj\Debug\BusinessUtilities.pdb
+D:\programming\InventoryProject\Solution\BusinessUtilities\bin\Debug\Inventory_DAL.dll
+D:\programming\InventoryProject\Solution\BusinessUtilities\bin\Debug\SharedUtilities.dll
+D:\programming\InventoryProject\Solution\BusinessUtilities\bin\Debug\Inventory_DAL.pdb
+D:\programming\InventoryProject\Solution\BusinessUtilities\bin\Debug\SharedUtilities.pdb
+D:\programming\InventoryProject\Solution\BusinessUtilities\obj\Debug\Business.824DBE79.Up2Date

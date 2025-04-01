@@ -53,10 +53,6 @@ namespace SharedUtilities
             }
         }
 
-
-
-
-
         public static void LogWarning(string message,
                                   [CallerMemberName] string methodName = "",
                                   [CallerFilePath] string filePath = "")
@@ -88,6 +84,7 @@ namespace SharedUtilities
                 Console.WriteLine("Logging failed: " + loggingEx.Message);
             }
         }
+
         /// <summary>
         /// Logs an informational message.
         /// </summary>
@@ -95,13 +92,32 @@ namespace SharedUtilities
                                     [CallerMemberName] string methodName = "",
                                     [CallerFilePath] string filePath = "")
         {
-            string fileName = Path.GetFileName(filePath);
-            string projectName = Path.GetFileName(Path.GetDirectoryName(filePath));
+            try
+            {
+                // Create event source if it does not exist
+                if (!EventLog.SourceExists(SourceName))
+                {
+                    EventLog.CreateEventSource(SourceName, LogName);
+                }
 
-            string logMessage = $"{DateTime.Now:G} | {projectName}::{fileName}::{methodName}: {message}";
+                // Extract file name and project name for context
+                string fileName = Path.GetFileName(filePath);
+                string projectName = Path.GetFileName(Path.GetDirectoryName(filePath));
 
-            // Example: Write to Console (replace with actual implementation if needed)
-            Console.WriteLine(logMessage);
+                // Compose detailed log message
+                string logMessage = $"{DateTime.Now:G} | {projectName}::{fileName}::{methodName}: {message}";
+
+                // Write to event log
+                EventLog.WriteEntry(SourceName, logMessage, EventLogEntryType.Information);
+
+                // Optional: Write to console for debugging purposes
+                Console.WriteLine(logMessage);
+            }
+            catch (Exception loggingEx)
+            {
+                // Fallback logging if EventLog fails
+                Console.WriteLine("Logging failed: " + loggingEx.Message);
+            }
         }
     }
 }

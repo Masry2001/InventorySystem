@@ -36,10 +36,25 @@ namespace Inventory_Business
         // Derived property to get a formatted "Active" status
         //// Expression-bodied read-only property
         public string ActiveStatus => IsActive ? "Active" : "Inactive";
+
+        public enum enMode { AddNew = 0, Update = 1 };
+        public enMode Mode = enMode.AddNew;
         // Constructor
         public clsEmployeeManager()
         {
             // Initialize with default values if necessary
+            EmployeeID = -1;
+            PersonID = -1;
+            PersonInfo = new clsPersonManager();
+            Designation = "";
+            Department = "";
+            Salary = 0;
+            Notes = "";
+            IsActive = true;
+            CreatedDate = DateTime.Now;
+            ModifiedDate = DateTime.Now;
+            Mode = enMode.AddNew;
+
         }
 
         // Parameterized Constructor
@@ -55,6 +70,7 @@ namespace Inventory_Business
             IsActive = isActive;
             CreatedDate = createdDate;
             ModifiedDate = modifiedDate;
+            Mode = enMode.Update;
         }
         public string GetInfo()
         {
@@ -65,14 +81,6 @@ namespace Inventory_Business
         {
             return clsEmployeesDAL.GetAllEmployeesAsDataTable();
         }
-
-
-        // No Need For This Method
-        public static int GetPersonIdByEmployeeId(int employeeId)
-        {
-            return clsEmployeesDAL.GetPersonIdByEmployeeId(employeeId);
-        }
-
 
 
         public static clsEmployeeManager GetEmployee(int employeeId)
@@ -100,6 +108,55 @@ namespace Inventory_Business
         }
 
 
+        private bool _AddNewEmployee()
+        {
+            //call DataAccess Layer 
+
+            //this.PersonID = clsPeopleDAL.AddNewPerson(
+            //    this.FirstName, this.SecondName, this.ThirdName,
+            //    this.LastName, this.NationalNo,
+            //    this.DateOfBirth, this.Gendor, this.Address, this.Phone, this.Email,
+            //    this.NationalityCountryID, this.ImagePath);
+
+            //return (this.PersonID != -1);
+            return false;
+        }
+
+        private bool _UpdateEmployee()
+        {
+            //call DataAccess Layer 
+
+
+
+            return clsEmployeesDAL.UpdateEmployee(
+                this.EmployeeID, this.PersonID, this.Designation, this.Department, this.Salary, this.Notes, this.IsActive, this.CreatedDate, this.ModifiedDate);
+        }
+
+
+        public bool SaveEmployee()
+        {
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    if (_AddNewEmployee())
+                    {
+
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+                case enMode.Update:
+
+                    return _UpdateEmployee();
+
+            }
+
+            return false;
+        }
 
 
 
