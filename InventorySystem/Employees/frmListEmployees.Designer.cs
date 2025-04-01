@@ -48,13 +48,15 @@
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.deActivateEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
-            this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblRecordsCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbIsActive = new System.Windows.Forms.ComboBox();
             this.cbSalary = new System.Windows.Forms.ComboBox();
+            this.activateEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
+            this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployeesImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -180,6 +182,7 @@
             this.dgvEmployees.TabIndex = 94;
             this.dgvEmployees.TabStop = false;
             this.dgvEmployees.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployees_CellDoubleClick);
+            this.dgvEmployees.SelectionChanged += new System.EventHandler(this.dgvEmployees_SelectionChanged);
             // 
             // contextMenuStrip1
             // 
@@ -193,10 +196,12 @@
             this.toolStripMenuItem2,
             this.deActivateEmployeeToolStripMenuItem,
             this.toolStripMenuItem3,
-            this.deleteEmployeeToolStripMenuItem,
-            this.toolStripMenuItem4});
+            this.toolStripMenuItem4,
+            this.activateEmployeeToolStripMenuItem,
+            this.toolStripMenuItem6,
+            this.deleteEmployeeToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(271, 162);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(271, 200);
             // 
             // toolStripMenuItem5
             // 
@@ -220,6 +225,7 @@
             this.updateEmployeeToolStripMenuItem.Name = "updateEmployeeToolStripMenuItem";
             this.updateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(270, 32);
             this.updateEmployeeToolStripMenuItem.Text = "Update Employee";
+            this.updateEmployeeToolStripMenuItem.Click += new System.EventHandler(this.updateEmployeeToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -231,17 +237,12 @@
             this.deActivateEmployeeToolStripMenuItem.Name = "deActivateEmployeeToolStripMenuItem";
             this.deActivateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(270, 32);
             this.deActivateEmployeeToolStripMenuItem.Text = "DeActivate Employee";
+            this.deActivateEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deActivateEmployeeToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(267, 6);
-            // 
-            // deleteEmployeeToolStripMenuItem
-            // 
-            this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
-            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(270, 32);
-            this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
             // 
             // toolStripMenuItem4
             // 
@@ -314,6 +315,25 @@
             this.cbSalary.Visible = false;
             this.cbSalary.SelectedIndexChanged += new System.EventHandler(this.cbSalary_SelectedIndexChanged);
             // 
+            // activateEmployeeToolStripMenuItem
+            // 
+            this.activateEmployeeToolStripMenuItem.Name = "activateEmployeeToolStripMenuItem";
+            this.activateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(270, 32);
+            this.activateEmployeeToolStripMenuItem.Text = "Activate Employee";
+            this.activateEmployeeToolStripMenuItem.Click += new System.EventHandler(this.activateEmployeeToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(267, 6);
+            // 
+            // deleteEmployeeToolStripMenuItem
+            // 
+            this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
+            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(270, 32);
+            this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
+            this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
+            // 
             // frmListEmployees
             // 
             this.AcceptButton = this.btnAddEmployee;
@@ -367,7 +387,9 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem deActivateEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem deleteEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem activateEmployeeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem deleteEmployeeToolStripMenuItem;
     }
 }

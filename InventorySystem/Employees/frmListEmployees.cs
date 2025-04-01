@@ -187,5 +187,108 @@ namespace InventorySystem.Employees
             }
         }
 
+        private void updateEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+                OpenEmployeeInfo();
+            
+        }
+
+        private void deActivateEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvEmployees.SelectedRows.Count > 0)
+            {
+                int employeeId = Convert.ToInt32(dgvEmployees.SelectedRows[0].Cells["EmployeeID"].Value);
+                clsEmployeeManager employee = clsEmployeeManager.GetEmployee(employeeId);
+
+                if (!employee.IsActive) // Employee is already inactive
+                {
+                    MessageBox.Show("Employee is already inactive.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                // Deactivate Employee
+                employee.IsActive = false;
+                if (employee.SaveEmployee())
+                {
+                    MessageBox.Show("Employee has been deactivated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _RefreshEmployeesList();
+                    UpdateMenuItemsState(); // Ensure UI reflects changes
+                }
+                else
+                {
+                    MessageBox.Show("Failed to deactivate employee.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an employee.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void activateEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (dgvEmployees.SelectedRows.Count > 0)
+            {
+                int employeeId = Convert.ToInt32(dgvEmployees.SelectedRows[0].Cells["EmployeeID"].Value);
+                clsEmployeeManager employee = clsEmployeeManager.GetEmployee(employeeId);
+
+                if (employee.IsActive) // Employee is already active
+                {
+                    MessageBox.Show("Employee is already active.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+                // Activate Employee
+                employee.IsActive = true;
+                if (employee.SaveEmployee())
+                {
+                    MessageBox.Show("Employee has been activated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _RefreshEmployeesList();
+                    UpdateMenuItemsState(); // Ensure UI reflects changes
+                }
+                else
+                {
+                    MessageBox.Show("Failed to activate employee.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an employee.", "Selection Required", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        // This method is triggered when the selection in DataGridView changes
+        private void dgvEmployees_SelectionChanged(object sender, EventArgs e)
+        {
+            UpdateMenuItemsState();
+        }
+
+        // This method ensures correct enabling/disabling of menu items
+        private void UpdateMenuItemsState()
+        {
+            if (dgvEmployees.SelectedRows.Count > 0)
+            {
+                int employeeId = Convert.ToInt32(dgvEmployees.SelectedRows[0].Cells["EmployeeID"].Value);
+                clsEmployeeManager employee = clsEmployeeManager.GetEmployee(employeeId);
+
+                // If employee is active, allow deactivation but disable activation
+                deActivateEmployeeToolStripMenuItem.Enabled = employee.IsActive;
+                activateEmployeeToolStripMenuItem.Enabled = !employee.IsActive;
+            }
+            else
+            {
+                // No employee selected, disable both options
+                deActivateEmployeeToolStripMenuItem.Enabled = false;
+                activateEmployeeToolStripMenuItem.Enabled = false;
+            }
+        }
+
+
+
+        private void deleteEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
