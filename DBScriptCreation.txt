@@ -1,0 +1,21 @@
+Step 1: Generate the Database Schema Script
+In SQL Server Management Studio (SSMS):
+
+Open your database in SSMS.
+Right-click the database you want to export.
+Select Tasks > Generate Scripts.
+Configure the Generate Scripts Wizard:
+
+Choose Objects:
+Select the specific objects you want to script (e.g., Tables, Stored Procedures, Views, etc.) or select the entire database.
+Set Script Options:
+In the Set Scripting Options step, choose Save to file.
+Click Advanced and ensure the following settings are configured:
+Types of data to script: Schema and Data (this includes both the structure and the data).
+Script for Server Version: Select the appropriate SQL Server version.
+Script DROP and CREATE: Set to Script DROP and CREATE if you want the script to drop existing objects before recreating them.
+Complete the wizard to generate your script.
+Save the Script:
+
+Save the script file, for example: DatabaseSchemaAndData.sql.
+Commit this file to your repository.
