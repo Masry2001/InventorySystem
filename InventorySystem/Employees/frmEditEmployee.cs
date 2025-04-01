@@ -116,9 +116,48 @@ namespace InventorySystem.Employees
         }
 
 
+        public void SaveEmployeeData()
+        {
+            if (_Employee == null) return;
+
+            _Employee.Designation = txtDesignation.Text;
+            _Employee.Department = txtDepartment.Text;
+            if (decimal.TryParse(txtSalary.Text, out decimal salary))
+            {
+                _Employee.Salary = salary;
+            }
 
 
+            _Employee.Notes = txtNotes.Text;
+            _Employee.IsActive = chkIsActive.Checked;
+            _Employee.CreatedDate = dtpCreationDate.Value;
+            _Employee.ModifiedDate = dtpModifiedDate.Value;
 
+            _Employee.Mode = clsEmployeeManager.enMode.Update;
+
+            if (_Employee.SaveEmployee())
+            {
+                MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (!this.ValidateChildren())
+            {
+
+                //Here we dont continue becuase the form is not valid
+                MessageBox.Show("Some fileds are not valide!, put the mouse over the red icon(s) to see the erro", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+
+            SaveEmployeeData();
+        }
     }
 
 

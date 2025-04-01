@@ -149,6 +149,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessUtilities\BusinessUtilities.csproj">
+      <Project>{79562a26-5158-4d1e-9ed1-132b300837c3}</Project>
+      <Name>BusinessUtilities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Inventory_Business\Inventory_Business.csproj">
       <Project>{df34f6a5-ead2-4633-a2d8-be0926c14d1d}</Project>
       <Name>Inventory_Business</Name>

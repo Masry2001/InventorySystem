@@ -112,5 +112,10 @@ namespace InventorySystem.Utilities
         {
             PresentationUtility.ValidatePhone(sender, errorProvider1, e);
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
