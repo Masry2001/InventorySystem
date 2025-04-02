@@ -199,6 +199,54 @@ namespace Inventory_DAL
             }
         }
 
+
+        protected static bool DeleteEntity(string tableName, int ID,
+                                         [CallerMemberName] string methodName = "", [CallerFilePath] string filePath = "")
+        {
+            using (SqlConnection connection = GetConnection())
+            {
+                Dictionary<string, string> primaryKeyMap = new Dictionary<string, string>
+                {
+                    { "People", "PersonID" },
+                    { "Employees", "EmployeeID" },
+                    { "Customers", "CustomerID" },
+                    { "Suppliers", "SupplierID" }
+                };
+
+                if (!primaryKeyMap.TryGetValue(tableName, out string primaryKey))
+                {
+                    LogHelper.LogError($"Invalid table name: {tableName}", null, methodName, filePath);
+                    return false;
+                }
+
+                string query = $"DELETE FROM {tableName} WHERE {primaryKey} = @ID";
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@ID", ID);
+                    try
+                    {
+                        int rowsAffected = command.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            LogHelper.LogInfo($"Delete successful in {filePath}, Method: {methodName}");
+                            return true;
+                        }
+                        else
+                        {
+                            LogHelper.LogWarning($"No rows were deleted in {filePath}, Method: {methodName}");
+                            return false;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        LogHelper.LogError($"An error occurred while deleting from table '{tableName}'.", ex, methodName, filePath);
+                        return false;
+                    }
+                }
+            }
+        }
+
+
         protected static int GetPersonIdByEntityId(string tableName, string idColumnName, int entityId,
                                            [CallerMemberName] string methodName = "", [CallerFilePath] string filePath = "")
         {

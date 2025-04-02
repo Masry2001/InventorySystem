@@ -291,7 +291,21 @@ namespace InventorySystem.Employees
 
         private void deleteEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Are you sure you want to delete Employee [" + dgvEmployees.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
 
+            {
+
+                //Perform Delele and refresh
+                if (clsEmployeeManager.DeleteEmployee((int)dgvEmployees.CurrentRow.Cells[0].Value))
+                {
+                    MessageBox.Show("Employee Deleted Successfully.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _RefreshEmployeesList();
+                }
+
+                else
+                    MessageBox.Show("Employee was not deleted because it has data linked to it.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
     }
 }

@@ -133,6 +133,12 @@ namespace Inventory_Business
         }
 
 
+
+        public static bool DeleteEmployee(int ID)
+        {
+            return clsEmployeesDAL.DeleteEmployee(ID);
+        }
+
         public bool SaveEmployee()
         {
             switch (Mode)
