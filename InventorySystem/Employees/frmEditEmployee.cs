@@ -53,6 +53,7 @@ namespace InventorySystem.Employees
         private void frmEditEmployee_Load(object sender, EventArgs e)
         {
             LoadEmployeeData();
+            dtpModifiedDate.Enabled = false;
 
         }
 
@@ -131,6 +132,8 @@ namespace InventorySystem.Employees
             _Employee.Notes = txtNotes.Text;
             _Employee.IsActive = chkIsActive.Checked;
             _Employee.CreatedDate = dtpCreationDate.Value;
+
+            dtpModifiedDate.Value = DateTime.Now;
             _Employee.ModifiedDate = dtpModifiedDate.Value;
 
             _Employee.Mode = clsEmployeeManager.enMode.Update;

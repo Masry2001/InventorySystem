@@ -209,6 +209,7 @@ namespace InventorySystem.Employees
 
                 // Deactivate Employee
                 employee.IsActive = false;
+                employee.ModifiedDate = DateTime.Now;
                 if (employee.SaveEmployee())
                 {
                     MessageBox.Show("Employee has been deactivated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -241,6 +242,8 @@ namespace InventorySystem.Employees
 
                 // Activate Employee
                 employee.IsActive = true;
+                employee.ModifiedDate = DateTime.Now;
+
                 if (employee.SaveEmployee())
                 {
                     MessageBox.Show("Employee has been activated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

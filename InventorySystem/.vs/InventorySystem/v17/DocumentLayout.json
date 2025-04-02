@@ -7,16 +7,20 @@
       "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmlistemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\employees\\frmlistemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|D:\\programming\\InventoryProject\\Solution\\InventorySystem\\employees\\frmlistemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmlistemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\employees\\frmlistemployees.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmlistemployees.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|D:\\programming\\InventoryProject\\Solution\\InventorySystem\\employees\\frmeditemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmeditemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\employees\\frmeditemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmeditemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\employees\\frmeditemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmeditemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\employees\\frmemployeeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmemployeeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,16 +50,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmListEmployees.Designer.cs",
-              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmListEmployees.Designer.cs",
-              "RelativeDocumentMoniker": "Employees\\frmListEmployees.Designer.cs",
-              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmListEmployees.Designer.cs",
-              "RelativeToolTip": "Employees\\frmListEmployees.Designer.cs",
-              "ViewState": "AgIAAOcAAAAAAAAAAAAAAPsAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "frmEmployeeInfo.cs [Design]",
+              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmEmployeeInfo.cs",
+              "RelativeDocumentMoniker": "Employees\\frmEmployeeInfo.cs",
+              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmEmployeeInfo.cs [Design]",
+              "RelativeToolTip": "Employees\\frmEmployeeInfo.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T19:27:42.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-02T12:14:27.588Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmEditEmployee.cs [Design]",
+              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmEditEmployee.cs",
+              "RelativeDocumentMoniker": "Employees\\frmEditEmployee.cs",
+              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmEditEmployee.cs [Design]",
+              "RelativeToolTip": "Employees\\frmEditEmployee.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-02T12:08:36.594Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -65,7 +80,7 @@
               "RelativeDocumentMoniker": "Employees\\frmListEmployees.cs",
               "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmListEmployees.cs",
               "RelativeToolTip": "Employees\\frmListEmployees.cs",
-              "ViewState": "AgIAAAwBAAAAAAAAAAAewBwBAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAN8AAAAAAAAAAAAUwPUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T19:20:33.049Z",
               "EditorCaption": ""
@@ -84,13 +99,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "frmEditEmployee.cs",
               "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmEditEmployee.cs",
               "RelativeDocumentMoniker": "Employees\\frmEditEmployee.cs",
               "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmEditEmployee.cs",
               "RelativeToolTip": "Employees\\frmEditEmployee.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAqwG8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAAwHcAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T19:09:24.785Z",
               "EditorCaption": ""
