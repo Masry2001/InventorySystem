@@ -49,14 +49,14 @@
             this.deActivateEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
+            this.activateEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
+            this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblRecordsCount = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbIsActive = new System.Windows.Forms.ComboBox();
             this.cbSalary = new System.Windows.Forms.ComboBox();
-            this.activateEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
-            this.deleteEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pbEmployeesImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmployees)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -137,6 +137,7 @@
             this.btnAddEmployee.Size = new System.Drawing.Size(135, 55);
             this.btnAddEmployee.TabIndex = 93;
             this.btnAddEmployee.UseVisualStyleBackColor = true;
+            this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
             // 
             // dgvEmployees
             // 
@@ -249,6 +250,25 @@
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
             this.toolStripMenuItem4.Size = new System.Drawing.Size(267, 6);
             // 
+            // activateEmployeeToolStripMenuItem
+            // 
+            this.activateEmployeeToolStripMenuItem.Name = "activateEmployeeToolStripMenuItem";
+            this.activateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(270, 32);
+            this.activateEmployeeToolStripMenuItem.Text = "Activate Employee";
+            this.activateEmployeeToolStripMenuItem.Click += new System.EventHandler(this.activateEmployeeToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(267, 6);
+            // 
+            // deleteEmployeeToolStripMenuItem
+            // 
+            this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
+            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(270, 32);
+            this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
+            this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
+            // 
             // btnClose
             // 
             this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -314,25 +334,6 @@
             this.cbSalary.TabIndex = 105;
             this.cbSalary.Visible = false;
             this.cbSalary.SelectedIndexChanged += new System.EventHandler(this.cbSalary_SelectedIndexChanged);
-            // 
-            // activateEmployeeToolStripMenuItem
-            // 
-            this.activateEmployeeToolStripMenuItem.Name = "activateEmployeeToolStripMenuItem";
-            this.activateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(270, 32);
-            this.activateEmployeeToolStripMenuItem.Text = "Activate Employee";
-            this.activateEmployeeToolStripMenuItem.Click += new System.EventHandler(this.activateEmployeeToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(267, 6);
-            // 
-            // deleteEmployeeToolStripMenuItem
-            // 
-            this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
-            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(270, 32);
-            this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
-            this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
             // 
             // frmListEmployees
             // 

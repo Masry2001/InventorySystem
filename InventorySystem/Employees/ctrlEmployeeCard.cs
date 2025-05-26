@@ -85,5 +85,10 @@ namespace InventorySystem.Employees
             LoadEmployeeData(_EmployeeID);
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -54,6 +54,7 @@
             this.ctrlEmployeeCard1.Name = "ctrlEmployeeCard1";
             this.ctrlEmployeeCard1.Size = new System.Drawing.Size(671, 679);
             this.ctrlEmployeeCard1.TabIndex = 18;
+            this.ctrlEmployeeCard1.Load += new System.EventHandler(this.ctrlEmployeeCard1_Load);
             // 
             // frmEmployeeInfo
             // 

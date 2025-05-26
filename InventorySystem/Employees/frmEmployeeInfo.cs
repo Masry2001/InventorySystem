@@ -36,5 +36,10 @@ namespace InventorySystem.Employees
         {
             this.Close();
         }
+
+        private void ctrlEmployeeCard1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

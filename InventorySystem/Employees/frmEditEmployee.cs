@@ -161,6 +161,11 @@ namespace InventorySystem.Employees
 
             SaveEmployeeData();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 
 

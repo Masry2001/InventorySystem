@@ -307,5 +307,10 @@ namespace InventorySystem.Employees
 
             }
         }
+
+        private void btnAddEmployee_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

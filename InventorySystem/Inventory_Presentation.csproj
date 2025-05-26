@@ -55,6 +55,12 @@
     <Compile Include="Employees\ctrlEmployeeCard.Designer.cs">
       <DependentUpon>ctrlEmployeeCard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employees\frmAddEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employees\frmAddEmployee.Designer.cs">
+      <DependentUpon>frmAddEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employees\frmEditEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
