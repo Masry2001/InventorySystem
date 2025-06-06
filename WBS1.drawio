@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/26.2.2 Chrome/134.0.6998.178 Electron/35.1.2 Safari/537.36" version="26.2.2">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
-    <mxGraphModel dx="10466" dy="1176" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="10246" dy="1058" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
@@ -643,7 +643,7 @@
         <mxCell id="65cO1v7DSOVo5D8rHl5I-72" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ou1Um3V3Lqt0a47ZtSMg-18" target="ou1Um3V3Lqt0a47ZtSMg-21" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="C0AuJhxQYPkVt5SnDvR3-2" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ou1Um3V3Lqt0a47ZtSMg-18" target="C0AuJhxQYPkVt5SnDvR3-1">
+        <mxCell id="C0AuJhxQYPkVt5SnDvR3-2" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ou1Um3V3Lqt0a47ZtSMg-18" target="C0AuJhxQYPkVt5SnDvR3-1" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ou1Um3V3Lqt0a47ZtSMg-18" value="frmListEmployees" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
@@ -774,14 +774,50 @@
         <mxCell id="JhYFZ3ytualBZ-5gvpQC-15" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.541;entryY=0.026;entryDx=0;entryDy=0;entryPerimeter=0;fontSize=16;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="JhYFZ3ytualBZ-5gvpQC-13" target="JhYFZ3ytualBZ-5gvpQC-14" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="C0AuJhxQYPkVt5SnDvR3-0" value="Delete Employee" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="C0AuJhxQYPkVt5SnDvR3-0" value="Delete Employee" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-6720" y="4120" width="180" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="C0AuJhxQYPkVt5SnDvR3-1" value="frmAddEmployee" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="C0AuJhxQYPkVt5SnDvR3-1" value="frmAddEmployee" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="-7240" y="4120" width="180" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="C0AuJhxQYPkVt5SnDvR3-3" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.6;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ou1Um3V3Lqt0a47ZtSMg-18" target="C0AuJhxQYPkVt5SnDvR3-0">
+        <mxCell id="C0AuJhxQYPkVt5SnDvR3-3" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.6;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ou1Um3V3Lqt0a47ZtSMg-18" target="C0AuJhxQYPkVt5SnDvR3-0" edge="1">
           <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9JtRrjdEGw4XhnF6AaKr-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=20;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="9JtRrjdEGw4XhnF6AaKr-0" target="9JtRrjdEGw4XhnF6AaKr-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9JtRrjdEGw4XhnF6AaKr-0" value="Form Validation" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-6970" y="5400" width="240" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="9JtRrjdEGw4XhnF6AaKr-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="9JtRrjdEGw4XhnF6AaKr-1" target="9JtRrjdEGw4XhnF6AaKr-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9JtRrjdEGw4XhnF6AaKr-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=20;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="9JtRrjdEGw4XhnF6AaKr-1" target="9JtRrjdEGw4XhnF6AaKr-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9JtRrjdEGw4XhnF6AaKr-1" value="Presentation Utility Validations In Utilites Folder" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-7040" y="5655" width="380" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="9JtRrjdEGw4XhnF6AaKr-2" value="Validation In SharedUtilites Class Library" style="whiteSpace=wrap;html=1;rounded=0;fontSize=20;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-7150" y="5900" width="231" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9JtRrjdEGw4XhnF6AaKr-4" value="Validation Messages In Utilites Folder" style="whiteSpace=wrap;html=1;rounded=0;fontSize=20;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-6750" y="5900" width="240" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="9JtRrjdEGw4XhnF6AaKr-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="9JtRrjdEGw4XhnF6AaKr-7" target="9JtRrjdEGw4XhnF6AaKr-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9JtRrjdEGw4XhnF6AaKr-7" value="In Your Class Or Form Read Data From ConfigHelper" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-6015" y="5360" width="240" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="9JtRrjdEGw4XhnF6AaKr-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="9JtRrjdEGw4XhnF6AaKr-8" target="9JtRrjdEGw4XhnF6AaKr-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9JtRrjdEGw4XhnF6AaKr-8" value="ConfigHelper Read From App.config" style="rounded=0;whiteSpace=wrap;html=1;fontSize=20;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-6100" y="5620" width="410" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="9JtRrjdEGw4XhnF6AaKr-10" value="Store Data In App.Config" style="whiteSpace=wrap;html=1;fontSize=20;rounded=0;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-6090" y="5895" width="390" height="175" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

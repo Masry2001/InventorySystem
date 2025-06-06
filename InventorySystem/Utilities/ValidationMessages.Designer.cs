@@ -61,11 +61,29 @@ namespace InventorySystem.Utilities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Created Date cannot be After Modified Date..
+        /// </summary>
+        internal static string Error_CreatedDateAfterModifiedDate {
+            get {
+                return ResourceManager.GetString("Error_CreatedDateAfterModifiedDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid email address format!.
         /// </summary>
         internal static string Error_InvalidEmail {
             get {
                 return ResourceManager.GetString("Error_InvalidEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid Name Format.
+        /// </summary>
+        internal static string Error_InvalidName {
+            get {
+                return ResourceManager.GetString("Error_InvalidName", resourceCulture);
             }
         }
         
@@ -84,6 +102,24 @@ namespace InventorySystem.Utilities {
         internal static string Error_InvalidSalary {
             get {
                 return ResourceManager.GetString("Error_InvalidSalary", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Modified Date cannot be earlier than Created Date..
+        /// </summary>
+        internal static string Error_ModifiedDateBeforeCreatedDate {
+            get {
+                return ResourceManager.GetString("Error_ModifiedDateBeforeCreatedDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Notes Length limit Exceeded.
+        /// </summary>
+        internal static string Error_Notes_LengthLimit {
+            get {
+                return ResourceManager.GetString("Error_Notes_LengthLimit", resourceCulture);
             }
         }
         

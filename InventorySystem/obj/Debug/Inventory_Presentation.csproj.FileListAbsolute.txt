@@ -45,3 +45,6 @@ D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\BusinessUtili
 D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Utilities.frmEditPerson.resources
 D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Utilities.ValidationMessages.resources
 D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Employees.frmEditEmployee.resources
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Employees.frmAddEmployee.resources
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Utilities.ctrlAddEditPersonInfo.resources
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Employees.ctrlAddEditEmployeeInfo.resources

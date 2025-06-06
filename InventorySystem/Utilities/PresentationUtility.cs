@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+
 
 namespace InventorySystem.Utilities
 {
@@ -156,12 +158,35 @@ namespace InventorySystem.Utilities
 
             if (string.IsNullOrEmpty(textBox.Text.Trim()))
             {
-                e.Cancel = true;
-                errorProvider.SetError(textBox, ValidationMessages.Error_RequiredField);
+                //e.Cancel = true;
+                // commented becuase You’re informing, not blocking.                errorProvider.SetError(textBox, ValidationMessages.Error_RequiredField);
             }
             else
             {
-                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                //e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                errorProvider.SetError(textBox, null); // Clear the error
+            }
+        }
+
+        public static void ValidateName(object sender, ErrorProvider errorProvider, CancelEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            string errorMessage;
+
+            // Validate name using the shared validation method
+            if (!Validation.ValidateName(textBox.Text, out errorMessage))
+            {
+                errorMessage = (errorMessage == "RequiredField")
+                ? ValidationMessages.Error_RequiredField
+                : ValidationMessages.Error_InvalidName;
+
+                //e.Cancel = true;
+                // commented becuase You’re informing, not blocking.
+                errorProvider.SetError(textBox, errorMessage);
+            }
+            else
+            {
+                //e.Cancel = false; // Ensure the cancel flag is reset if validation passes
                 errorProvider.SetError(textBox, null); // Clear the error
             }
         }
@@ -173,12 +198,13 @@ namespace InventorySystem.Utilities
             // Validate email format
             if (!Validation.ValidateEmail(textBox.Text))
             {
-                e.Cancel = true;
+                //e.Cancel = true;
+                // commented becuase You’re informing, not blocking.
                 errorProvider.SetError(textBox, ValidationMessages.Error_InvalidEmail);
             }
             else
             {
-                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                //e.Cancel = false; // Ensure the cancel flag is reset if validation passes
                 errorProvider.SetError(textBox, null); // Clear the error
             }
         }
@@ -190,12 +216,13 @@ namespace InventorySystem.Utilities
 
             if (!Validation.IsValidPhone(textBox.Text))
             {
-                e.Cancel = true;
+                //e.Cancel = true;
+                // commented becuase You’re informing, not blocking.
                 errorProvider.SetError(textBox, ValidationMessages.Error_InvalidPhone);
             }
             else
             {
-                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                //e.Cancel = false; // Ensure the cancel flag is reset if validation passes
                 errorProvider.SetError(textBox, null); // Clear the error
             }
         }
@@ -207,12 +234,13 @@ namespace InventorySystem.Utilities
 
             if (!Validation.IsValidSalary(textBox.Text))
             {
-                e.Cancel = true;
+                //e.Cancel = true;
+                // commented becuase You’re informing, not blocking.
                 errorProvider.SetError(textBox, ValidationMessages.Error_InvalidSalary);
             }
             else
             {
-                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                //e.Cancel = false; // Ensure the cancel flag is reset if validation passes
                 errorProvider.SetError(textBox, null); // Clear the error
             }
         }
@@ -221,13 +249,14 @@ namespace InventorySystem.Utilities
         {
             if (dtpCreatedDate.Value > dtpModifiedDate.Value) // Created Date is AFTER Modified Date
             {
-                errorProvider.SetError(dtpModifiedDate, "Modified Date cannot be earlier than Created Date.");
-                e.Cancel = true; // Prevents losing focus
-                dtpModifiedDate.Focus();
+                //e.Cancel = true;
+                // commented becuase You’re informing, not blocking.
+                //dtpModifiedDate.Focus();
+                errorProvider.SetError(dtpModifiedDate, ValidationMessages.Error_ModifiedDateBeforeCreatedDate);
             }
             else
             {
-                errorProvider.SetError(dtpModifiedDate, ""); // Clears the error if validation passes
+                errorProvider.SetError(dtpModifiedDate, null); // Clears the error if validation passes
             }
         }
 
@@ -235,13 +264,14 @@ namespace InventorySystem.Utilities
         {
             if (dtpCreatedDate.Value > dtpModifiedDate.Value) // Created Date is AFTER Modified Date
             {
-                errorProvider.SetError(dtpCreatedDate, "Created Date cannot be later than Modified Date.");
-                e.Cancel = true; // Prevents losing focus
-                dtpCreatedDate.Focus();
+                errorProvider.SetError(dtpCreatedDate, ValidationMessages.Error_CreatedDateAfterModifiedDate);
+                //e.Cancel = true;
+                // commented becuase You’re informing, not blocking.
+                //dtpModifiedDate.Focus();
             }
             else
             {
-                errorProvider.SetError(dtpCreatedDate, ""); // Clears the error if validation passes
+                errorProvider.SetError(dtpCreatedDate, null); // Clears the error if validation passes
             }
         }
 
@@ -250,14 +280,18 @@ namespace InventorySystem.Utilities
             TextBox textBox = sender as TextBox;
             if (textBox != null)
             {
-                if (textBox.Text.Length > 250)
+
+                //int NotesMaxLength = ConfigurationManager.AppSettings.NotesMaxLength;
+                int NotesMaxLength = ConfigHelper.NotesMaxLength;
+
+                if (textBox.Text.Length > NotesMaxLength)
                 {
-                    errorProvider.SetError(textBox, "Notes should not exceed 250 characters.");
+                    errorProvider.SetError(textBox, ValidationMessages.Error_Notes_LengthLimit + NotesMaxLength);
                     e.Cancel = true; // Prevent focus change
                 }
                 else
                 {
-                    errorProvider.SetError(textBox, ""); // Clear error
+                    errorProvider.SetError(textBox, null); // Clear error
                 }
             }
         }

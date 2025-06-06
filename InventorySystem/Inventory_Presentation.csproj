@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employees\ctrlAddEditEmployeeInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Employees\ctrlAddEditEmployeeInfo.Designer.cs">
+      <DependentUpon>ctrlAddEditEmployeeInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employees\ctrlEmployeeCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ctrlAddEditPersonInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utilities\ctrlAddEditPersonInfo.Designer.cs">
+      <DependentUpon>ctrlAddEditPersonInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utilities\ctrlPersonCard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -105,8 +117,14 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Employees\ctrlAddEditEmployeeInfo.resx">
+      <DependentUpon>ctrlAddEditEmployeeInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Employees\ctrlEmployeeCard.resx">
       <DependentUpon>ctrlEmployeeCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employees\frmAddEmployee.resx">
+      <DependentUpon>frmAddEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employees\frmEditEmployee.resx">
       <DependentUpon>frmEditEmployee.cs</DependentUpon>
@@ -129,6 +147,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Utilities\ctrlAddEditPersonInfo.resx">
+      <DependentUpon>ctrlAddEditPersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Utilities\ctrlPersonCard.resx">
       <DependentUpon>ctrlPersonCard.cs</DependentUpon>
     </EmbeddedResource>
