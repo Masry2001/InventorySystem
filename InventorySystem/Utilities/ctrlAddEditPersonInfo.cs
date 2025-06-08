@@ -23,11 +23,15 @@ namespace InventorySystem.Utilities
             InitializeComponent();
         }
 
+
         private void ctrlAddEditPersonInfo_Load(object sender, EventArgs e)
         {
 
-        }
+            //The Load event is raised after all controls have been created, added to the visual tree, and initialized.
 
+            PresentationUtility.SetTextBoxesMaxLength(this);
+
+        }
 
         public clsPersonManager GetPersonData()
         {
@@ -46,5 +50,23 @@ namespace InventorySystem.Utilities
         {
             PresentationUtility.ValidateName(sender, errorProvider1, e);
         }
+
+        private void txtPhone_Validating(object sender, CancelEventArgs e)
+        {
+            PresentationUtility.ValidatePhone(sender, errorProvider1, e);
+        }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            PresentationUtility.ValidateEmail(sender, errorProvider1, e);
+
+        }
+
+        private void txtAddress_Validating(object sender, CancelEventArgs e)
+        {
+            PresentationUtility.ValidateFieldIsLessThan250Char(sender, errorProvider1, e);
+        }
+
+
     }
 }

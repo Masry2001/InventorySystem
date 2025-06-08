@@ -145,6 +145,6 @@
     <value>Created Date cannot be After Modified Date.</value>
   </data>
   <data name="Error_Notes_LengthLimit" xml:space="preserve">
-    <value>Notes Length limit Exceeded</value>
+    <value>This Field Exceeded The Max Limit Of </value>
   </data>
 </root>

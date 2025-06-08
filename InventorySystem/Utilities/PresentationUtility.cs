@@ -275,23 +275,57 @@ namespace InventorySystem.Utilities
             }
         }
 
-        public static void ValidateNotesIsLessThan250Char(object sender, ErrorProvider errorProvider, CancelEventArgs e)
+        public static void ValidateFieldIsLessThan250Char(object sender, ErrorProvider errorProvider, CancelEventArgs e)
         {
+
+            // This Method Is not Importanct and can be removed
+            // because The TextBox has a MaxLength property that limits the input to 250 characters.
             TextBox textBox = sender as TextBox;
             if (textBox != null)
             {
 
-                //int NotesMaxLength = ConfigurationManager.AppSettings.NotesMaxLength;
-                int NotesMaxLength = ConfigHelper.NotesMaxLength;
+                int Length = ConfigHelper.LengthOf250Char;
+                
 
-                if (textBox.Text.Length > NotesMaxLength)
+                if (textBox.Text.Length > Length)
                 {
-                    errorProvider.SetError(textBox, ValidationMessages.Error_Notes_LengthLimit + NotesMaxLength);
-                    e.Cancel = true; // Prevent focus change
+                    errorProvider.SetError(textBox, ValidationMessages.Error_Notes_LengthLimit + Length);
                 }
                 else
                 {
                     errorProvider.SetError(textBox, null); // Clear error
+                }
+            }
+        }
+
+
+
+
+        private static readonly Dictionary<string, int> TextBoxMaxLengths = new Dictionary<string, int>
+        {
+            // Map textBox names to their respective max length config values
+            { "txtName", ConfigHelper.LengthOf50Char },
+            { "txtPhone", ConfigHelper.LengthOf15Char },
+            { "txtEmail", ConfigHelper.LengthOf50Char },
+            { "txtAddress", ConfigHelper.LengthOf250Char },
+            // Add as needed
+        };
+
+
+
+        public static void SetTextBoxesMaxLength(Control parentControl)
+        {
+            foreach (Control control in parentControl.Controls)
+            {
+                if (control is TextBox textBox && TextBoxMaxLengths.TryGetValue(textBox.Name, out int maxLength))
+                {
+                    textBox.MaxLength = maxLength;
+                }
+
+                // Recursively check inside containers like GroupBox, Panel, TabPage, etc.
+                if (control.HasChildren)
+                {
+                    SetTextBoxesMaxLength(control);
                 }
             }
         }

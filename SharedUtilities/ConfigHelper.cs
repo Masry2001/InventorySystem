@@ -19,17 +19,38 @@ namespace SharedUtilities
         }
 
 
-        public static int NotesMaxLength
+        public static int LengthOf250Char
         {
             get
             {
-                if (int.TryParse(ConfigurationManager.AppSettings["NotesMaxLength"], out int value))
+                if (int.TryParse(ConfigurationManager.AppSettings["LengthOf250Char"], out int value))
                     return value;
                 else
                     return 250;
             }
         }
 
+        public static int LengthOf50Char
+        {
+            get
+            {
+                if (int.TryParse(ConfigurationManager.AppSettings["LengthOf50Char"], out int value))
+                    return value;
+                else
+                    return 50;
+            }
+        }
+
+        public static int LengthOf15Char
+        {
+            get
+            {
+                if (int.TryParse(ConfigurationManager.AppSettings["LengthOf15Char"], out int value))
+                    return value;
+                else
+                    return 15;
+            }
+        }
 
     }
 }

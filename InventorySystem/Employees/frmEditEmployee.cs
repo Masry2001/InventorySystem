@@ -113,7 +113,7 @@ namespace InventorySystem.Employees
 
         private void txtNotes_Validating(object sender, CancelEventArgs e)
         {
-            PresentationUtility.ValidateNotesIsLessThan250Char(sender, errorProvider1, e);
+            PresentationUtility.ValidateFieldIsLessThan250Char(sender, errorProvider1, e);
         }
 
 

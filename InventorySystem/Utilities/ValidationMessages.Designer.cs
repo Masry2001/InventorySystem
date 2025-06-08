@@ -115,7 +115,7 @@ namespace InventorySystem.Utilities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Notes Length limit Exceeded.
+        ///   Looks up a localized string similar to This Field Exceeded The Max Limit Of .
         /// </summary>
         internal static string Error_Notes_LengthLimit {
             get {

@@ -48,11 +48,12 @@
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(123, 201);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtAddress.MaxLength = 50;
+            this.txtAddress.MaxLength = 250;
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(390, 106);
             this.txtAddress.TabIndex = 132;
+            this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txtAddress_Validating);
             // 
             // label12
             // 
@@ -74,6 +75,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(390, 30);
             this.txtEmail.TabIndex = 130;
+            this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // label6
             // 
@@ -91,10 +93,11 @@
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(123, 105);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtPhone.MaxLength = 50;
+            this.txtPhone.MaxLength = 15;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(390, 30);
             this.txtPhone.TabIndex = 128;
+            this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
             // 
             // label4
             // 
