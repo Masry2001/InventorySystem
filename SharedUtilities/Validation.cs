@@ -80,7 +80,7 @@ namespace SharedUtilities
             {
                 return false;
             }
-            string pattern = @"^\d{1,9}(\.\d{1,4})?$"; // Matches Salary with 2 decimal points
+            string pattern = @"^\d{1,9}(\.\d{1,4})?$"; // Matches Salary with 4 decimal points
             return Regex.IsMatch(Salary, pattern);
         }
 

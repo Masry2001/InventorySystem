@@ -30,7 +30,7 @@ namespace Inventory_Business
         public decimal Salary { get; set; }
         public string Notes { get; set; }
         public bool IsActive { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public DateTime CreationDate { get; set; }
         public DateTime ModifiedDate { get; set; }
 
         // Derived property to get a formatted "Active" status
@@ -51,14 +51,14 @@ namespace Inventory_Business
             Salary = 0;
             Notes = "";
             IsActive = true;
-            CreatedDate = DateTime.Now;
+            CreationDate = DateTime.Now;
             ModifiedDate = DateTime.Now;
             Mode = enMode.AddNew;
 
         }
 
         // Parameterized Constructor
-        public clsEmployeeManager(int employeeId, int personId, string designation, string department, decimal salary, string notes, bool isActive, DateTime createdDate, DateTime modifiedDate)
+        public clsEmployeeManager(int employeeId, int personId, string designation, string department, decimal salary, string notes, bool isActive, DateTime CreationDate, DateTime modifiedDate)
         {
             EmployeeID = employeeId;
             PersonID = personId;
@@ -68,7 +68,7 @@ namespace Inventory_Business
             Salary = salary;
             Notes = notes;
             IsActive = isActive;
-            CreatedDate = createdDate;
+            this.CreationDate = CreationDate;
             ModifiedDate = modifiedDate;
             Mode = enMode.Update;
         }
@@ -102,7 +102,7 @@ namespace Inventory_Business
                 (decimal)employeeData["Salary"],
                 BusinessUtil.GetValueOrDefault(employeeData["Notes"].ToString()),
                 (bool)employeeData["IsActive"],
-                (DateTime)employeeData["CreatedDate"],
+                (DateTime)employeeData["CreationDate"],
                 (DateTime)employeeData["ModifiedDate"]
             );
         }
@@ -129,7 +129,7 @@ namespace Inventory_Business
 
 
             return clsEmployeesDAL.UpdateEmployee(
-                this.EmployeeID, this.PersonID, this.Designation, this.Department, this.Salary, this.Notes, this.IsActive, this.CreatedDate, this.ModifiedDate);
+                this.EmployeeID, this.PersonID, this.Designation, this.Department, this.Salary, this.Notes, this.IsActive, this.CreationDate, this.ModifiedDate);
         }
 
 
