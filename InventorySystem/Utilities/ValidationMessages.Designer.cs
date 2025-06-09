@@ -97,7 +97,7 @@ namespace InventorySystem.Utilities {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Enter A Valid Salary With 2 Decimals At Most.
+        ///   Looks up a localized string similar to Enter A Valid Salary With 4 Decimals At Most.
         /// </summary>
         internal static string Error_InvalidSalary {
             get {

@@ -28,50 +28,34 @@ namespace InventorySystem.Employees
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-           
 
-            // Save Person Info
-
-            SavePersonInfo();
-            // Save Employee Info
+            GetEmployeeInfo();
+            //SaveEmployeeInfo();
 
         }
 
 
-        //private void btnSave_Click(object sender, EventArgs e)
-        //{
-        //    bool allValid = true;
 
-        //    if (string.IsNullOrWhiteSpace(txtName.Text))
-        //    {
-        //        errorProvider1.SetError(txtName, "Name is required.");
-        //        allValid = false;
-        //    }
-
-        //    if (string.IsNullOrWhiteSpace(txtEmail.Text))
-        //    {
-        //        errorProvider1.SetError(txtEmail, "Email is required.");
-        //        allValid = false;
-        //    }
-
-        //    // Add more fields as needed...
-
-        //    if (!allValid)
-        //    {
-        //        MessageBox.Show("Please fill in all required fields before saving.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        return;
-        //    }
-
-        //    // Proceed to save...
-        //}
-
-
-        private void SavePersonInfo()
+        private void GetEmployeeInfo()
         {
-           
 
+            // Get Person Data From Control
             _Person = ctrlAddEditPersonInfo1.GetPersonData();
 
+            // Get Employee Data From Control
+            _Employee = ctrlAddEditEmployeeInfo1.GetEmployeeData();
+
+
+        }
+
+        private void SaveEmployeeInfo()
+        {
+            _Person.SavePerson();
+            _Employee.SaveEmployee();
+        }
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
 
         }
     }

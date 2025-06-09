@@ -133,7 +133,7 @@
     <value>Failed To Save Data</value>
   </data>
   <data name="Error_InvalidSalary" xml:space="preserve">
-    <value>Enter A Valid Salary With 2 Decimals At Most</value>
+    <value>Enter A Valid Salary With 4 Decimals At Most</value>
   </data>
   <data name="Error_InvalidName" xml:space="preserve">
     <value>Invalid Name Format</value>

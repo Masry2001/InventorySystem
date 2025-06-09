@@ -158,8 +158,7 @@ namespace InventorySystem.Utilities
 
             if (string.IsNullOrEmpty(textBox.Text.Trim()))
             {
-                //e.Cancel = true;
-                // commented becuase You’re informing, not blocking.                errorProvider.SetError(textBox, ValidationMessages.Error_RequiredField);
+                errorProvider.SetError(textBox, ValidationMessages.Error_RequiredField);
             }
             else
             {
@@ -308,6 +307,7 @@ namespace InventorySystem.Utilities
             { "txtPhone", ConfigHelper.LengthOf15Char },
             { "txtEmail", ConfigHelper.LengthOf50Char },
             { "txtAddress", ConfigHelper.LengthOf250Char },
+            { "txtNotes", ConfigHelper.LengthOf250Char },
             // Add as needed
         };
 
@@ -317,9 +317,17 @@ namespace InventorySystem.Utilities
         {
             foreach (Control control in parentControl.Controls)
             {
-                if (control is TextBox textBox && TextBoxMaxLengths.TryGetValue(textBox.Name, out int maxLength))
+                if (control is TextBox textBox)
                 {
-                    textBox.MaxLength = maxLength;
+                    if (TextBoxMaxLengths.TryGetValue(textBox.Name, out int maxLength))
+                    {
+                        textBox.MaxLength = maxLength;
+                    }
+                    else
+                    {
+                        // Default max length if not explicitly mapped
+                        textBox.MaxLength = ConfigHelper.LengthOf50Char;
+                    }
                 }
 
                 // Recursively check inside containers like GroupBox, Panel, TabPage, etc.
@@ -329,6 +337,7 @@ namespace InventorySystem.Utilities
                 }
             }
         }
+
 
 
 
