@@ -65,7 +65,7 @@ namespace InventorySystem.Employees
                 lblDesignation.Text = _Employee.Designation;
                 lblDepartment.Text = _Employee.Department;
                 lblSalary.Text = Convert.ToString(_Employee.Salary);
-                lblCreationDate.Text = Convert.ToString(_Employee.CreatedDate);
+                lblCreationDate.Text = Convert.ToString(_Employee.CreationDate);
                 lblModifiedDate.Text = Convert.ToString(_Employee.ModifiedDate);
                 lblIsActive.Text = _Employee.ActiveStatus;
                 lblNotes.Text = _Employee.Notes;

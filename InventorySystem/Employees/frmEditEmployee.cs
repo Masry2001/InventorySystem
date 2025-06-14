@@ -69,7 +69,7 @@ namespace InventorySystem.Employees
                 txtSalary.Text = _Employee.Salary.ToString();
                 txtNotes.Text = _Employee.Notes;
                 chkIsActive.Checked = _Employee.IsActive;
-                dtpCreationDate.Value = _Employee.CreatedDate;
+                dtpCreationDate.Value = _Employee.CreationDate;
                 dtpModifiedDate.Value = _Employee.ModifiedDate;
 
 
@@ -131,7 +131,7 @@ namespace InventorySystem.Employees
 
             _Employee.Notes = txtNotes.Text;
             _Employee.IsActive = chkIsActive.Checked;
-            _Employee.CreatedDate = dtpCreationDate.Value;
+            _Employee.CreationDate = dtpCreationDate.Value;
 
             dtpModifiedDate.Value = DateTime.Now;
             _Employee.ModifiedDate = dtpModifiedDate.Value;

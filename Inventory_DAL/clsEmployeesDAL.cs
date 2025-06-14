@@ -47,6 +47,21 @@ namespace Inventory_DAL
             return UpdateEntity("Employees", employeeId, new Dictionary<string, object> { { "Designation", designation }, { "Department", department }, { "Salary", salary }, { "Notes", notes }, { "IsActive", isActive }, { "CreatedDate", createdDate }, { "ModifiedDate", modifiedDate } });
         }
 
+        public static int AddNewEmployee(int personId, string designation, string department, decimal salary, string notes, bool isActive, DateTime createdDate, DateTime modifiedDate)
+        {
+            return AddEntity("Employees", new Dictionary<string, object>
+            {
+                { "PersonID", personId },
+                { "Designation", designation },
+                { "Department", department },
+                { "Salary", salary },
+                { "Notes", notes },
+                { "IsActive", isActive },
+                { "CreatedDate", createdDate },
+                { "ModifiedDate", modifiedDate }
+            });
+        }
+
         public static bool DeleteEmployee(int employeeId)
         {
             return DeleteEntity("Employees", employeeId);

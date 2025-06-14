@@ -30,7 +30,7 @@ namespace InventorySystem.Employees
 
 
             GetEmployeeInfo();
-            //SaveEmployeeInfo();
+            SaveEmployeeInfo();
 
         }
 
@@ -42,6 +42,7 @@ namespace InventorySystem.Employees
             // Get Person Data From Control
             _Person = ctrlAddEditPersonInfo1.GetPersonData();
 
+
             // Get Employee Data From Control
             _Employee = ctrlAddEditEmployeeInfo1.GetEmployeeData();
 
@@ -50,8 +51,28 @@ namespace InventorySystem.Employees
 
         private void SaveEmployeeInfo()
         {
-            _Person.SavePerson();
-            _Employee.SaveEmployee();
+            if (_Person.SavePerson())
+            {
+                _PersonID = _Person.PersonID;
+
+                _Employee.PersonID = _Person.PersonID; 
+
+
+                if (_Employee.SaveEmployee())
+                {
+                    _EmployeeID = _Employee.EmployeeID;
+
+                    MessageBox.Show($"Employee saved successfully EmployeeID: {_EmployeeID}, PersonID: {_PersonID} .");
+                }
+                else
+                {
+                    MessageBox.Show($"Failed to save employee, PersonID: {_PersonID}.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Failed to save person.");
+            }
         }
 
         private void lblTitle_Click(object sender, EventArgs e)

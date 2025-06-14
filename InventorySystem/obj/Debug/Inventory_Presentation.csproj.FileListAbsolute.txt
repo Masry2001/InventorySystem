@@ -48,3 +48,4 @@ D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySyst
 D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Employees.frmAddEmployee.resources
 D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Utilities.ctrlAddEditPersonInfo.resources
 D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Employees.ctrlAddEditEmployeeInfo.resources
+D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.exe.config

@@ -110,16 +110,13 @@ namespace Inventory_Business
 
         private bool _AddNewEmployee()
         {
-            //call DataAccess Layer 
+            //call DataAccess Layer
+            // we have the person ID from the clsPersonmManager class
 
-            //this.PersonID = clsPeopleDAL.AddNewPerson(
-            //    this.FirstName, this.SecondName, this.ThirdName,
-            //    this.LastName, this.NationalNo,
-            //    this.DateOfBirth, this.Gendor, this.Address, this.Phone, this.Email,
-            //    this.NationalityCountryID, this.ImagePath);
 
-            //return (this.PersonID != -1);
-            return false;
+            this.EmployeeID = clsEmployeesDAL.AddNewEmployee(this.PersonID, this.Designation, this.Department, this.Salary, this.Notes, this.IsActive, this.CreationDate, this.ModifiedDate);
+
+            return (this.EmployeeID != -1);
         }
 
         private bool _UpdateEmployee()
