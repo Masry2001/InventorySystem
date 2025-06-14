@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\ctrladdeditemployeeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\employees\\ctrladdeditemployeeinfo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\ctrladdeditemployeeinfo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|D:\\programming\\InventoryProject\\Solution\\InventorySystem\\utilities\\presentationutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:utilities\\presentationutility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -52,7 +56,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -72,20 +76,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ctrlAddEditEmployeeInfo.Designer.cs",
+              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\ctrlAddEditEmployeeInfo.Designer.cs",
+              "RelativeDocumentMoniker": "Employees\\ctrlAddEditEmployeeInfo.Designer.cs",
+              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\ctrlAddEditEmployeeInfo.Designer.cs",
+              "RelativeToolTip": "Employees\\ctrlAddEditEmployeeInfo.Designer.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAQwFwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T00:58:33.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ctrlAddEditEmployeeInfo.cs",
               "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\ctrlAddEditEmployeeInfo.cs",
               "RelativeDocumentMoniker": "Employees\\ctrlAddEditEmployeeInfo.cs",
               "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\ctrlAddEditEmployeeInfo.cs",
               "RelativeToolTip": "Employees\\ctrlAddEditEmployeeInfo.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAA8wDcAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAACsAAAAAAAAAAAAAADwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-09T00:46:27.376Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "PresentationUtility.cs",
               "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Utilities\\PresentationUtility.cs",
               "RelativeDocumentMoniker": "Utilities\\PresentationUtility.cs",
@@ -110,7 +127,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Validation.cs",
               "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\SharedUtilities\\Validation.cs",
               "RelativeDocumentMoniker": "..\\SharedUtilities\\Validation.cs",
@@ -123,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ctrlAddEditPersonInfo.cs",
               "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Utilities\\ctrlAddEditPersonInfo.cs",
               "RelativeDocumentMoniker": "Utilities\\ctrlAddEditPersonInfo.cs",
@@ -136,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ctrlAddEditPersonInfo.cs [Design]",
               "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Utilities\\ctrlAddEditPersonInfo.cs",
               "RelativeDocumentMoniker": "Utilities\\ctrlAddEditPersonInfo.cs",
@@ -147,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "App.config",
               "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\App.config",
               "RelativeDocumentMoniker": "App.config",
@@ -159,7 +176,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ConfigHelper.cs",
               "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\SharedUtilities\\ConfigHelper.cs",
               "RelativeDocumentMoniker": "..\\SharedUtilities\\ConfigHelper.cs",
@@ -171,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ValidationMessages.resx",
               "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Utilities\\ValidationMessages.resx",
               "RelativeDocumentMoniker": "Utilities\\ValidationMessages.resx",
@@ -182,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "frmAddEmployee.cs [Design]",
               "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmAddEmployee.cs",
               "RelativeDocumentMoniker": "Employees\\frmAddEmployee.cs",
@@ -193,7 +210,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "frmAddEmployee.cs",
               "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmAddEmployee.cs",
               "RelativeDocumentMoniker": "Employees\\frmAddEmployee.cs",

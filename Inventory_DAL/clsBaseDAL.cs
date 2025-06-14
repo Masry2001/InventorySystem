@@ -150,7 +150,8 @@ namespace Inventory_DAL
                     { "People", "PersonID" },
                     { "Employees", "EmployeeID" },
                     { "Customers", "CustomerID" },
-                    { "Suppliers", "SupplierID" }
+                    { "Suppliers", "SupplierID" },
+                    /// Add More Table As needed
                 };
 
                 // Ensure the table name exists in the dictionary
@@ -194,6 +195,52 @@ namespace Inventory_DAL
                     {
                         LogHelper.LogError($"An error occurred while updating table '{tableName}'.", ex, methodName, filePath);
                         throw; // Rethrow exception
+                    }
+                }
+            }
+        }
+
+
+
+        protected static int AddEntity(string tableName, Dictionary<string, object> columnsToInsert,
+                               [CallerMemberName] string methodName = "", [CallerFilePath] string filePath = "")
+        {
+            if (columnsToInsert == null || columnsToInsert.Count == 0)
+            {
+                throw new ArgumentException("No columns provided for insertion.");
+            }
+
+            using (SqlConnection connection = GetConnection())
+            {
+                // Construct columns and values placeholders
+                string columnNames = string.Join(", ", columnsToInsert.Keys);
+                string parameterNames = string.Join(", ", columnsToInsert.Keys.Select(col => $"@{col}"));
+
+                // Add query for insert and return inserted ID
+                string query = $@"
+                INSERT INTO {tableName} ({columnNames})
+                VALUES ({parameterNames});
+                SELECT SCOPE_IDENTITY();"; // Returns last inserted ID
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    foreach (var column in columnsToInsert)
+                    {
+                        command.Parameters.AddWithValue($"@{column.Key}", column.Value ?? DBNull.Value);
+                    }
+
+                    try
+                    {
+                        object result = command.ExecuteScalar(); // Get inserted ID
+                        int insertedId = Convert.ToInt32(result);
+
+                        LogHelper.LogInfo($"Insert successful in {filePath}, Method: {methodName}, ID: {insertedId}");
+                        return insertedId;
+                    }
+                    catch (Exception ex)
+                    {
+                        LogHelper.LogError($"An error occurred while inserting into table '{tableName}'.", ex, methodName, filePath);
+                        throw;
                     }
                 }
             }

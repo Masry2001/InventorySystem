@@ -11,17 +11,22 @@ namespace Inventory_DAL
     {
 
         // Find Person Using PersonID
-        public static bool GetPersonById(int personId, out Dictionary<string, object> personData)
+        public static bool GetPersonById(int PersonID, out Dictionary<string, object> personData)
         {
-            return GetEntityById("People", personId, new List<string> { "Name", "Phone", "Email", "Address" }, out personData);
+            return GetEntityById("People", PersonID, new List<string> { "Name", "Phone", "Email", "Address" }, out personData);
         }
 
 
-        public static bool UpdatePerson(int personId, string name, string phone, string email, string address)
+        public static bool UpdatePerson(int PersonID, string name, string phone, string email, string address)
         {
-            return UpdateEntity("People", personId, new Dictionary<string, object> { { "Name", name }, { "Phone", phone }, { "Email", email }, { "Address", address } });
+            return UpdateEntity("People", PersonID, new Dictionary<string, object> { { "Name", name }, { "Phone", phone }, { "Email", email }, { "Address", address } });
         }
 
+
+        public static int AddNewPerson(string name, string phone, string email, string address)
+        {
+            return AddEntity("People", new Dictionary<string, object> { { "Name", name }, { "Phone", phone }, { "Email", email }, { "Address", address } });
+        }
 
         public static bool GetCustomerById(int customerId, out Dictionary<string, object> customerData)
         {

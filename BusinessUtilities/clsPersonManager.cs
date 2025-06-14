@@ -16,7 +16,7 @@ namespace Inventory_Business
     public class clsPersonManager
     {
         // Properties   
-        public int PersonId { get; set; }
+        public int PersonID { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
@@ -30,7 +30,7 @@ namespace Inventory_Business
         public clsPersonManager()
         {
             // Initialize with default values if necessary
-            PersonId = -1;
+            PersonID = -1;
             Name = "";
             Phone = "";
             Email = "";
@@ -42,7 +42,7 @@ namespace Inventory_Business
         // Parameterized Constructor to Initialize Fields
         public clsPersonManager(int id, string name, string phone, string email, string address)
         {
-            PersonId = id;
+            PersonID = id;
             Name = name;
             Phone = phone;
             Email = email;
@@ -58,13 +58,13 @@ namespace Inventory_Business
         }
 
 
-        public static clsPersonManager GetPerson(int personId)
+        public static clsPersonManager GetPerson(int PersonID)
         {
-            if (clsPeopleDAL.GetPersonById(personId, out Dictionary<string, object> personData))
+            if (clsPeopleDAL.GetPersonById(PersonID, out Dictionary<string, object> personData))
             {
                 return new clsPersonManager
                 {
-                    PersonId = personId,
+                    PersonID = PersonID,
                     Name = personData["Name"].ToString(),
                     Phone = BusinessUtil.GetValueOrDefault(personData["Phone"]?.ToString()),
                     Email = BusinessUtil.GetValueOrDefault(personData["Email"]?.ToString()),
@@ -78,16 +78,12 @@ namespace Inventory_Business
 
         private bool _AddNewPerson()
         {
-            //call DataAccess Layer 
+            //call DataAccess Layer
 
-            //this.PersonID = clsPeopleDAL.AddNewPerson(
-            //    this.FirstName, this.SecondName, this.ThirdName,
-            //    this.LastName, this.NationalNo,
-            //    this.DateOfBirth, this.Gendor, this.Address, this.Phone, this.Email,
-            //    this.NationalityCountryID, this.ImagePath);
+            this.PersonID = clsPeopleDAL.AddNewPerson(this.Name, this.Phone, this.Email,
+                this.Address);
 
-            //return (this.PersonID != -1);
-            return false;
+            return (this.PersonID != -1);
         }
 
         private bool _UpdatePerson()
@@ -95,7 +91,7 @@ namespace Inventory_Business
             //call DataAccess Layer 
 
             return clsPeopleDAL.UpdatePerson(
-                this.PersonId, this.Name, this.Phone, this.Email,
+                this.PersonID, this.Name, this.Phone, this.Email,
                 this.Address);
         }
 
