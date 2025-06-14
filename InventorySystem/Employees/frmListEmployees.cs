@@ -19,7 +19,7 @@ namespace InventorySystem.Employees
         private static DataTable _dtAllEmployees = clsEmployeeManager.GetAllEmployeesAsDataTable();
 
         //only select the columns that you want to show in the grid
-        //EmployeeID, PersonID, Name, Phone, Email, Address, Designation, Department, Salary,  Notes, IsActive, CreatedDate, ModifiedDate
+        //EmployeeID, PersonID, Name, Phone, Email, Address, Designation, Department, Salary,  Notes, IsActive, CreationDate, ModifiedDate
         private DataTable _dtAllEmployeesWithSpecificColumns = _dtAllEmployees.DefaultView.ToTable(false, "EmployeeID", "Name", "Designation", "Department", "Phone", "Salary", "IsActive");
 
         private void _RefreshEmployeesList()

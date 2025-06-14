@@ -39,15 +39,20 @@ namespace Inventory_DAL
 
         public static bool GetEmployeeById(int employeeId, out Dictionary<string, object> employeeData)
         {
-            return GetEntityById("Employees", employeeId, new List<string> { "PersonID", "Designation", "Department", "Salary", "Notes", "IsActive", "CreatedDate", "ModifiedDate" }, out employeeData);
+            return GetEntityById("Employees", employeeId,
+                new List<string> 
+                {
+                    "PersonID", "Designation", "Department", "Salary", "Notes", "IsActive", "CreationDate", "ModifiedDate"
+                },
+                out employeeData);
         }
 
-        public static bool UpdateEmployee(int employeeId, int personId, string designation, string department, decimal salary, string notes, bool isActive, DateTime createdDate, DateTime modifiedDate)
+        public static bool UpdateEmployee(int employeeId, int personId, string designation, string department, decimal salary, string notes, bool isActive, DateTime CreationDate, DateTime modifiedDate)
         {
-            return UpdateEntity("Employees", employeeId, new Dictionary<string, object> { { "Designation", designation }, { "Department", department }, { "Salary", salary }, { "Notes", notes }, { "IsActive", isActive }, { "CreatedDate", createdDate }, { "ModifiedDate", modifiedDate } });
+            return UpdateEntity("Employees", employeeId, new Dictionary<string, object> { { "Designation", designation }, { "Department", department }, { "Salary", salary }, { "Notes", notes }, { "IsActive", isActive }, { "CreationDate", CreationDate }, { "ModifiedDate", modifiedDate } });
         }
 
-        public static int AddNewEmployee(int personId, string designation, string department, decimal salary, string notes, bool isActive, DateTime createdDate, DateTime modifiedDate)
+        public static int AddNewEmployee(int personId, string designation, string department, decimal salary, string notes, bool isActive, DateTime CreationDate, DateTime modifiedDate)
         {
             return AddEntity("Employees", new Dictionary<string, object>
             {
@@ -57,7 +62,7 @@ namespace Inventory_DAL
                 { "Salary", salary },
                 { "Notes", notes },
                 { "IsActive", isActive },
-                { "CreatedDate", createdDate },
+                { "CreationDate", CreationDate },
                 { "ModifiedDate", modifiedDate }
             });
         }

@@ -42,13 +42,13 @@ namespace Inventory_DAL
 
         public static bool GetCustomerById(int customerId, out Dictionary<string, object> customerData)
         {
-            return GetEntityById("Customers", customerId, new List<string> { "PersonID", "Notes", "IsActive", "CreatedDate", "ModifiedDate" }, out customerData);
+            return GetEntityById("Customers", customerId, new List<string> { "PersonID", "Notes", "IsActive", "CreationDate", "ModifiedDate" }, out customerData);
         }
 
 
         public static bool GetSupplierById(int supplierId, out Dictionary<string, object> supplierData)
         {
-            return GetEntityById("Suppliers", supplierId, new List<string> { "PersonID", "Notes", "IsActive", "CreatedDate", "ModifiedDate" }, out supplierData);
+            return GetEntityById("Suppliers", supplierId, new List<string> { "PersonID", "Notes", "IsActive", "CreationDate", "ModifiedDate" }, out supplierData);
         }
 
 
