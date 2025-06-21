@@ -91,7 +91,6 @@
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(298, 198);
             this.txtNotes.TabIndex = 4;
-            this.txtNotes.Validating += new System.ComponentModel.CancelEventHandler(this.txtNotes_Validating);
             // 
             // txtSalary
             // 

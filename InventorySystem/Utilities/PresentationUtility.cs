@@ -229,93 +229,37 @@ namespace InventorySystem.Utilities
         public static void ValidateSalary(object sender, ErrorProvider errorProvider, CancelEventArgs e)
         {
             TextBox textBox = sender as TextBox;
-            const decimal MinSalary = 0.00m;
-            const decimal MaxSalary = 200000.99m;
 
-            if (!decimal.TryParse(textBox.Text, out decimal salary) ||
-                salary < MinSalary || salary > MaxSalary)
+            if (textBox == null)
             {
                 e.Cancel = true;
-                errorProvider.SetError(textBox, ValidationMessages.Error_InvalidSalary +
-                    $" (Allowed range: {MinSalary} - {MaxSalary})");
+                return;
+            }
+
+            if (!Validation.IsValidSalary(textBox.Text))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(textBox,
+                    ValidationMessages.Error_InvalidSalary +
+                    $" (Allowed range: {ConfigHelper.MinSalary:C} - {ConfigHelper.MaxSalary:C})");
             }
             else
             {
-                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                e.Cancel = false;
                 errorProvider.SetError(textBox, null); // Clear the error
             }
         }
 
-        public static void ValidateModifiedDate(DateTimePicker dtpCreatedDate, DateTimePicker dtpModifiedDate, ErrorProvider errorProvider, CancelEventArgs e)
-        {
-            if (dtpCreatedDate.Value > dtpModifiedDate.Value) // Created Date is AFTER Modified Date
-            {
-                e.Cancel = true;
-                //dtpModifiedDate.Focus();
-                errorProvider.SetError(dtpModifiedDate, ValidationMessages.Error_ModifiedDateBeforeCreatedDate);
-            }
-            else
-            {
-                errorProvider.SetError(dtpModifiedDate, null); // Clears the error if validation passes
-                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
-            }
-        }
 
-        public static void ValidateCreationDate(DateTimePicker dtpCreatedDate, DateTimePicker dtpModifiedDate, ErrorProvider errorProvider, CancelEventArgs e)
-        {
-            if (dtpCreatedDate.Value > dtpModifiedDate.Value) // Created Date is AFTER Modified Date
-            {
-                errorProvider.SetError(dtpCreatedDate, ValidationMessages.Error_CreatedDateAfterModifiedDate);
-                e.Cancel = true;
-                //dtpModifiedDate.Focus();
-            }
-            else
-            {
-                errorProvider.SetError(dtpCreatedDate, null); // Clears the error if validation passes
-                e.Cancel = false;
-            }
-        }
-
-        public static void ValidateFieldIsLessThan250Char(object sender, ErrorProvider errorProvider, CancelEventArgs e)
-        {
-
-            // This Method Is not Importanct and can be removed
-            // because The TextBox has a MaxLength property that limits the input to 250 characters.
-            TextBox textBox = sender as TextBox;
-            if (textBox != null)
-            {
-
-                int Length = ConfigHelper.LengthOf250Char;
-                
-
-                if (textBox.Text.Length > Length)
-                {
-                    errorProvider.SetError(textBox, ValidationMessages.Error_Notes_LengthLimit + Length);
-                    e.Cancel = true; // This line is CRITICAL to prevent form submission
-                }
-                else
-                {
-                    errorProvider.SetError(textBox, null); // Clear error
-                    e.Cancel = false;
-                }
-            }
-        }
-
-
-
-
+        // Improved TextBox MaxLength setup
         private static readonly Dictionary<string, int> TextBoxMaxLengths = new Dictionary<string, int>
         {
-            // Map textBox names to their respective max length config values
             { "txtName", ConfigHelper.LengthOf50Char },
             { "txtPhone", ConfigHelper.LengthOf15Char },
             { "txtEmail", ConfigHelper.LengthOf50Char },
             { "txtAddress", ConfigHelper.LengthOf250Char },
-            { "txtNotes", ConfigHelper.LengthOf250Char },
-            // Add as needed
+            { "txtNotes", ConfigHelper.LengthOf250Char }
         };
-
-
 
         public static void SetTextBoxesMaxLength(Control parentControl)
         {
@@ -334,11 +278,42 @@ namespace InventorySystem.Utilities
                     }
                 }
 
-                // Recursively check inside containers like GroupBox, Panel, TabPage, etc.
+                // Recursively check inside containers
                 if (control.HasChildren)
                 {
                     SetTextBoxesMaxLength(control);
                 }
+            }
+        }
+
+        public static void ValidateModifiedDate(DateTimePicker dtpCreatedDate, DateTimePicker dtpModifiedDate,
+            ErrorProvider errorProvider, CancelEventArgs e)
+        {
+            if (!Validation.IsValidModificationDate(dtpModifiedDate.Value, dtpCreatedDate.Value))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(dtpModifiedDate, ValidationMessages.Error_ModifiedDateBeforeCreatedDate);
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(dtpModifiedDate, null);
+            }
+        }
+
+
+        public static void ValidateCreationDate(DateTimePicker dtpCreatedDate, DateTimePicker dtpModifiedDate,
+            ErrorProvider errorProvider, CancelEventArgs e)
+        {
+            if (!Validation.IsValidCreationDate(dtpCreatedDate.Value, dtpModifiedDate.Value))
+            {
+                e.Cancel = true;
+                errorProvider.SetError(dtpCreatedDate, ValidationMessages.Error_CreatedDateAfterModifiedDate);
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider.SetError(dtpCreatedDate, null);
             }
         }
 

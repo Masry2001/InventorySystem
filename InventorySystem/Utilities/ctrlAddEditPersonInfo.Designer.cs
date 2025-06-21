@@ -53,7 +53,6 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(390, 106);
             this.txtAddress.TabIndex = 3;
-            this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txtAddress_Validating);
             // 
             // label12
             // 

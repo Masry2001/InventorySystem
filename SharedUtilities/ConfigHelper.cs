@@ -52,5 +52,27 @@ namespace SharedUtilities
             }
         }
 
+        public static decimal MinSalary
+        {
+            get
+            {
+                if (decimal.TryParse(ConfigurationManager.AppSettings["MinSalary"], out decimal value))
+                    return value;
+                else
+                    return 0.00m; // Default value if parsing fails
+            }
+        }
+
+        public static decimal MaxSalary
+        {
+            get
+            {
+                if (decimal.TryParse(ConfigurationManager.AppSettings["MaxSalary"], out decimal value))
+                    return value;
+                else
+                    return 200000.99m; // Default value if parsing fails
+            }
+        }
+
     }
 }

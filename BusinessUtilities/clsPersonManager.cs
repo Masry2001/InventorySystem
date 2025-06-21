@@ -1,12 +1,14 @@
-﻿using System;
+﻿using BusinessUtilities;
+using Inventory_DAL;
+using SharedUtilities;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Inventory_DAL;
-using BusinessUtilities;
 using System.Xml.Linq;
+using static BusinessUtilities.BusinessValidationHelper;
 
 namespace Inventory_Business
 {
@@ -95,30 +97,50 @@ namespace Inventory_Business
                 this.Address);
         }
 
+
+        private void ValidatePerson()
+        {
+            if (!BusinessValidationHelper.TryValidatePerson(this, out string error))
+            {
+                LogHelper.LogError($"Person validation failed: {error}");
+                throw new ValidationException(error);
+            }
+        }
+
         public bool SavePerson()
         {
-            switch (Mode)
+            try
             {
-                case enMode.AddNew:
-                    if (_AddNewPerson())
-                    {
+                ValidatePerson();
 
-                        Mode = enMode.Update;
-                        return true;
-                    }
-                    else
-                    {
+                switch (Mode)
+                {
+                    case enMode.AddNew:
+                        if (_AddNewPerson())
+                        {
+                            Mode = enMode.Update;
+                            return true;
+                        }
                         return false;
-                    }
 
-                case enMode.Update:
+                    case enMode.Update:
+                        return _UpdatePerson();
+                }
 
-                    return _UpdatePerson();
-
+                return false;
             }
-
-            return false;
+            catch (ValidationException ex)
+            {
+                LogHelper.LogError("Validation failed while saving person.", ex);
+                throw;
+            }
+            catch (Exception ex)
+            {
+                LogHelper.LogError("Unexpected error in SavePerson.", ex);
+                throw;
+            }
         }
+
 
 
 

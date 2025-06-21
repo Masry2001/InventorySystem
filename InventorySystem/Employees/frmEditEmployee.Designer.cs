@@ -150,7 +150,6 @@
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(426, 94);
             this.txtNotes.TabIndex = 12;
-            this.txtNotes.Validating += new System.ComponentModel.CancelEventHandler(this.txtNotes_Validating);
             // 
             // label12
             // 

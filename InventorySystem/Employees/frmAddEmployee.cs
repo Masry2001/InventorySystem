@@ -29,7 +29,6 @@ namespace InventorySystem.Employees
         private void frmAddEmployee_Load(object sender, EventArgs e)
         {
             btnSave.Enabled = false;
-
             ctrlAddEditPersonInfo1.FocusFirstField();
 
 

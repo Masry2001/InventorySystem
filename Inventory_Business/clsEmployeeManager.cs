@@ -1,4 +1,6 @@
-﻿using Inventory_DAL;
+﻿using BusinessUtilities;
+using Inventory_DAL;
+using SharedUtilities;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,7 +10,7 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using BusinessUtilities;
+using static BusinessUtilities.BusinessValidationHelper;
 
 namespace Inventory_Business
 {
@@ -136,30 +138,63 @@ namespace Inventory_Business
             return clsEmployeesDAL.DeleteEmployee(ID);
         }
 
-        public bool SaveEmployee()
+        private void ValidateEmployee()
         {
-            switch (Mode)
+            var DTO = new EmployeeDTO
             {
-                case enMode.AddNew:
-                    if (_AddNewEmployee())
-                    {
+                Designation = this.Designation,
+                Department = this.Department,
+                Salary = this.Salary.ToString(),
+                CreationDate = this.CreationDate,
+                ModifiedDate = this.ModifiedDate,
+                Notes = this.Notes
+            };
 
-                        Mode = enMode.Update;
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
+            if (!BusinessValidationHelper.TryValidateEmployee(DTO, out string error))
+            {
 
-                case enMode.Update:
+                // Log the validation error before throwing
+                LogHelper.LogError($"Employee validation failed: {error}");
 
-                    return _UpdateEmployee();
-
+                throw new ValidationException(error);
             }
 
-            return false;
         }
+
+        public bool SaveEmployee()
+        {
+            try
+            {
+                ValidateEmployee();
+
+                switch (Mode)
+                {
+                    case enMode.AddNew:
+                        if (_AddNewEmployee())
+                        {
+                            Mode = enMode.Update;
+                            return true;
+                        }
+                        return false;
+
+                    case enMode.Update:
+                        return _UpdateEmployee();
+                }
+
+                return false;
+            }
+            catch (ValidationException ex)
+            {
+                LogHelper.LogError("Validation failed while saving employee.", ex);
+                throw; // Optionally rethrow or return false
+            }
+            catch (Exception ex)
+            {
+                LogHelper.LogError("Unexpected error in SaveEmployee.", ex);
+                throw;
+            }
+        }
+
 
 
 

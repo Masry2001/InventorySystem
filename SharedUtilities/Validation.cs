@@ -1,11 +1,34 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
+
+
 
 namespace SharedUtilities
 {
 
     public static class Validation
     {
+
+
+        public static bool ValidateName(string name, out string error)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                error = "RequiredField";
+                return false;
+            }
+
+            if (!Regex.IsMatch(name, @"^[a-zA-Z\s]+$"))
+            {
+                error = "InvalidName";
+                return false;
+            }
+
+            error = string.Empty;
+            return true;
+        }
+
         public static bool ValidateEmail(string emailAddress)
         {
 
@@ -29,24 +52,68 @@ namespace SharedUtilities
             return Regex.IsMatch(Phone, pattern);
         }
 
-        public static bool ValidateName(string name, out string error)
+
+        public static bool IsValidSalary(string salary)
         {
-            if (string.IsNullOrWhiteSpace(name))
-            {
-                error = "RequiredField";
-                return false;
-            }
 
-            if (!Regex.IsMatch(name, @"^[a-zA-Z\s]+$"))
-            {
-                error = "InvalidName";
-                return false;
-            }
+            decimal MinSalary = ConfigHelper.MinSalary;
+            decimal MaxSalary = ConfigHelper.MaxSalary;
 
-            error = string.Empty;
-            return true;
+            if (string.IsNullOrWhiteSpace(salary))
+                return false;
+
+            if (!decimal.TryParse(salary, out decimal salaryValue))
+                return false;
+
+            return salaryValue >= MinSalary && salaryValue <= MaxSalary;
         }
 
+
+
+
+        // Generic text length validation
+        public static bool IsValidTextLength(string text, int maxLength)
+        {
+            if (string.IsNullOrEmpty(text))
+                return true; // Empty is considered valid, adjust if needed
+
+            return text.Length <= maxLength;
+        }
+
+        
+        private static readonly Dictionary<string, int> FieldMaxLengths = new Dictionary<string, int>
+        {
+            { "Name", ConfigHelper.LengthOf50Char },
+            { "Phone", ConfigHelper.LengthOf15Char },
+            { "Email", ConfigHelper.LengthOf50Char },
+            { "Address", ConfigHelper.LengthOf250Char },
+            { "Notes", ConfigHelper.LengthOf250Char },
+            // Add More As Needed
+        };
+
+        public static bool IsValidFieldByType(string text, string fieldType)
+        {
+            if (FieldMaxLengths.TryGetValue(fieldType, out int maxLength))
+            {
+                return IsValidTextLength(text, maxLength);
+            }
+
+            // Default to 50 characters if field type not found
+            return IsValidTextLength(text, ConfigHelper.LengthOf50Char);
+        }
+
+
+
+        public static bool IsValidCreationDate(DateTime createdDate, DateTime modifiedDate)
+        {
+            return createdDate <= modifiedDate;
+        }
+
+ 
+        public static bool IsValidModificationDate(DateTime modifiedDate, DateTime createdDate)
+        {
+            return modifiedDate >= createdDate;
+        }
 
         public static bool ValidateInteger(string Number)
         {
@@ -73,19 +140,10 @@ namespace SharedUtilities
             return (ValidateInteger(Number) || ValidateFloat(Number));
         }
 
-        
-        public static bool IsValidSalary(string Salary)
-        {
-            if (string.IsNullOrWhiteSpace(Salary))
-            {
-                return false;
-            }
-            string pattern = @"^\d{1,9}(\.\d{1,4})?$"; // Matches Salary with 4 decimal points
-            return Regex.IsMatch(Salary, pattern);
-        }
 
- 
 
 
     }
+
+
 }

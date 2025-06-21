@@ -106,11 +106,7 @@ namespace InventorySystem.Employees
             PresentationUtility.ValidateModifiedDate(dtpCreationDate, dtpModifiedDate, errorProvider1, e);
         }
 
-        private void txtNotes_Validating(object sender, CancelEventArgs e)
-        {
-            PresentationUtility.ValidateFieldIsLessThan250Char(sender, errorProvider1, e);
 
-        }
 
 
     }

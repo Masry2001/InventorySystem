@@ -37,7 +37,6 @@ namespace InventorySystem.Utilities
 
         private void ctrlAddEditPersonInfo_Load(object sender, EventArgs e)
         {
-
             //The Load event is raised after all controls have been created, added to the visual tree, and initialized.
 
             PresentationUtility.SetTextBoxesMaxLength(this);
@@ -105,10 +104,7 @@ namespace InventorySystem.Utilities
 
         }
 
-        private void txtAddress_Validating(object sender, CancelEventArgs e)
-        {
-            PresentationUtility.ValidateFieldIsLessThan250Char(sender, errorProvider1, e);
-        }
+
 
 
         public event EventHandler MoveToNextTab;
