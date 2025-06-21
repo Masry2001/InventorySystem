@@ -30,12 +30,12 @@
         {
             this.tabContol1 = new System.Windows.Forms.TabControl();
             this.tpPerson = new System.Windows.Forms.TabPage();
-            this.ctrlAddEditPersonInfo1 = new InventorySystem.Utilities.ctrlAddEditPersonInfo();
             this.tpEmployee = new System.Windows.Forms.TabPage();
-            this.ctrlAddEditEmployeeInfo1 = new InventorySystem.Employees.ctrlAddEditEmployeeInfo();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.ctrlAddEditPersonInfo1 = new InventorySystem.Utilities.ctrlAddEditPersonInfo();
+            this.ctrlAddEditEmployeeInfo1 = new InventorySystem.Employees.ctrlAddEditEmployeeInfo();
             this.tabContol1.SuspendLayout();
             this.tpPerson.SuspendLayout();
             this.tpEmployee.SuspendLayout();
@@ -46,10 +46,10 @@
             this.tabContol1.Controls.Add(this.tpPerson);
             this.tabContol1.Controls.Add(this.tpEmployee);
             this.tabContol1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabContol1.Location = new System.Drawing.Point(41, 136);
+            this.tabContol1.Location = new System.Drawing.Point(12, 121);
             this.tabContol1.Name = "tabContol1";
             this.tabContol1.SelectedIndex = 0;
-            this.tabContol1.Size = new System.Drawing.Size(1114, 438);
+            this.tabContol1.Size = new System.Drawing.Size(1143, 453);
             this.tabContol1.TabIndex = 0;
             // 
             // tpPerson
@@ -59,20 +59,10 @@
             this.tpPerson.Location = new System.Drawing.Point(4, 34);
             this.tpPerson.Name = "tpPerson";
             this.tpPerson.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPerson.Size = new System.Drawing.Size(1106, 400);
+            this.tpPerson.Size = new System.Drawing.Size(1135, 415);
             this.tpPerson.TabIndex = 0;
             this.tpPerson.Text = "Person Info";
             this.tpPerson.UseVisualStyleBackColor = true;
-            // 
-            // ctrlAddEditPersonInfo1
-            // 
-            this.ctrlAddEditPersonInfo1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ctrlAddEditPersonInfo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlAddEditPersonInfo1.Location = new System.Drawing.Point(3, 3);
-            this.ctrlAddEditPersonInfo1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ctrlAddEditPersonInfo1.Name = "ctrlAddEditPersonInfo1";
-            this.ctrlAddEditPersonInfo1.Size = new System.Drawing.Size(1100, 394);
-            this.ctrlAddEditPersonInfo1.TabIndex = 0;
             // 
             // tpEmployee
             // 
@@ -80,19 +70,10 @@
             this.tpEmployee.Location = new System.Drawing.Point(4, 34);
             this.tpEmployee.Name = "tpEmployee";
             this.tpEmployee.Padding = new System.Windows.Forms.Padding(3);
-            this.tpEmployee.Size = new System.Drawing.Size(1106, 400);
+            this.tpEmployee.Size = new System.Drawing.Size(1135, 415);
             this.tpEmployee.TabIndex = 1;
             this.tpEmployee.Text = "Employee Info";
             this.tpEmployee.UseVisualStyleBackColor = true;
-            // 
-            // ctrlAddEditEmployeeInfo1
-            // 
-            this.ctrlAddEditEmployeeInfo1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ctrlAddEditEmployeeInfo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ctrlAddEditEmployeeInfo1.Location = new System.Drawing.Point(3, 3);
-            this.ctrlAddEditEmployeeInfo1.Name = "ctrlAddEditEmployeeInfo1";
-            this.ctrlAddEditEmployeeInfo1.Size = new System.Drawing.Size(1100, 394);
-            this.ctrlAddEditEmployeeInfo1.TabIndex = 0;
             // 
             // lblTitle
             // 
@@ -105,20 +86,6 @@
             this.lblTitle.Text = "Add New Employee";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
-            // 
-            // btnClose
-            // 
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(862, 582);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(142, 49);
-            this.btnClose.TabIndex = 76;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
@@ -134,6 +101,36 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnClose
+            // 
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(863, 582);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(141, 49);
+            this.btnClose.TabIndex = 76;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // ctrlAddEditPersonInfo1
+            // 
+            this.ctrlAddEditPersonInfo1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ctrlAddEditPersonInfo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlAddEditPersonInfo1.Location = new System.Drawing.Point(3, 3);
+            this.ctrlAddEditPersonInfo1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ctrlAddEditPersonInfo1.Name = "ctrlAddEditPersonInfo1";
+            this.ctrlAddEditPersonInfo1.Size = new System.Drawing.Size(1129, 409);
+            this.ctrlAddEditPersonInfo1.TabIndex = 0;
+            // 
+            // ctrlAddEditEmployeeInfo1
+            // 
+            this.ctrlAddEditEmployeeInfo1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ctrlAddEditEmployeeInfo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ctrlAddEditEmployeeInfo1.Location = new System.Drawing.Point(3, 3);
+            this.ctrlAddEditEmployeeInfo1.Name = "ctrlAddEditEmployeeInfo1";
+            this.ctrlAddEditEmployeeInfo1.Size = new System.Drawing.Size(1129, 409);
+            this.ctrlAddEditEmployeeInfo1.TabIndex = 0;
+            // 
             // frmAddEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -145,6 +142,7 @@
             this.Controls.Add(this.tabContol1);
             this.Name = "frmAddEmployee";
             this.Text = "frmAddEmployee";
+            this.Load += new System.EventHandler(this.frmAddEmployee_Load);
             this.tabContol1.ResumeLayout(false);
             this.tpPerson.ResumeLayout(false);
             this.tpEmployee.ResumeLayout(false);
@@ -158,10 +156,10 @@
         private System.Windows.Forms.TabPage tpPerson;
         private System.Windows.Forms.TabPage tpEmployee;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
         private Utilities.ctrlAddEditPersonInfo ctrlAddPersonInfo1;
         private Utilities.ctrlAddEditPersonInfo ctrlAddEditPersonInfo1;
         private ctrlAddEditEmployeeInfo ctrlAddEditEmployeeInfo1;
+        private System.Windows.Forms.Button btnClose;
     }
 }

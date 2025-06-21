@@ -63,6 +63,7 @@
             // 
             // dtpModifiedDate
             // 
+            this.dtpModifiedDate.Enabled = false;
             this.dtpModifiedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpModifiedDate.Location = new System.Drawing.Point(179, 283);
             this.dtpModifiedDate.Name = "dtpModifiedDate";
@@ -72,6 +73,7 @@
             // 
             // dtpCreationDate
             // 
+            this.dtpCreationDate.Enabled = false;
             this.dtpCreationDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCreationDate.Location = new System.Drawing.Point(179, 229);
             this.dtpCreationDate.Name = "dtpCreationDate";

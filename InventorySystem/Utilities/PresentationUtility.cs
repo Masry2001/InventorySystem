@@ -159,10 +159,12 @@ namespace InventorySystem.Utilities
             if (string.IsNullOrEmpty(textBox.Text.Trim()))
             {
                 errorProvider.SetError(textBox, ValidationMessages.Error_RequiredField);
+                e.Cancel = true; // This line is CRITICAL
+
             }
             else
             {
-                //e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
                 errorProvider.SetError(textBox, null); // Clear the error
             }
         }
@@ -179,13 +181,13 @@ namespace InventorySystem.Utilities
                 ? ValidationMessages.Error_RequiredField
                 : ValidationMessages.Error_InvalidName;
 
-                //e.Cancel = true;
+                e.Cancel = true;
                 // commented becuase You’re informing, not blocking.
                 errorProvider.SetError(textBox, errorMessage);
             }
             else
             {
-                //e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
                 errorProvider.SetError(textBox, null); // Clear the error
             }
         }
@@ -197,13 +199,12 @@ namespace InventorySystem.Utilities
             // Validate email format
             if (!Validation.ValidateEmail(textBox.Text))
             {
-                //e.Cancel = true;
-                // commented becuase You’re informing, not blocking.
+                e.Cancel = true;
                 errorProvider.SetError(textBox, ValidationMessages.Error_InvalidEmail);
             }
             else
             {
-                //e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
                 errorProvider.SetError(textBox, null); // Clear the error
             }
         }
@@ -215,31 +216,32 @@ namespace InventorySystem.Utilities
 
             if (!Validation.IsValidPhone(textBox.Text))
             {
-                //e.Cancel = true;
-                // commented becuase You’re informing, not blocking.
+                e.Cancel = true;
                 errorProvider.SetError(textBox, ValidationMessages.Error_InvalidPhone);
             }
             else
             {
-                //e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
                 errorProvider.SetError(textBox, null); // Clear the error
             }
         }
 
-        // validate the salary of text box 
         public static void ValidateSalary(object sender, ErrorProvider errorProvider, CancelEventArgs e)
         {
             TextBox textBox = sender as TextBox;
+            const decimal MinSalary = 0.00m;
+            const decimal MaxSalary = 200000.99m;
 
-            if (!Validation.IsValidSalary(textBox.Text))
+            if (!decimal.TryParse(textBox.Text, out decimal salary) ||
+                salary < MinSalary || salary > MaxSalary)
             {
-                //e.Cancel = true;
-                // commented becuase You’re informing, not blocking.
-                errorProvider.SetError(textBox, ValidationMessages.Error_InvalidSalary);
+                e.Cancel = true;
+                errorProvider.SetError(textBox, ValidationMessages.Error_InvalidSalary +
+                    $" (Allowed range: {MinSalary} - {MaxSalary})");
             }
             else
             {
-                //e.Cancel = false; // Ensure the cancel flag is reset if validation passes
+                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
                 errorProvider.SetError(textBox, null); // Clear the error
             }
         }
@@ -248,14 +250,14 @@ namespace InventorySystem.Utilities
         {
             if (dtpCreatedDate.Value > dtpModifiedDate.Value) // Created Date is AFTER Modified Date
             {
-                //e.Cancel = true;
-                // commented becuase You’re informing, not blocking.
+                e.Cancel = true;
                 //dtpModifiedDate.Focus();
                 errorProvider.SetError(dtpModifiedDate, ValidationMessages.Error_ModifiedDateBeforeCreatedDate);
             }
             else
             {
                 errorProvider.SetError(dtpModifiedDate, null); // Clears the error if validation passes
+                e.Cancel = false; // Ensure the cancel flag is reset if validation passes
             }
         }
 
@@ -264,13 +266,13 @@ namespace InventorySystem.Utilities
             if (dtpCreatedDate.Value > dtpModifiedDate.Value) // Created Date is AFTER Modified Date
             {
                 errorProvider.SetError(dtpCreatedDate, ValidationMessages.Error_CreatedDateAfterModifiedDate);
-                //e.Cancel = true;
-                // commented becuase You’re informing, not blocking.
+                e.Cancel = true;
                 //dtpModifiedDate.Focus();
             }
             else
             {
                 errorProvider.SetError(dtpCreatedDate, null); // Clears the error if validation passes
+                e.Cancel = false;
             }
         }
 
@@ -289,10 +291,12 @@ namespace InventorySystem.Utilities
                 if (textBox.Text.Length > Length)
                 {
                     errorProvider.SetError(textBox, ValidationMessages.Error_Notes_LengthLimit + Length);
+                    e.Cancel = true; // This line is CRITICAL to prevent form submission
                 }
                 else
                 {
                     errorProvider.SetError(textBox, null); // Clear error
+                    e.Cancel = false;
                 }
             }
         }

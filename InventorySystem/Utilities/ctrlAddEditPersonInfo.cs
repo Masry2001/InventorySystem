@@ -16,6 +16,17 @@ namespace InventorySystem.Utilities
     {
 
 
+
+
+        public event EventHandler FieldChanged;
+
+
+        private void OnFieldChanged(object sender, EventArgs e)
+        {
+            FieldChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+
         clsPersonManager _Person;
 
         public ctrlAddEditPersonInfo()
@@ -31,20 +42,48 @@ namespace InventorySystem.Utilities
 
             PresentationUtility.SetTextBoxesMaxLength(this);
 
+            //Whenever TextChanged happens, automatically .NET Framework call the OnFieldChanged method
+            //👤 User types in textbox
+            //      ↓
+            //🔁 .NET says: “Ah! Text changed”
+            //      ↓
+            //🎯 Calls: OnFieldChanged(sender, e)
+            //      ↓
+            //📢 OnFieldChanged raises: FieldChanged event
+            //      ↓
+            //🏃 Parent Form hears it, runs: ValidateAll(sender, e)
+            //      ↓
+            //✅ Checks all inputs and enables Save button if valid
+            txtName.TextChanged += OnFieldChanged;
+            txtPhone.TextChanged += OnFieldChanged;
+            txtEmail.TextChanged += OnFieldChanged;
+            txtAddress.TextChanged += OnFieldChanged;
+
         }
+
+        private bool RunValidation()
+        {
+            return this.ValidateChildren(ValidationConstraints.Enabled);
+        }
+
+        public bool IsValid() => RunValidation();
 
         public clsPersonManager GetPersonData()
         {
             if (_Person == null)
-            {
                 _Person = new clsPersonManager();
-            }
+
+            if (!RunValidation())
+                return null;
+
             _Person.Name = txtName.Text;
             _Person.Phone = txtPhone.Text;
             _Person.Email = txtEmail.Text;
             _Person.Address = txtAddress.Text;
+
             return _Person;
         }
+
 
         private void txtName_Validating(object sender, CancelEventArgs e)
         {
@@ -66,6 +105,8 @@ namespace InventorySystem.Utilities
         {
             PresentationUtility.ValidateFieldIsLessThan250Char(sender, errorProvider1, e);
         }
+
+
 
 
     }

@@ -195,7 +195,7 @@ namespace InventorySystem.Employees
         }
 
         private void deActivateEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        {   
             if (dgvEmployees.SelectedRows.Count > 0)
             {
                 int employeeId = Convert.ToInt32(dgvEmployees.SelectedRows[0].Cells["EmployeeID"].Value);
@@ -312,8 +312,24 @@ namespace InventorySystem.Employees
         {
             using (frmAddEmployee frm = new frmAddEmployee())
             {
-                frm.ShowDialog();
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    // Success logic here
+                    MessageBox.Show("Employee added successfully.");
+                }
             }
+            _RefreshEmployeesList(); // Refresh the employee list after adding a new employee
+        }
+
+        private void frmListEmployees_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Console.WriteLine("frmListEmployees is closing. Reason: " + e.CloseReason.ToString());
+            Console.WriteLine(Environment.StackTrace);
+        }
+
+
+        private void dgvEmployees_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

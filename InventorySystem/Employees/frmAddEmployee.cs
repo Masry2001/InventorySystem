@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace InventorySystem.Employees
 {
@@ -24,60 +26,87 @@ namespace InventorySystem.Employees
         {
             InitializeComponent();
         }
+        private void frmAddEmployee_Load(object sender, EventArgs e)
+        {
+            btnSave.Enabled = false;
+
+            // this means “Dear ctrlAddEditEmployeeInfo, if you raise your FieldChanged event, I want you to call my method ValidateAll().”
+
+            ctrlAddEditPersonInfo1.FieldChanged += ValidateAll;
+            ctrlAddEditEmployeeInfo1.FieldChanged += ValidateAll;
+        }
+
+        private void ValidateAll(object sender, EventArgs e)
+        {
+            btnSave.Enabled =
+                ctrlAddEditPersonInfo1.IsValid() &&
+                ctrlAddEditEmployeeInfo1.IsValid();
+        }
+
+
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-
-
-            GetEmployeeInfo();
-            SaveEmployeeInfo();
-
-        }
-
-
-
-        private void GetEmployeeInfo()
-        {
-
-            // Get Person Data From Control
-            _Person = ctrlAddEditPersonInfo1.GetPersonData();
-
-
-            // Get Employee Data From Control
-            _Employee = ctrlAddEditEmployeeInfo1.GetEmployeeData();
-
-
-        }
-
-        private void SaveEmployeeInfo()
-        {
-            if (_Person.SavePerson())
+            if (TrySaveEmployee())
             {
-                _PersonID = _Person.PersonID;
-
-                _Employee.PersonID = _Person.PersonID; 
-
-
-                if (_Employee.SaveEmployee())
-                {
-                    _EmployeeID = _Employee.EmployeeID;
-
-                    MessageBox.Show($"Employee saved successfully EmployeeID: {_EmployeeID}, PersonID: {_PersonID} .");
-                }
-                else
-                {
-                    MessageBox.Show($"Failed to save employee, PersonID: {_PersonID}.");
-                }
+                MessageBox.Show($"Employee saved successfully.\nEmployeeID: {_EmployeeID}, PersonID: {_PersonID}.");
+                this.DialogResult = DialogResult.OK; // Automatically closes the form
             }
             else
             {
-                MessageBox.Show("Failed to save person.");
+                MessageBox.Show("Failed to save employee information.");
             }
         }
+
+        private bool TrySaveEmployee()
+        {
+            if (!CollectEmployeeData())
+                return false;
+
+            if (!_Person.SavePerson())
+            {
+                MessageBox.Show("Failed to save person data.");
+                return false;
+            }
+
+            _PersonID = _Person.PersonID;
+            _Employee.PersonID = _PersonID;
+
+            if (!_Employee.SaveEmployee())
+            {
+                MessageBox.Show($"Failed to save employee record (PersonID: {_PersonID}).");
+                return false;
+            }
+
+            _EmployeeID = _Employee.EmployeeID;
+            return true;
+        }
+
+        private bool CollectEmployeeData()
+        {
+            _Person = ctrlAddEditPersonInfo1.GetPersonData();
+            _Employee = ctrlAddEditEmployeeInfo1.GetEmployeeData();
+
+            if (_Person == null || _Employee == null)
+            {
+                MessageBox.Show("Please fill in all required fields.");
+                return false;
+            }
+
+            return true;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
 
         private void lblTitle_Click(object sender, EventArgs e)
         {
 
         }
+
+  
     }
 }

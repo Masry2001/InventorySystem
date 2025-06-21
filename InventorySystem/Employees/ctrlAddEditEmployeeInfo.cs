@@ -14,6 +14,11 @@ namespace InventorySystem.Employees
 {
     public partial class ctrlAddEditEmployeeInfo : UserControl
     {
+        public event EventHandler FieldChanged;
+        private void OnFieldChanged(object sender, EventArgs e)
+        {
+            FieldChanged?.Invoke(this, EventArgs.Empty);
+        }
 
         clsEmployeeManager _Employee;
         public ctrlAddEditEmployeeInfo()
@@ -27,15 +32,35 @@ namespace InventorySystem.Employees
         {
             PresentationUtility.SetTextBoxesMaxLength(this);
 
+            txtDesignation.TextChanged += OnFieldChanged;
+            txtDepartment.TextChanged += OnFieldChanged;
+            txtSalary.TextChanged += OnFieldChanged;
+            txtNotes.TextChanged += OnFieldChanged;
+
         }
+
+        private bool RunValidation()
+        {
+            return this.ValidateChildren(ValidationConstraints.Enabled);
+        }
+
+        public bool IsValid() => RunValidation();
+
 
 
         public clsEmployeeManager GetEmployeeData()
         {
+
+
             if (_Employee == null)
             {
                 _Employee = new clsEmployeeManager();
             }
+
+            if (!RunValidation())
+                return null;
+
+
 
             _Employee.Designation = txtDesignation.Text;
             _Employee.Department = txtDepartment.Text;
@@ -81,5 +106,7 @@ namespace InventorySystem.Employees
             PresentationUtility.ValidateFieldIsLessThan250Char(sender, errorProvider1, e);
 
         }
+
+
     }
 }

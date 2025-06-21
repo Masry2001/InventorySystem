@@ -32,8 +32,17 @@ namespace Inventory_Presentation
         private void employeesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListEmployees frm = new frmListEmployees();
-            frm.ShowDialog();
+
+
+            //This way you simulate modal behavior without ShowDialog().
+
+
+            this.Enabled = false; // disable frmMain
+            frm.FormClosed += (s, args) => this.Enabled = true; // re-enable after closing
+            frm.Show();
+
         }
+
 
         private void btnClose_Click(object sender, EventArgs e)
         {
