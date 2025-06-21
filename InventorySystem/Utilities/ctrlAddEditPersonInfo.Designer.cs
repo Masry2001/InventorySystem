@@ -52,7 +52,7 @@
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(390, 106);
-            this.txtAddress.TabIndex = 132;
+            this.txtAddress.TabIndex = 3;
             this.txtAddress.Validating += new System.ComponentModel.CancelEventHandler(this.txtAddress_Validating);
             // 
             // label12
@@ -74,7 +74,7 @@
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(390, 30);
-            this.txtEmail.TabIndex = 130;
+            this.txtEmail.TabIndex = 2;
             this.txtEmail.Validating += new System.ComponentModel.CancelEventHandler(this.txtEmail_Validating);
             // 
             // label6
@@ -96,7 +96,7 @@
             this.txtPhone.MaxLength = 15;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(390, 30);
-            this.txtPhone.TabIndex = 128;
+            this.txtPhone.TabIndex = 1;
             this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
             // 
             // label4
@@ -129,7 +129,7 @@
             this.txtName.MaxLength = 50;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(390, 30);
-            this.txtName.TabIndex = 126;
+            this.txtName.TabIndex = 0;
             this.txtName.Validating += new System.ComponentModel.CancelEventHandler(this.txtName_Validating);
             // 
             // lblPersonID

@@ -47,6 +47,11 @@ namespace InventorySystem.Employees
         public bool IsValid() => RunValidation();
 
 
+        public void FocusFirstField()
+        {
+            txtDesignation.Focus();
+        }
+
 
         public clsEmployeeManager GetEmployeeData()
         {

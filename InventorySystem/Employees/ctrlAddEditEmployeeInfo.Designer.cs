@@ -58,7 +58,7 @@
             this.chkIsActive.Location = new System.Drawing.Point(596, 7);
             this.chkIsActive.Name = "chkIsActive";
             this.chkIsActive.Size = new System.Drawing.Size(18, 17);
-            this.chkIsActive.TabIndex = 171;
+            this.chkIsActive.TabIndex = 3;
             this.chkIsActive.UseVisualStyleBackColor = true;
             // 
             // dtpModifiedDate
@@ -90,7 +90,7 @@
             this.txtNotes.Multiline = true;
             this.txtNotes.Name = "txtNotes";
             this.txtNotes.Size = new System.Drawing.Size(298, 198);
-            this.txtNotes.TabIndex = 168;
+            this.txtNotes.TabIndex = 4;
             this.txtNotes.Validating += new System.ComponentModel.CancelEventHandler(this.txtNotes_Validating);
             // 
             // txtSalary
@@ -101,7 +101,7 @@
             this.txtSalary.MaxLength = 50;
             this.txtSalary.Name = "txtSalary";
             this.txtSalary.Size = new System.Drawing.Size(222, 30);
-            this.txtSalary.TabIndex = 167;
+            this.txtSalary.TabIndex = 2;
             this.txtSalary.Validating += new System.ComponentModel.CancelEventHandler(this.txtSalary_Validating);
             // 
             // txtDepartment
@@ -112,7 +112,7 @@
             this.txtDepartment.MaxLength = 50;
             this.txtDepartment.Name = "txtDepartment";
             this.txtDepartment.Size = new System.Drawing.Size(217, 30);
-            this.txtDepartment.TabIndex = 166;
+            this.txtDepartment.TabIndex = 1;
             this.txtDepartment.Validating += new System.ComponentModel.CancelEventHandler(this.txtDepartment_Validating);
             // 
             // label7
@@ -189,7 +189,7 @@
             this.txtDesignation.MaxLength = 50;
             this.txtDesignation.Name = "txtDesignation";
             this.txtDesignation.Size = new System.Drawing.Size(222, 30);
-            this.txtDesignation.TabIndex = 159;
+            this.txtDesignation.TabIndex = 0;
             this.txtDesignation.Validating += new System.ComponentModel.CancelEventHandler(this.txtDesignation_Validating);
             // 
             // label5

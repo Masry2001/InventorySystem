@@ -59,6 +59,10 @@ namespace InventorySystem.Utilities
             txtEmail.TextChanged += OnFieldChanged;
             txtAddress.TextChanged += OnFieldChanged;
 
+
+            txtAddress.PreviewKeyDown += txtAddress_PreviewKeyDown;
+
+
         }
 
         private bool RunValidation()
@@ -107,7 +111,25 @@ namespace InventorySystem.Utilities
         }
 
 
+        public event EventHandler MoveToNextTab;
 
+        private void txtAddress_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Tab)
+            {
+                // Tell the parent to move to the next tab
+                MoveToNextTab?.Invoke(this, EventArgs.Empty);
+
+                // Optional: prevent default tabbing behavior
+                e.IsInputKey = true; // Makes Tab act like a regular key
+            }
+        }
+
+
+        public void FocusFirstField()
+        {
+            txtName.Focus();
+        }
 
     }
 }

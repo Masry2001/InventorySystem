@@ -3,24 +3,32 @@
   "WorkspaceRootPath": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|D:\\programming\\InventoryProject\\Solution\\InventorySystem\\utilities\\ctrladdeditpersoninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\utilities\\ctrladdeditpersoninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:utilities\\ctrladdeditpersoninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|D:\\programming\\InventoryProject\\Solution\\InventorySystem\\employees\\frmaddemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmaddemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\utilities\\ctrladdeditpersoninfo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:utilities\\ctrladdeditpersoninfo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|D:\\programming\\InventoryProject\\Solution\\InventorySystem\\employees\\ctrladdeditemployeeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\ctrladdeditemployeeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|D:\\programming\\InventoryProject\\Solution\\InventorySystem\\employees\\frmaddemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmaddemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|D:\\programming\\InventoryProject\\Solution\\InventorySystem\\employees\\frmaddemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmaddemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\employees\\ctrladdeditemployeeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\ctrladdeditemployeeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\utilities\\ctrladdeditpersoninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:utilities\\ctrladdeditpersoninfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\employees\\ctrladdeditemployeeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\ctrladdeditemployeeinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,19 +59,70 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ctrlAddEditPersonInfo.Designer.cs",
+              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Utilities\\ctrlAddEditPersonInfo.Designer.cs",
+              "RelativeDocumentMoniker": "Utilities\\ctrlAddEditPersonInfo.Designer.cs",
+              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Utilities\\ctrlAddEditPersonInfo.Designer.cs",
+              "RelativeToolTip": "Utilities\\ctrlAddEditPersonInfo.Designer.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAApwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T03:08:57.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ctrlAddEditEmployeeInfo.cs [Design]",
+              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\ctrlAddEditEmployeeInfo.cs",
+              "RelativeDocumentMoniker": "Employees\\ctrlAddEditEmployeeInfo.cs",
+              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\ctrlAddEditEmployeeInfo.cs [Design]",
+              "RelativeToolTip": "Employees\\ctrlAddEditEmployeeInfo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T02:04:35.499Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "frmAddEmployee.cs",
               "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmAddEmployee.cs",
               "RelativeDocumentMoniker": "Employees\\frmAddEmployee.cs",
               "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmAddEmployee.cs",
               "RelativeToolTip": "Employees\\frmAddEmployee.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAxwB4AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-14T18:37:49.032Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ctrlAddEditPersonInfo.cs",
+              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Utilities\\ctrlAddEditPersonInfo.cs",
+              "RelativeDocumentMoniker": "Utilities\\ctrlAddEditPersonInfo.cs",
+              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Utilities\\ctrlAddEditPersonInfo.cs",
+              "RelativeToolTip": "Utilities\\ctrlAddEditPersonInfo.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAzwHUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T03:42:15.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ctrlAddEditEmployeeInfo.cs",
+              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\ctrlAddEditEmployeeInfo.cs",
+              "RelativeDocumentMoniker": "Employees\\ctrlAddEditEmployeeInfo.cs",
+              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\ctrlAddEditEmployeeInfo.cs",
+              "RelativeToolTip": "Employees\\ctrlAddEditEmployeeInfo.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-17T03:42:25.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "frmAddEmployee.cs [Design]",
               "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmAddEmployee.cs",
               "RelativeDocumentMoniker": "Employees\\frmAddEmployee.cs",
@@ -75,41 +134,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ctrlAddEditPersonInfo.cs",
+              "DocumentIndex": 5,
+              "Title": "ctrlAddEditPersonInfo.cs [Design]",
               "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Utilities\\ctrlAddEditPersonInfo.cs",
               "RelativeDocumentMoniker": "Utilities\\ctrlAddEditPersonInfo.cs",
-              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Utilities\\ctrlAddEditPersonInfo.cs",
-              "RelativeToolTip": "Utilities\\ctrlAddEditPersonInfo.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAUwFYAAAA8AAAAAAAAAA==",
+              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Utilities\\ctrlAddEditPersonInfo.cs [Design]",
+              "RelativeToolTip": "Utilities\\ctrlAddEditPersonInfo.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T03:42:15.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmMain.cs [Design]",
-              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\frmMain.cs",
-              "RelativeDocumentMoniker": "frmMain.cs",
-              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\frmMain.cs [Design]",
-              "RelativeToolTip": "frmMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-20T14:22:12.986Z",
+              "WhenOpened": "2025-06-21T02:55:03.757Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ctrlAddEditEmployeeInfo.cs",
-              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\ctrlAddEditEmployeeInfo.cs",
-              "RelativeDocumentMoniker": "Employees\\ctrlAddEditEmployeeInfo.cs",
-              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\ctrlAddEditEmployeeInfo.cs",
-              "RelativeToolTip": "Employees\\ctrlAddEditEmployeeInfo.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAhwEEAAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T03:42:25.934Z",
-              "EditorCaption": ""
             }
           ]
         }

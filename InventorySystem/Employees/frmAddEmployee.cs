@@ -30,10 +30,16 @@ namespace InventorySystem.Employees
         {
             btnSave.Enabled = false;
 
+            ctrlAddEditPersonInfo1.FocusFirstField();
+
+
             // this means “Dear ctrlAddEditEmployeeInfo, if you raise your FieldChanged event, I want you to call my method ValidateAll().”
 
             ctrlAddEditPersonInfo1.FieldChanged += ValidateAll;
             ctrlAddEditEmployeeInfo1.FieldChanged += ValidateAll;
+
+            ctrlAddEditPersonInfo1.MoveToNextTab += MoveToEmployeeTab;
+
         }
 
         private void ValidateAll(object sender, EventArgs e)
@@ -41,6 +47,13 @@ namespace InventorySystem.Employees
             btnSave.Enabled =
                 ctrlAddEditPersonInfo1.IsValid() &&
                 ctrlAddEditEmployeeInfo1.IsValid();
+        }
+
+
+        private void MoveToEmployeeTab(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tpEmployee;
+            ctrlAddEditEmployeeInfo1.FocusFirstField();
         }
 
 
