@@ -1,12 +1,14 @@
-﻿using System;
+﻿using SharedUtilities;
+using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
-using SharedUtilities;
-using System.Runtime.Remoting.Messaging;
+using Inventory_Models;
 
 namespace Inventory_DAL
 {
@@ -22,30 +24,67 @@ namespace Inventory_DAL
             return ExecuteDataTable(Query);
         }
 
-        public static int GetPersonIdByEmployeeId(int employeeId)
-        {
-            return GetPersonIdByEntityId("Employees", "EmployeeID", employeeId);
-        }
 
-        public static int GetPersonIdByCustomerId(int customerId)
-        {
-            return GetPersonIdByEntityId("Customers", "CustomerID", customerId);
-        }
 
-        public static int GetPersonIdBySupplierId(int supplierId)
-        {
-            return GetPersonIdByEntityId("Suppliers", "SupplierID", supplierId);
-        }
 
-        public static bool GetEmployeeById(int employeeId, out Dictionary<string, object> employeeData)
+
+
+
+
+        public static bool GetEmployeeById(int employeeId, out EmployeeDto employeeData,
+                                         [CallerMemberName] string methodName = "", [CallerFilePath] string filePath = "")
         {
-            return GetEntityById("Employees", employeeId,
-                new List<string> 
+
+            //return GetEntityById("Employees", employeeId,
+            //new List<string>
+            //{"PersonID", "Designation", "Department", "Salary", "Notes", "IsActive", "CreationDate", "ModifiedDate"},
+            //out employeeData);
+
+            employeeData = null;
+
+            using (SqlConnection conn = GetConnection())
+            using (SqlCommand cmd = new SqlCommand("usp_GetEmployeeByID", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@EmployeeID", employeeId);
+
+                try
                 {
-                    "PersonID", "Designation", "Department", "Salary", "Notes", "IsActive", "CreationDate", "ModifiedDate"
-                },
-                out employeeData);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            employeeData = new EmployeeDto
+                            {
+                                EmployeeID = employeeId,
+                                PersonID = Convert.ToInt32(reader["PersonID"]),
+                                Designation = reader["Designation"]?.ToString(),
+                                Department = reader["Department"]?.ToString(),
+                                Salary = Convert.ToDecimal(reader["Salary"]),
+                                Notes = reader["Notes"]?.ToString(),
+                                IsActive = Convert.ToBoolean(reader["IsActive"]),
+                                CreationDate = Convert.ToDateTime(reader["CreationDate"]),
+                                ModifiedDate = Convert.ToDateTime(reader["ModifiedDate"])
+                            };
+
+                            LogHelper.LogInfo($"Employee data retrieved successfully. ID: {employeeId}", methodName, filePath);
+                            return true;
+                        }
+                        else
+                        {
+                            LogHelper.LogWarning($"No employee found with ID: {employeeId}", methodName, filePath);
+                            return false;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    LogHelper.LogError($"Error retrieving employee with ID: {employeeId}", ex, methodName, filePath);
+                    throw;
+                }
+            }
         }
+
 
         public static bool UpdateEmployee(int employeeId, int personId, string designation, string department, decimal salary, string notes, bool isActive, DateTime CreationDate, DateTime modifiedDate)
         {
@@ -71,6 +110,24 @@ namespace Inventory_DAL
         {
             return DeleteEntity("Employees", employeeId);
         }
+
+
+
+        public static int GetPersonIdByEmployeeId(int employeeId)
+        {
+            return GetPersonIdByEntityId("Employees", "EmployeeID", employeeId);
+        }
+
+        public static int GetPersonIdByCustomerId(int customerId)
+        {
+            return GetPersonIdByEntityId("Customers", "CustomerID", customerId);
+        }
+
+        public static int GetPersonIdBySupplierId(int supplierId)
+        {
+            return GetPersonIdByEntityId("Suppliers", "SupplierID", supplierId);
+        }
+
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using BusinessUtilities;
 using Inventory_DAL;
+using Inventory_Models;
 using SharedUtilities;
 using System;
 using System.Collections.Generic;
@@ -85,29 +86,32 @@ namespace Inventory_Business
         }
 
 
+
+
         public static clsEmployeeManager GetEmployee(int employeeId)
         {
-            Dictionary<string, object> employeeData;
+            EmployeeDto dto;
 
-            // Fetch data from DAL
-            bool isFound = clsEmployeesDAL.GetEmployeeById(employeeId, out employeeData);
+            // Get the DTO from DAL
+            bool isFound = clsEmployeesDAL.GetEmployeeById(employeeId, out dto);
 
-            if (!isFound || employeeData == null)
-                return null; // Employee not found
+            if (!isFound || dto == null)
+                return null;
 
-            // Map the dictionary data to a clsEmployee object
+            // Use the DTO to build the business object
             return new clsEmployeeManager(
-                employeeId,
-                (int)employeeData["PersonID"],
-                employeeData["Designation"].ToString(),
-                employeeData["Department"].ToString(),
-                (decimal)employeeData["Salary"],
-                BusinessUtil.GetValueOrDefault(employeeData["Notes"].ToString()),
-                (bool)employeeData["IsActive"],
-                (DateTime)employeeData["CreationDate"],
-                (DateTime)employeeData["ModifiedDate"]
+                dto.EmployeeID,
+                dto.PersonID,
+                dto.Designation,
+                dto.Department,
+                dto.Salary,
+                BusinessUtil.GetValueOrDefault(dto.Notes),
+                dto.IsActive,
+                dto.CreationDate,
+                dto.ModifiedDate
             );
         }
+
 
 
         private bool _AddNewEmployee()
