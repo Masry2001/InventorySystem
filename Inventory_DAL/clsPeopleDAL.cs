@@ -1,4 +1,5 @@
-﻿using SharedUtilities;
+﻿using Inventory_Models;
+using SharedUtilities;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,10 +15,10 @@ namespace Inventory_DAL
     {
 
 
-        public static bool GetPersonById(int PersonID, out Dictionary<string, object> personData,
+
+        public static bool GetPersonById(int personID, out PersonDto personData,
                                  [CallerMemberName] string methodName = "", [CallerFilePath] string filePath = "")
         {
-
             //return GetEntityById("People", PersonID, new List<string> { "Name", "Phone", "Email", "Address" }, out personData);
             //return GetEntityById("Customers", customerId,
             //new List<string> { "PersonID", "Notes", "IsActive", "CreationDate", "ModifiedDate" }, out customerData);
@@ -25,14 +26,13 @@ namespace Inventory_DAL
             //new List<string> { "PersonID", "Notes", "IsActive", "CreationDate", "ModifiedDate" }, out supplierData);
 
 
-
-            personData = new Dictionary<string, object>();
+            personData = null;
 
             using (SqlConnection conn = GetConnection())
             using (SqlCommand cmd = new SqlCommand("usp_GetPersonByID", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ID", PersonID);
+                cmd.Parameters.AddWithValue("@ID", personID);
 
                 try
                 {
@@ -40,30 +40,35 @@ namespace Inventory_DAL
                     {
                         if (reader.Read())
                         {
-                            personData["Name"] = GetDbValueOrNull(reader["Name"]);
-                            personData["Phone"] = GetDbValueOrNull(reader["Phone"]);
-                            personData["Email"] = GetDbValueOrNull(reader["Email"]);
-                            personData["Address"] = GetDbValueOrNull(reader["Address"]);
+                            personData = new PersonDto
+                            {
+                                PersonID = personID,
+                                Name = reader["Name"]?.ToString(),
+                                Phone = reader["Phone"]?.ToString(),
+                                Email = reader["Email"]?.ToString(),
+                                Address = reader["Address"]?.ToString(),
+                                IsDeleted = reader["IsDeleted"] != DBNull.Value && Convert.ToBoolean(reader["IsDeleted"]),
+                                DeletedDate = 
+                                reader["DeletedDate"] != DBNull.Value ? Convert.ToDateTime(reader["DeletedDate"]) : (DateTime?)null
+                            };
 
-                            LogHelper.LogInfo($"Person retrieved successfully. ID: {PersonID}", methodName, filePath);
+                            LogHelper.LogInfo($"Person retrieved successfully. ID: {personID}", methodName, filePath);
                             return true;
                         }
                         else
                         {
-                            LogHelper.LogWarning($"No person found with ID: {PersonID}", methodName, filePath);
+                            LogHelper.LogWarning($"No person found with ID: {personID}", methodName, filePath);
                             return false;
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    LogHelper.LogError($"An error occurred while retrieving person with ID: {PersonID}.", ex, methodName, filePath);
+                    LogHelper.LogError($"Error retrieving person with ID: {personID}", ex, methodName, filePath);
                     throw;
                 }
             }
         }
-
-
 
 
         public static bool UpdatePerson(int personID, string name, string phone, string email, string address,

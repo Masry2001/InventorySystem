@@ -74,8 +74,6 @@ namespace InventorySystem.Employees
             _Employee.Designation = txtDesignation.Text;
             _Employee.Department = txtDepartment.Text;
             _Employee.Salary = Convert.ToDecimal(txtSalary.Text);
-            _Employee.CreationDate = dtpCreationDate.Value;
-            _Employee.ModifiedDate = dtpModifiedDate.Value;
             _Employee.Notes = txtNotes.Text;
             _Employee.IsActive = chkIsActive.Checked;
             return _Employee;
@@ -95,19 +93,6 @@ namespace InventorySystem.Employees
         private void txtSalary_Validating(object sender, CancelEventArgs e)
         {
             PresentationUtility.ValidateSalary(sender, errorProvider1, e);
-        }
-
-
-
-        private void dtpCreationDate_Validating(object sender, CancelEventArgs e)
-        {
-            PresentationUtility.ValidateCreationDate(dtpCreationDate, dtpModifiedDate, errorProvider1, e);
-            
-        }
-
-        private void dtpModifiedDate_Validating(object sender, CancelEventArgs e)
-        {
-            PresentationUtility.ValidateModifiedDate(dtpCreationDate, dtpModifiedDate, errorProvider1, e);
         }
 
 
@@ -154,10 +139,7 @@ namespace InventorySystem.Employees
 
             _Employee.Notes = txtNotes.Text;
             _Employee.IsActive = chkIsActive.Checked;
-            _Employee.CreationDate = dtpCreationDate.Value;
 
-            dtpModifiedDate.Value = DateTime.Now;
-            _Employee.ModifiedDate = dtpModifiedDate.Value;
 
             _Employee.Mode = clsEmployeeManager.enMode.Update;
 
@@ -171,6 +153,9 @@ namespace InventorySystem.Employees
             }
         }
 
+        private void dtpCreationDate_ValueChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

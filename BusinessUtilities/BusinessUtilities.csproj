@@ -51,6 +51,10 @@
       <Project>{48eae4f3-9402-4e89-a109-ebe4b5cb1121}</Project>
       <Name>Inventory_DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Inventory_Models\Inventory_Models.csproj">
+      <Project>{46b9d244-be9a-48ba-a224-01e1ab2cffca}</Project>
+      <Name>Inventory_Models</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SharedUtilities\SharedUtilities.csproj">
       <Project>{49cdbec7-1751-4fc5-8ee0-67240d331b74}</Project>
       <Name>SharedUtilities</Name>

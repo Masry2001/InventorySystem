@@ -19,7 +19,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -45,22 +45,9 @@
               "RelativeDocumentMoniker": "..\\Inventory_DAL\\clsPeopleDAL.cs",
               "ToolTip": "D:\\programming\\InventoryProject\\Solution\\Inventory_DAL\\clsPeopleDAL.cs",
               "RelativeToolTip": "..\\Inventory_DAL\\clsPeopleDAL.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAkwBMAAAByAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T06:20:15.018Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "clsBaseDAL.cs",
-              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\Inventory_DAL\\clsBaseDAL.cs",
-              "RelativeDocumentMoniker": "..\\Inventory_DAL\\clsBaseDAL.cs",
-              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\Inventory_DAL\\clsBaseDAL.cs",
-              "RelativeToolTip": "..\\Inventory_DAL\\clsBaseDAL.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAqwFsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T06:11:02.412Z",
               "EditorCaption": ""
             },
             {
@@ -71,9 +58,22 @@
               "RelativeDocumentMoniker": "..\\Inventory_DAL\\clsEmployeesDAL.cs",
               "ToolTip": "D:\\programming\\InventoryProject\\Solution\\Inventory_DAL\\clsEmployeesDAL.cs",
               "RelativeToolTip": "..\\Inventory_DAL\\clsEmployeesDAL.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAiwDYAAABiAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAA3wIcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-24T06:11:41.98Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clsBaseDAL.cs",
+              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\Inventory_DAL\\clsBaseDAL.cs",
+              "RelativeDocumentMoniker": "..\\Inventory_DAL\\clsBaseDAL.cs",
+              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\Inventory_DAL\\clsBaseDAL.cs",
+              "RelativeToolTip": "..\\Inventory_DAL\\clsBaseDAL.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAgwJMAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T06:11:02.412Z",
               "EditorCaption": ""
             }
           ]

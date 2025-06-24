@@ -28,3 +28,5 @@ D:\programming\InventoryProject\Solution\Inventory_Business\bin\Debug\BusinessUt
 D:\programming\InventoryProject\Solution\Inventory_Business\bin\Debug\Inventory_DAL.pdb
 D:\programming\InventoryProject\Solution\Inventory_Business\bin\Debug\SharedUtilities.pdb
 D:\programming\InventoryProject\Solution\Inventory_Business\obj\Debug\Inventor.465271B8.Up2Date
+D:\programming\InventoryProject\Solution\Inventory_Business\bin\Debug\Inventory_Models.dll
+D:\programming\InventoryProject\Solution\Inventory_Business\bin\Debug\Inventory_Models.pdb

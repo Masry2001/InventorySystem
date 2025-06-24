@@ -16,3 +16,5 @@ D:\programming\InventoryProject\Solution\Inventory_DAL\obj\Debug\Inventory_DAL.c
 D:\programming\InventoryProject\Solution\Inventory_DAL\obj\Debug\Inventor.07157F25.Up2Date
 D:\programming\InventoryProject\Solution\Inventory_DAL\obj\Debug\Inventory_DAL.dll
 D:\programming\InventoryProject\Solution\Inventory_DAL\obj\Debug\Inventory_DAL.pdb
+D:\programming\InventoryProject\Solution\Inventory_DAL\bin\Debug\Inventory_Models.dll
+D:\programming\InventoryProject\Solution\Inventory_DAL\bin\Debug\Inventory_Models.pdb

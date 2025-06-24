@@ -49,3 +49,5 @@ D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySyst
 D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Utilities.ctrlAddEditPersonInfo.resources
 D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.Employees.ctrlAddEditEmployeeInfo.resources
 D:\programming\InventoryProject\Solution\InventorySystem\obj\Debug\InventorySystem.exe.config
+D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\Inventory_Models.dll
+D:\programming\InventoryProject\Solution\InventorySystem\bin\Debug\Inventory_Models.pdb

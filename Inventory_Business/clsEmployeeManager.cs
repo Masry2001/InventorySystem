@@ -125,14 +125,23 @@ namespace Inventory_Business
             return (this.EmployeeID != -1);
         }
 
+
         private bool _UpdateEmployee()
         {
-            //call DataAccess Layer 
+            // Create the DTO
+            EmployeeDto dto = new EmployeeDto
+            {
+                EmployeeID = this.EmployeeID,
+                Designation = this.Designation,
+                Department = this.Department,
+                Salary = this.Salary,
+                Notes = this.Notes,
+                IsActive = this.IsActive
+                // No need to pass CreationDate or ModifiedDate
+            };
 
-
-
-            return clsEmployeesDAL.UpdateEmployee(
-                this.EmployeeID, this.PersonID, this.Designation, this.Department, this.Salary, this.Notes, this.IsActive, this.CreationDate, this.ModifiedDate);
+            // Call DAL method
+            return clsEmployeesDAL.UpdateEmployee(dto);
         }
 
 

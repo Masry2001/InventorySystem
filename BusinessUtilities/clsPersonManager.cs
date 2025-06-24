@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using static BusinessUtilities.BusinessValidationHelper;
+using Inventory_Models;
 
 namespace Inventory_Business
 {
@@ -17,65 +18,65 @@ namespace Inventory_Business
 
     public class clsPersonManager
     {
-        // Properties   
+        // Properties (match PersonDto)
         public int PersonID { get; set; }
         public string Name { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Address { get; set; }
+        public bool IsDeleted { get; set; }
+        public DateTime? DeletedDate { get; set; }
 
-        public enum enMode { AddNew = 0, Update = 1 };
+        public enum enMode { AddNew = 0, Update = 1 }
         public enMode Mode = enMode.AddNew;
-
-
 
         public clsPersonManager()
         {
-            // Initialize with default values if necessary
             PersonID = -1;
             Name = "";
             Phone = "";
             Email = "";
             Address = "";
+            IsDeleted = false;
+            DeletedDate = null;
             Mode = enMode.AddNew;
-
         }
 
-        // Parameterized Constructor to Initialize Fields
-        public clsPersonManager(int id, string name, string phone, string email, string address)
+        public clsPersonManager(int id, string name, string phone, string email, string address, bool isDeleted, DateTime? deletedDate)
         {
             PersonID = id;
             Name = name;
             Phone = phone;
             Email = email;
             Address = address;
+            IsDeleted = isDeleted;
+            DeletedDate = deletedDate;
             Mode = enMode.Update;
         }
 
-
-        // Base Class Method to Display Basic Info
         public virtual string GetInfo()
         {
             return $"Name: {Name} - Email: {Email}, Phone: {Phone}, Address: {Address}";
         }
 
-
-        public static clsPersonManager GetPerson(int PersonID)
+        public static clsPersonManager GetPerson(int personID)
         {
-            if (clsPeopleDAL.GetPersonById(PersonID, out Dictionary<string, object> personData))
+            if (clsPeopleDAL.GetPersonById(personID, out PersonDto dto))
             {
-                return new clsPersonManager
-                {
-                    PersonID = PersonID,
-                    Name = personData["Name"].ToString(),
-                    Phone = BusinessUtil.GetValueOrDefault(personData["Phone"]?.ToString()),
-                    Email = BusinessUtil.GetValueOrDefault(personData["Email"]?.ToString()),
-                    Address = BusinessUtil.GetValueOrDefault(personData["Address"]?.ToString())
-
-                };
+                return new clsPersonManager(
+                    dto.PersonID,
+                    dto.Name,
+                    BusinessUtil.GetValueOrDefault(dto.Phone),
+                    BusinessUtil.GetValueOrDefault(dto.Email),
+                    BusinessUtil.GetValueOrDefault(dto.Address),
+                    dto.IsDeleted,
+                    dto.DeletedDate
+                );
             }
-            return null; // No data found
+
+            return null;
         }
+
 
 
         private bool _AddNewPerson()

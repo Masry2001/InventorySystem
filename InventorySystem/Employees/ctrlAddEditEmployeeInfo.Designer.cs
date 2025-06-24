@@ -69,7 +69,6 @@
             this.dtpModifiedDate.Name = "dtpModifiedDate";
             this.dtpModifiedDate.Size = new System.Drawing.Size(366, 30);
             this.dtpModifiedDate.TabIndex = 170;
-            this.dtpModifiedDate.Validating += new System.ComponentModel.CancelEventHandler(this.dtpModifiedDate_Validating);
             // 
             // dtpCreationDate
             // 
@@ -79,7 +78,7 @@
             this.dtpCreationDate.Name = "dtpCreationDate";
             this.dtpCreationDate.Size = new System.Drawing.Size(366, 30);
             this.dtpCreationDate.TabIndex = 169;
-            this.dtpCreationDate.Validating += new System.ComponentModel.CancelEventHandler(this.dtpCreationDate_Validating);
+            this.dtpCreationDate.ValueChanged += new System.EventHandler(this.dtpCreationDate_ValueChanged);
             // 
             // txtNotes
             // 

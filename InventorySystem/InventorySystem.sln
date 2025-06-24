@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessUtilities", "..\Bus
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedUtilities", "..\SharedUtilities\SharedUtilities.csproj", "{49CDBEC7-1751-4FC5-8EE0-67240D331B74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory_Models", "..\Inventory_Models\Inventory_Models.csproj", "{46B9D244-BE9A-48BA-A224-01E1AB2CFFCA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,8 +41,15 @@ Global
 		{49CDBEC7-1751-4FC5-8EE0-67240D331B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49CDBEC7-1751-4FC5-8EE0-67240D331B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49CDBEC7-1751-4FC5-8EE0-67240D331B74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B9D244-BE9A-48BA-A224-01E1AB2CFFCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B9D244-BE9A-48BA-A224-01E1AB2CFFCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B9D244-BE9A-48BA-A224-01E1AB2CFFCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B9D244-BE9A-48BA-A224-01E1AB2CFFCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06A91BC5-213A-4CD8-8F25-A66764B799E0}
 	EndGlobalSection
 EndGlobal

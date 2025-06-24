@@ -86,10 +86,49 @@ namespace Inventory_DAL
         }
 
 
-        public static bool UpdateEmployee(int employeeId, int personId, string designation, string department, decimal salary, string notes, bool isActive, DateTime CreationDate, DateTime modifiedDate)
+
+        public static bool UpdateEmployee(EmployeeDto dto,
+                                  [CallerMemberName] string methodName = "", [CallerFilePath] string filePath = "")
         {
-            return UpdateEntity("Employees", employeeId, new Dictionary<string, object> { { "Designation", designation }, { "Department", department }, { "Salary", salary }, { "Notes", notes }, { "IsActive", isActive }, { "CreationDate", CreationDate }, { "ModifiedDate", modifiedDate } });
+
+            //return UpdateEntity("Employees", employeeId, new Dictionary<string, object> { { "Designation", designation }, { "Department", department }, { "Salary", salary }, { "Notes", notes }, { "IsActive", isActive }, { "CreationDate", CreationDate }, { "ModifiedDate", modifiedDate } });
+
+
+            using (SqlConnection conn = GetConnection())
+            using (SqlCommand cmd = new SqlCommand("usp_UpdateEmployee", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@EmployeeID", dto.EmployeeID);
+                cmd.Parameters.AddWithValue("@Designation", dto.Designation);
+                cmd.Parameters.AddWithValue("@Department", dto.Department);
+                cmd.Parameters.AddWithValue("@Salary", dto.Salary);
+                cmd.Parameters.AddWithValue("@Notes", dto.Notes ?? (object)DBNull.Value);
+                cmd.Parameters.AddWithValue("@IsActive", dto.IsActive);
+
+                try
+                {
+                    int affectedRows = cmd.ExecuteNonQuery();
+
+                    if (affectedRows > 0)
+                    {
+                        LogHelper.LogInfo($"Employee updated successfully. ID: {dto.EmployeeID}", methodName, filePath);
+                        return true;
+                    }
+                    else
+                    {
+                        LogHelper.LogWarning($"No update occurred for employee ID: {dto.EmployeeID}", methodName, filePath);
+                        return false;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    LogHelper.LogError($"Error updating employee ID: {dto.EmployeeID}", ex, methodName, filePath);
+                    throw;
+                }
+            }
         }
+
 
         public static int AddNewEmployee(int personId, string designation, string department, decimal salary, string notes, bool isActive, DateTime CreationDate, DateTime modifiedDate)
         {
