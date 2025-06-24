@@ -104,16 +104,27 @@ namespace SharedUtilities
 
 
 
-        public static bool IsValidCreationDate(DateTime createdDate, DateTime modifiedDate)
+        // Enhanced validation method with specific error messages
+        public static bool IsValidDateOrder(DateTime creationDate, DateTime modifiedDate, out string errorMessage)
         {
-            return createdDate <= modifiedDate;
+            errorMessage = string.Empty;
+
+            if (creationDate > modifiedDate)
+            {
+                errorMessage = "Creation date cannot be later than modified date.";
+                return false;
+            }
+
+            // Optional: Check for future dates
+            if (creationDate > DateTime.Now)
+            {
+                errorMessage = "Creation date cannot be in the future.";
+                return false;
+            }
+
+            return true;
         }
 
- 
-        public static bool IsValidModificationDate(DateTime modifiedDate, DateTime createdDate)
-        {
-            return modifiedDate >= createdDate;
-        }
 
         public static bool ValidateInteger(string Number)
         {

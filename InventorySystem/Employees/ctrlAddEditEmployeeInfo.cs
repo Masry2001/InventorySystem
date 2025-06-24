@@ -15,6 +15,10 @@ namespace InventorySystem.Employees
     public partial class ctrlAddEditEmployeeInfo : UserControl
     {
         public event EventHandler FieldChanged;
+
+
+
+
         private void OnFieldChanged(object sender, EventArgs e)
         {
             FieldChanged?.Invoke(this, EventArgs.Empty);
@@ -107,6 +111,65 @@ namespace InventorySystem.Employees
         }
 
 
+
+        // This Code is Used For Edit Employee
+
+        public int EmployeeID;
+
+        public void LoadEmployeeData()
+        {
+            if ((_Employee = clsEmployeeManager.GetEmployee(EmployeeID)) != null)
+            {
+
+                lblEmployeeID.Text = EmployeeID.ToString();
+                txtDesignation.Text = _Employee.Designation;
+                txtDepartment.Text = _Employee.Department;
+                txtSalary.Text = _Employee.Salary.ToString();
+                txtNotes.Text = _Employee.Notes;
+                chkIsActive.Checked = _Employee.IsActive;
+                dtpCreationDate.Value = _Employee.CreationDate;
+                dtpModifiedDate.Value = _Employee.ModifiedDate;
+
+
+            }
+
+            else
+            {
+                MessageBox.Show("Employee not found.");
+            }
+        }
+
+
+        public void SaveEmployeeData()
+        {
+            if (_Employee == null) return;
+
+            _Employee.Designation = txtDesignation.Text;
+            _Employee.Department = txtDepartment.Text;
+            if (decimal.TryParse(txtSalary.Text, out decimal salary))
+            {
+                _Employee.Salary = salary;
+            }
+
+
+            _Employee.Notes = txtNotes.Text;
+            _Employee.IsActive = chkIsActive.Checked;
+            _Employee.CreationDate = dtpCreationDate.Value;
+
+            dtpModifiedDate.Value = DateTime.Now;
+            _Employee.ModifiedDate = dtpModifiedDate.Value;
+
+            _Employee.Mode = clsEmployeeManager.enMode.Update;
+
+            if (_Employee.SaveEmployee())
+            {
+                MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 
     }

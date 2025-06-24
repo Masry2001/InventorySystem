@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace InventorySystem.Employees
 {
@@ -22,15 +23,20 @@ namespace InventorySystem.Employees
         clsPersonManager _Person;
         clsEmployeeManager _Employee;
 
+
         public frmAddEmployee()
         {
             InitializeComponent();
+            btnClose.CausesValidation = false;
+
         }
         private void frmAddEmployee_Load(object sender, EventArgs e)
         {
             btnSave.Enabled = false;
-            ctrlAddEditPersonInfo1.FocusFirstField();
 
+
+            // 💡 This prevents validation from blocking form close
+            this.Deactivate += (_, __) => this.AutoValidate = AutoValidate.Disable;
 
             // this means “Dear ctrlAddEditEmployeeInfo, if you raise your FieldChanged event, I want you to call my method ValidateAll().”
 
@@ -40,6 +46,12 @@ namespace InventorySystem.Employees
             ctrlAddEditPersonInfo1.MoveToNextTab += MoveToEmployeeTab;
 
         }
+
+        private void frmAddEmployee_Shown(object sender, EventArgs e)
+        {
+            ctrlAddEditPersonInfo1.FocusFirstField(); 
+        }
+
 
         private void ValidateAll(object sender, EventArgs e)
         {
@@ -110,15 +122,12 @@ namespace InventorySystem.Employees
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+
             this.Close();
-        }
-
-
-        private void lblTitle_Click(object sender, EventArgs e)
-        {
 
         }
 
-  
+
+
     }
 }

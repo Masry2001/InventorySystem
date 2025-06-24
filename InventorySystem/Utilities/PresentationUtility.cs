@@ -289,10 +289,10 @@ namespace InventorySystem.Utilities
         public static void ValidateModifiedDate(DateTimePicker dtpCreatedDate, DateTimePicker dtpModifiedDate,
             ErrorProvider errorProvider, CancelEventArgs e)
         {
-            if (!Validation.IsValidModificationDate(dtpModifiedDate.Value, dtpCreatedDate.Value))
+            if (!Validation.IsValidDateOrder(dtpModifiedDate.Value, dtpCreatedDate.Value, out string error))
             {
                 e.Cancel = true;
-                errorProvider.SetError(dtpModifiedDate, ValidationMessages.Error_ModifiedDateBeforeCreatedDate);
+                errorProvider.SetError(dtpModifiedDate, error);
             }
             else
             {
@@ -305,10 +305,10 @@ namespace InventorySystem.Utilities
         public static void ValidateCreationDate(DateTimePicker dtpCreatedDate, DateTimePicker dtpModifiedDate,
             ErrorProvider errorProvider, CancelEventArgs e)
         {
-            if (!Validation.IsValidCreationDate(dtpCreatedDate.Value, dtpModifiedDate.Value))
+            if (!Validation.IsValidDateOrder(dtpCreatedDate.Value, dtpModifiedDate.Value, out string error))
             {
                 e.Cancel = true;
-                errorProvider.SetError(dtpCreatedDate, ValidationMessages.Error_CreatedDateAfterModifiedDate);
+                errorProvider.SetError(dtpCreatedDate, error);
             }
             else
             {

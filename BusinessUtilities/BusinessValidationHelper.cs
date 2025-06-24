@@ -109,18 +109,7 @@ namespace BusinessUtilities
                 return false;
             }
 
-            // CreationDate & ModifiedDate (Required)
-            if (!Validation.IsValidCreationDate(employee.CreationDate, employee.ModifiedDate))
-            {
-                error = "Creation date must be before or equal to Modified date.";
-                return false;
-            }
 
-            if (!Validation.IsValidModificationDate(employee.ModifiedDate, employee.CreationDate))
-            {
-                error = "Modified date cannot be earlier than creation date.";
-                return false;
-            }
 
             error = null;
             return true;

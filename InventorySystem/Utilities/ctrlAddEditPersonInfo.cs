@@ -37,7 +37,6 @@ namespace InventorySystem.Utilities
 
         private void ctrlAddEditPersonInfo_Load(object sender, EventArgs e)
         {
-            //The Load event is raised after all controls have been created, added to the visual tree, and initialized.
 
             PresentationUtility.SetTextBoxesMaxLength(this);
 
@@ -90,6 +89,8 @@ namespace InventorySystem.Utilities
 
         private void txtName_Validating(object sender, CancelEventArgs e)
         {
+
+
             PresentationUtility.ValidateName(sender, errorProvider1, e);
         }
 
@@ -126,6 +127,58 @@ namespace InventorySystem.Utilities
         {
             txtName.Focus();
         }
+
+
+
+
+
+
+
+
+
+        // The Following Code Is For Editing Person Data    
+
+        public int PersonID = -1;
+        public void LoadPersonData()
+        {
+            if ((_Person = clsPersonManager.GetPerson(PersonID)) != null)
+            {
+
+                lblPersonID.Text = PersonID.ToString();
+                txtName.Text = _Person.Name;
+                txtPhone.Text = _Person.Phone;
+                txtEmail.Text = _Person.Email;
+                txtAddress.Text = _Person.Address;
+            }
+
+            else
+            {
+                MessageBox.Show("Person not found.");
+            }
+        }
+
+
+        public void SavePersonData()
+        {
+            if (_Person == null) return;
+
+            _Person.Name = txtName.Text;
+            _Person.Phone = txtPhone.Text;
+            _Person.Email = txtEmail.Text;
+            _Person.Address = txtAddress.Text;
+            _Person.Mode = clsPersonManager.enMode.Update;
+
+            if (_Person.SavePerson())
+            {
+                MessageBox.Show("Data Saved Successfully.", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show("Error: Data Is not Saved Successfully.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
     }
 }

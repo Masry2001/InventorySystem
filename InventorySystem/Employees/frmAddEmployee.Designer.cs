@@ -104,7 +104,6 @@
             this.lblTitle.TabIndex = 74;
             this.lblTitle.Text = "Add New Employee";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // btnSave
             // 
@@ -143,6 +142,7 @@
             this.Name = "frmAddEmployee";
             this.Text = "frmAddEmployee";
             this.Load += new System.EventHandler(this.frmAddEmployee_Load);
+            this.Shown += new System.EventHandler(this.frmAddEmployee_Shown);
             this.tabControl1.ResumeLayout(false);
             this.tpPerson.ResumeLayout(false);
             this.tpEmployee.ResumeLayout(false);
