@@ -301,9 +301,10 @@ namespace InventorySystem.Employees
                     MessageBox.Show("Employee Deleted Successfully.", "Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     _RefreshEmployeesList();
                 }
-
-                else
+                else 
+                { 
                     MessageBox.Show("Employee was not deleted because it has data linked to it.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             }
         }

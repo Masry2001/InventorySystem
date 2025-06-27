@@ -104,28 +104,6 @@ namespace SharedUtilities
 
 
 
-        // Enhanced validation method with specific error messages
-        public static bool IsValidDateOrder(DateTime creationDate, DateTime modifiedDate, out string errorMessage)
-        {
-            errorMessage = string.Empty;
-
-            if (creationDate > modifiedDate)
-            {
-                errorMessage = "Creation date cannot be later than modified date.";
-                return false;
-            }
-
-            // Optional: Check for future dates
-            if (creationDate > DateTime.Now)
-            {
-                errorMessage = "Creation date cannot be in the future.";
-                return false;
-            }
-
-            return true;
-        }
-
-
         public static bool ValidateInteger(string Number)
         {
             if (string.IsNullOrWhiteSpace(Number))

@@ -81,7 +81,7 @@
             this.ctrlAddEditPersonInfo1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ctrlAddEditPersonInfo1.Name = "ctrlAddEditPersonInfo1";
             this.ctrlAddEditPersonInfo1.Size = new System.Drawing.Size(787, 321);
-            this.ctrlAddEditPersonInfo1.TabIndex = 116;
+            this.ctrlAddEditPersonInfo1.TabIndex = 1;
             // 
             // frmEditPerson
             // 

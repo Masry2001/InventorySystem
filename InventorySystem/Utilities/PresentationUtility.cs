@@ -286,36 +286,6 @@ namespace InventorySystem.Utilities
             }
         }
 
-        public static void ValidateModifiedDate(DateTimePicker dtpCreatedDate, DateTimePicker dtpModifiedDate,
-            ErrorProvider errorProvider, CancelEventArgs e)
-        {
-            if (!Validation.IsValidDateOrder(dtpModifiedDate.Value, dtpCreatedDate.Value, out string error))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(dtpModifiedDate, error);
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider.SetError(dtpModifiedDate, null);
-            }
-        }
-
-
-        public static void ValidateCreationDate(DateTimePicker dtpCreatedDate, DateTimePicker dtpModifiedDate,
-            ErrorProvider errorProvider, CancelEventArgs e)
-        {
-            if (!Validation.IsValidDateOrder(dtpCreatedDate.Value, dtpModifiedDate.Value, out string error))
-            {
-                e.Cancel = true;
-                errorProvider.SetError(dtpCreatedDate, error);
-            }
-            else
-            {
-                e.Cancel = false;
-                errorProvider.SetError(dtpCreatedDate, null);
-            }
-        }
 
 
 

@@ -114,16 +114,41 @@ namespace Inventory_Business
 
 
 
+ 
+
         private bool _AddNewEmployee()
         {
-            //call DataAccess Layer
-            // we have the person ID from the clsPersonmManager class
+            var dto = new EmployeeDto
+            {
+                PersonID = this.PersonID,
+                Designation = this.Designation,
+                Department = this.Department,
+                Salary = this.Salary,
+                Notes = this.Notes,
+                IsActive = this.IsActive
+            };
 
+            try
+            {
+                int newId = clsEmployeesDAL.AddEmployee(dto);
 
-            this.EmployeeID = clsEmployeesDAL.AddNewEmployee(this.PersonID, this.Designation, this.Department, this.Salary, this.Notes, this.IsActive, this.CreationDate, this.ModifiedDate);
+                if (newId > 0)
+                {
+                    this.EmployeeID = newId;
+                    this.Mode = enMode.Update;
+                    return true;
+                }
 
-            return (this.EmployeeID != -1);
+                return false; // Insert failed
+            }
+            catch
+            {
+                // Optional: add logging if not handled in DAL
+                return false;
+            }
         }
+
+
 
 
         private bool _UpdateEmployee()
@@ -137,10 +162,8 @@ namespace Inventory_Business
                 Salary = this.Salary,
                 Notes = this.Notes,
                 IsActive = this.IsActive
-                // No need to pass CreationDate or ModifiedDate
             };
 
-            // Call DAL method
             return clsEmployeesDAL.UpdateEmployee(dto);
         }
 
@@ -183,18 +206,15 @@ namespace Inventory_Business
                 switch (Mode)
                 {
                     case enMode.AddNew:
-                        if (_AddNewEmployee())
-                        {
-                            Mode = enMode.Update;
-                            return true;
-                        }
-                        return false;
+                        return _AddNewEmployee();
 
                     case enMode.Update:
                         return _UpdateEmployee();
-                }
 
-                return false;
+                    default:
+                        LogHelper.LogWarning($"Unhandled employee mode: {Mode}");
+                        return false;
+                }
             }
             catch (ValidationException ex)
             {
