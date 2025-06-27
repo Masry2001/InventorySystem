@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{48EAE4F3-9402-4E89-A109-EBE4B5CB1121}|..\\Inventory_DAL\\Inventory_DAL.csproj|d:\\programming\\inventoryproject\\solution\\inventory_dal\\clsemployeesdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48EAE4F3-9402-4E89-A109-EBE4B5CB1121}|..\\Inventory_DAL\\Inventory_DAL.csproj|d:\\programming\\inventoryproject\\solution\\inventory_dal\\clsbasedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DF34F6A5-EAD2-4633-A2D8-BE0926C14D1D}|..\\Inventory_Business\\Inventory_Business.csproj|d:\\programming\\inventoryproject\\solution\\inventory_business\\clsemployeemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|D:\\programming\\InventoryProject\\Solution\\InventorySystem\\employees\\frmlistemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmlistemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|D:\\programming\\InventoryProject\\Solution\\InventorySystem\\employees\\frmlistemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:employees\\frmlistemployees.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48EAE4F3-9402-4E89-A109-EBE4B5CB1121}|..\\Inventory_DAL\\Inventory_DAL.csproj|d:\\programming\\inventoryproject\\solution\\inventory_dal\\clspeopledal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|d:\\programming\\inventoryproject\\solution\\inventorysystem\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{061DEBB5-4723-4FCA-BB4D-4B08700B4C1D}|Inventory_Presentation.csproj|solutionrelative:frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,75 +42,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmListEmployees.cs",
-              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmListEmployees.cs",
-              "RelativeDocumentMoniker": "Employees\\frmListEmployees.cs",
-              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmListEmployees.cs",
-              "RelativeToolTip": "Employees\\frmListEmployees.cs",
-              "ViewState": "AgIAABYBAAAAAAAAAAApwCoBAAA1AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T04:53:08.339Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmListEmployees.cs [Design]",
-              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmListEmployees.cs",
-              "RelativeDocumentMoniker": "Employees\\frmListEmployees.cs",
-              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\Employees\\frmListEmployees.cs [Design]",
-              "RelativeToolTip": "Employees\\frmListEmployees.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T04:52:31.128Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "clsEmployeeManager.cs",
-              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\Inventory_Business\\clsEmployeeManager.cs",
-              "RelativeDocumentMoniker": "..\\Inventory_Business\\clsEmployeeManager.cs",
-              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\Inventory_Business\\clsEmployeeManager.cs",
-              "RelativeToolTip": "..\\Inventory_Business\\clsEmployeeManager.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAIAwwK0AAAAxAAAAAAAAAA==",
+              "Title": "frmMain.Designer.cs",
+              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\frmMain.Designer.cs",
+              "RelativeDocumentMoniker": "frmMain.Designer.cs",
+              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\frmMain.Designer.cs",
+              "RelativeToolTip": "frmMain.Designer.cs",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAAAKMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T03:59:01.865Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "clsPeopleDAL.cs",
-              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\Inventory_DAL\\clsPeopleDAL.cs",
-              "RelativeDocumentMoniker": "..\\Inventory_DAL\\clsPeopleDAL.cs",
-              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\Inventory_DAL\\clsPeopleDAL.cs",
-              "RelativeToolTip": "..\\Inventory_DAL\\clsPeopleDAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAByAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T06:20:15.018Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "clsEmployeesDAL.cs",
-              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\Inventory_DAL\\clsEmployeesDAL.cs",
-              "RelativeDocumentMoniker": "..\\Inventory_DAL\\clsEmployeesDAL.cs",
-              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\Inventory_DAL\\clsEmployeesDAL.cs",
-              "RelativeToolTip": "..\\Inventory_DAL\\clsEmployeesDAL.cs",
-              "ViewState": "AgIAAJcAAAAAAAAAAAAAAKIAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T06:11:41.98Z",
+              "WhenOpened": "2025-06-27T09:23:16.563Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "clsBaseDAL.cs",
-              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\Inventory_DAL\\clsBaseDAL.cs",
-              "RelativeDocumentMoniker": "..\\Inventory_DAL\\clsBaseDAL.cs",
-              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\Inventory_DAL\\clsBaseDAL.cs",
-              "RelativeToolTip": "..\\Inventory_DAL\\clsBaseDAL.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAYAAAAAAAAAA==",
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\frmMain.cs",
+              "RelativeToolTip": "frmMain.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAuwDEAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T06:11:02.412Z"
+              "WhenOpened": "2025-06-27T09:21:41.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "D:\\programming\\InventoryProject\\Solution\\InventorySystem\\frmMain.cs [Design]",
+              "RelativeToolTip": "frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T08:30:37.577Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
